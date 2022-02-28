@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 1
   groundCheck: {fileID: 3042317487578500756}
-  checkRadius: 0.5
+  checkRadius: 0.1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64

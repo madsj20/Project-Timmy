@@ -40,9 +40,6 @@ public class Movement : MonoBehaviour
         }
 
 
-
-
-
         //flip player in movement direction
         if (canMove == true)
         {

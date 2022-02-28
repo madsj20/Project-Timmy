@@ -515,6 +515,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_SideArc
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_UseOneWay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_SurfaceArc
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_UseSideBounce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_UseSideFriction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 572126277483314411, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
+      propertyPath: m_UseOneWayGrouping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1631712532500824556, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
       propertyPath: m_RootOrder
       value: 2

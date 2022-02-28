@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 3042317487916538227}
   - component: {fileID: 3042317487916538225}
   - component: {fileID: 3042317487916538226}
+  - component: {fileID: 515507517}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f33b1077e1d36548acb8d11ee40f038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1
+  jumpForce: 0.8
   groundCheck: {fileID: 3042317487578500756}
   checkRadius: 0.1
   whatIsGround:
@@ -151,12 +152,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &3042317487916538226
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +184,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.95269406, y: 3.0633392}
   m_EdgeRadius: 0
+--- !u!114 &515507517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63dd3cba0f4ee34ab89c8b2244d0434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

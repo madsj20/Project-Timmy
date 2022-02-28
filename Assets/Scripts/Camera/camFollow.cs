@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class camFollow : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     // Start is called before the first frame update
-    void start()
+    void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }

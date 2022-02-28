@@ -7,8 +7,7 @@ public class Movement : MonoBehaviour
     Rigidbody2D rb;
     public float jumpForce = 1;
 
-    private bool facingRight1 = false;
-    private bool facingRight2 = true;
+    private bool facingRight = true;
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -25,7 +24,7 @@ public class Movement : MonoBehaviour
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
         canMove = false;
-        Invoke("CanMove", 1.5f);
+        Invoke("CanMove", 0f);
     }
 
     // Update is called once per frame
@@ -47,11 +46,11 @@ public class Movement : MonoBehaviour
         //flip player in movement direction
         if (canMove == true)
         {
-            if (facingRight2 == false && dirX > 0)
+            if (facingRight == false && dirX < 0)
             {
                 Flip();
             }
-            else if (facingRight2 == true && dirX < 0)
+            else if (facingRight == true && dirX > 0)
             {
                 Flip();
             }
@@ -79,11 +78,11 @@ public class Movement : MonoBehaviour
     //Flip function
     void Flip()
     {
-            facingRight2 = !facingRight2;
-            Vector3 Scaler = transform.localScale;
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
 
-            Scaler.x *= -1;
-            transform.localScale = Scaler;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 
     public void CanMove()

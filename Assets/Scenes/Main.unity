@@ -274,10 +274,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform - gren 1
       objectReference: {fileID: 0}
-    - target: {fileID: 359302839451731726, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
 --- !u!1001 &3042317486646254163
@@ -395,10 +391,6 @@ PrefabInstance:
     - target: {fileID: 5964146008844385212, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
       propertyPath: m_Name
       value: Platform - gren 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5964146008844385212, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31e906a83a22f974da592e7b3cf7cfbe, type: 3}

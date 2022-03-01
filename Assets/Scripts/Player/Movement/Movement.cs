@@ -6,7 +6,6 @@ public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float jumpForce = 1;
-    public bool climb = false;
 
     private bool facingRight = true;
     private bool isGrounded;
@@ -18,6 +17,7 @@ public class Movement : MonoBehaviour
     public int extraJumpsValue;
 
     public bool canMove;
+    private bool climb = false;
 
     // Start is called before the first frame update
     void Start()
@@ -62,12 +62,13 @@ public class Movement : MonoBehaviour
             extraJumps = extraJumpsValue;
         }
 
-        if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true)
+        if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             extraJumps--;
+            Debug.Log("Jump");
         }
-        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true)
+        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
         }
@@ -75,7 +76,10 @@ public class Movement : MonoBehaviour
         //climb script
         if (climb == true)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
+            if (Input.GetButton("Jump"))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
+            }
         }
 
     }
@@ -84,18 +88,18 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.tag == "Vine")
         {
-            if (Input.GetButton("Jump"))
-            { 
-                Debug.Log("Hit vine");
+                Debug.Log("Enter vine");
                 climb = true;
-            }
         }
     }
     //Checks if players has left the vine and disables climbing
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Left vine");
-        climb = false;
+        if (other.gameObject.tag == "Vine")
+        {
+            Debug.Log("Left vine");
+            climb = false;
+        }
     }
 
     //Flip function

@@ -91,6 +91,7 @@ public class Movement : MonoBehaviour
             }
         }
     }
+    //Checks if players has left the vine and disables climbing
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("Left vine");

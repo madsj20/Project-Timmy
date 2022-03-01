@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float jumpForce = 1;
+    public bool climb = false;
 
     private bool facingRight = true;
     private bool isGrounded;
@@ -70,6 +71,30 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
         }
+
+        //climb script
+        if (climb == true)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
+        }
+
+    }
+    //Checks if player is inside vine, and activates climb in update
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Vine")
+        {
+            if (Input.GetButton("Jump"))
+            { 
+                Debug.Log("Hit vine");
+                climb = true;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("Left vine");
+        climb = false;
     }
 
     //Flip function

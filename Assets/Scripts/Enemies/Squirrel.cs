@@ -27,8 +27,6 @@ public class Squirrel : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-
     }
 
     // Update is called once per frame

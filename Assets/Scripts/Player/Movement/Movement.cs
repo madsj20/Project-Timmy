@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        float dirX = Input.GetAxis("Horizontal");
+        float dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)
         {
             rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);

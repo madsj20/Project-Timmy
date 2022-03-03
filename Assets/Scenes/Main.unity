@@ -1216,6 +1216,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Timmy
       objectReference: {fileID: 0}
+    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: m_Size.x
+      value: 0.72653794
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: m_Size.y
+      value: 3.0596285
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.10144913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.4917927
+      objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: extraJumpsValue
       value: 0

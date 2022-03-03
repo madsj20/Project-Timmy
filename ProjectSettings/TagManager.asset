@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Vine
   - Rope
+  - Squirrel
   layers:
   - Default
   - TransparentFX

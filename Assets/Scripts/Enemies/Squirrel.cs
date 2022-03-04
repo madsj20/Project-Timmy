@@ -21,7 +21,7 @@ public class Squirrel : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         canMove = false;
         Invoke("CanMove", 0f);
-        rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+        
     }
 
     private void FixedUpdate()
@@ -32,6 +32,8 @@ public class Squirrel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
         //flip player in movement direction
         if (canMove == true)
         {

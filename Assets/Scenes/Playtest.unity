@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 591065500}
   m_Layer: 0
   m_Name: Sving vine
-  m_TagString: Vine
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 644321769}
   m_Layer: 0
   m_Name: Sving vine 2
-  m_TagString: Vine
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1662,7 +1662,7 @@ GameObject:
   - component: {fileID: 1302265364}
   m_Layer: 0
   m_Name: Sving vine 3
-  m_TagString: Vine
+  m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

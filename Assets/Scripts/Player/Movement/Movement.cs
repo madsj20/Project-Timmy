@@ -80,7 +80,17 @@ public class Movement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
             }
+            else
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+                rb.gravityScale = 0;
+            }
+            if (Input.GetKey("s") && isGrounded == false)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, -5f * jumpForce);
+            }
         }
+        
 
     }
     //Checks if player is inside vine, and activates climb in update
@@ -99,6 +109,7 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("Left vine");
             climb = false;
+            rb.gravityScale = 2;
         }
     }
 

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3787532929316390716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5556368621499545177, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -5.6451426
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368621499545177, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157920, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_Name
+      value: TestRope
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157921, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: prefabRopeSegs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157921, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: prefabRopeSegs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3342099524226829365, guid: 1952fd5974bfda843ae32f3be1d87e68, type: 3}
+    - target: {fileID: 5556368623037157921, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: prefabRopeSegs.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.6451426
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8242037
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00f277cfecd5232429ac167701e614bd, type: 3}

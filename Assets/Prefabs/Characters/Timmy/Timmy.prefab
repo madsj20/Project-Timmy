@@ -126,6 +126,8 @@ GameObject:
   - component: {fileID: 3042317487916538225}
   - component: {fileID: 3042317487916538226}
   - component: {fileID: 515507517}
+  - component: {fileID: 935108950}
+  - component: {fileID: 935108949}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -218,7 +220,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  extraJumpsValue: 0
+  extraJumpsValue: 1
   canMove: 1
 --- !u!50 &3042317487916538225
 Rigidbody2D:
@@ -279,3 +281,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63dd3cba0f4ee34ab89c8b2244d0434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!233 &935108950
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0.16, y: 1.2}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!114 &935108949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d0a022ab1e53d4487c009129a78fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  pushForce: 10
+  attached: 0
+  attachedTo: {fileID: 0}

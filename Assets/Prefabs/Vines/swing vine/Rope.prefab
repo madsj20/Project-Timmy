@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5556368621499545158}
   - component: {fileID: 5556368621499545176}
   - component: {fileID: 5556368621499545177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.2980487, y: -3.0036361}
+  m_ConnectedAnchor: {x: 2, y: -1}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5556368623037157934}
   - component: {fileID: 5556368623037157921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}

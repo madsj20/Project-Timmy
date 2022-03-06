@@ -5,6 +5,7 @@ using UnityEngine;
 public class RopeSegment : MonoBehaviour
 {
     public GameObject connectedAbove, connectedBelow;
+    public bool isPlayerAttached;
     void Start()
     {
         connectedAbove = GetComponent<HingeJoint2D>().connectedBody.gameObject;

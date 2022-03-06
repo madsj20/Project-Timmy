@@ -1269,11 +1269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1310,26 +1310,6 @@ PrefabInstance:
     - target: {fileID: 3042317487916538190, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_Name
       value: Timmy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_Size.x
-      value: 0.72653794
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_Size.y
-      value: 3.0596285
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.10144913
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_Offset.y
-      value: 1.4917927
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: extraJumpsValue
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}

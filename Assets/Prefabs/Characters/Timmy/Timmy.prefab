@@ -218,7 +218,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  extraJumpsValue: 0
+  extraJumpsValue: 1
   canMove: 1
 --- !u!50 &3042317487916538225
 Rigidbody2D:

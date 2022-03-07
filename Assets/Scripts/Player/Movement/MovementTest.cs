@@ -80,7 +80,7 @@ public class MovementTest : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, 5f);
             }
             else
             {
@@ -89,7 +89,7 @@ public class MovementTest : MonoBehaviour
             }
             if (Input.GetKey("s") && isGrounded == false)
             {
-                rb.velocity = new Vector2(rb.velocity.x, -5f * jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, -5f);
             }
         }
 
@@ -99,7 +99,7 @@ public class MovementTest : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                rb.velocity = new Vector2(rb.velocity.x, 5f * jumpForce);
+                rb.velocity = new Vector2(rb.velocity.x, 5f);
             }
         }
 
@@ -134,7 +134,7 @@ public class MovementTest : MonoBehaviour
         {
             Debug.Log("Left vine");
             climb = false;
-            rb.gravityScale = 2;
+            rb.gravityScale = 4;
         }
     }
 

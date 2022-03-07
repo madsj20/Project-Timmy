@@ -41,10 +41,16 @@ public class PlayerSwing : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("w") || Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s"))
         {
             Detatch();
         }
+        if (Input.GetKeyDown("w"))
+        {
+            Detatch();
+            rb.velocity = new Vector2(rb.velocity.x, 8f);
+        }
+        
     }
     public void Attach(Rigidbody2D ropeBone)
     {

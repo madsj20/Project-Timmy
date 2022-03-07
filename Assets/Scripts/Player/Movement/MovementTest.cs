@@ -62,6 +62,7 @@ public class MovementTest : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            GetComponent<PlayerSwingTest>().attachedTo = null;
         }
 
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)

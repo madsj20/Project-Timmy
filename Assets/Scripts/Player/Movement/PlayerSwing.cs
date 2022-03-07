@@ -60,6 +60,7 @@ public class PlayerSwing : MonoBehaviour
         hj.enabled = true;
         attached = true;
         attachedTo = ropeBone.gameObject.transform.parent;
+
     }
     void Detatch()
     {
@@ -68,14 +69,14 @@ public class PlayerSwing : MonoBehaviour
         attached = false;
         hj.enabled = false;
         hj.connectedBody = null;
-        StartCoroutine(AttachedNull());
+        //StartCoroutine(AttachedNull());
     }
 
-    IEnumerator AttachedNull()
+    /*IEnumerator AttachedNull()
     {
         yield return new WaitForSeconds(0.5f);
         attachedTo = null;
-    }
+    }*/
 
     private void OnTriggerEnter2D(Collider2D col)
     {

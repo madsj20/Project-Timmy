@@ -48,7 +48,7 @@ public class PlayerSwingTest : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             Detatch();
-            rb.velocity = new Vector2(rb.velocity.x, 8f);
+            rb.velocity = new Vector2(rb.velocity.x, 14f);
         }
 
     }

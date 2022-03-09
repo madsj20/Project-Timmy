@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 3042317487916538227}
   - component: {fileID: 515507517}
   - component: {fileID: 935108949}
+  - component: {fileID: 5295393851187030860}
   - component: {fileID: 8869351489131275148}
   - component: {fileID: 1520465557964955182}
   m_Layer: 0
@@ -324,6 +325,21 @@ MonoBehaviour:
   pushForce: 10
   attached: 0
   attachedTo: {fileID: 0}
+--- !u!114 &5295393851187030860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99e689987198a5459fb82b3865533cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  happinessBar: {fileID: 0}
 --- !u!199 &8869351489131275148
 ParticleSystemRenderer:
   serializedVersion: 6

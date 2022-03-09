@@ -19,11 +19,14 @@ public class Movement : MonoBehaviour
     public bool canMove;
     private bool climb = false;
 
+    public ParticleSystem jumpPS;
+
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+        jumpPS = GetComponent<ParticleSystem>();
         canMove = false;
         Invoke("CanMove", 0f);
     }
@@ -66,12 +69,14 @@ public class Movement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
+            jumpPS.Play();
             extraJumps--;
             Debug.Log("Jump");
         }
         else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
+            jumpPS.Play();
         }
 
         //climb script

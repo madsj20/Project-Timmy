@@ -13,17 +13,24 @@ public class PlayerSwingTest : MonoBehaviour
     public Transform attachedTo;
     private GameObject disregard;
 
+    
+
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
+       
     }
-
+    private void Start()
+    {
+        //attachedTo = null;
+    }
 
     void Update()
     {
         CheckInput();
+        
     }
     void CheckInput()
     {
@@ -41,11 +48,11 @@ public class PlayerSwingTest : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s") && attachedTo != null)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") && attachedTo!=null)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);

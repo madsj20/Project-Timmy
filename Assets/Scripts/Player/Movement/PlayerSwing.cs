@@ -41,11 +41,11 @@ public class PlayerSwing : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKeyDown("s") && attachedTo != null)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("w") && attachedTo != null)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);

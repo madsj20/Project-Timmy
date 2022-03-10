@@ -1,0 +1,1200 @@
+fileFormatVersion: 2
+guid: 3fba1fb45c472854689acf0301770f16
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6318972061534827785
+    second: Idela Timmy_0
+  - first:
+      213: 1578454634102996993
+    second: Idela Timmy_1
+  - first:
+      213: -7368900030515192455
+    second: Idela Timmy_2
+  - first:
+      213: 2667343270985337666
+    second: Idela Timmy_3
+  - first:
+      213: -1300877314401741886
+    second: Idela Timmy_4
+  - first:
+      213: -3565619856654733551
+    second: Idela Timmy_5
+  - first:
+      213: -6061298665856905235
+    second: Idela Timmy_6
+  - first:
+      213: 5375607887515581728
+    second: Idela Timmy_7
+  - first:
+      213: 6546347425084686620
+    second: Idela Timmy_8
+  - first:
+      213: 5896871343416031365
+    second: Idela Timmy_9
+  - first:
+      213: 4590454350709610092
+    second: Idela Timmy_10
+  - first:
+      213: 664144271893961854
+    second: Idela Timmy_11
+  - first:
+      213: -8158920067817082031
+    second: Idela Timmy_12
+  - first:
+      213: 5908476311695819118
+    second: Idela Timmy_13
+  - first:
+      213: 1389949610725987227
+    second: Idela Timmy_14
+  - first:
+      213: -5340247424000994851
+    second: Idela Timmy_15
+  - first:
+      213: 8833625668688610494
+    second: Idela Timmy_16
+  - first:
+      213: -6688949192004360813
+    second: Idela Timmy_17
+  - first:
+      213: 1521745149285060435
+    second: Idela Timmy_18
+  - first:
+      213: 827954761872032987
+    second: Idela Timmy_19
+  - first:
+      213: -4508447770559371051
+    second: Idela Timmy_20
+  - first:
+      213: -7732849316897977725
+    second: Idela Timmy_21
+  - first:
+      213: -7601056518830011312
+    second: Idela Timmy_22
+  - first:
+      213: 155853922439947545
+    second: Idela Timmy_23
+  - first:
+      213: 4129130627641408388
+    second: Idela Timmy_24
+  - first:
+      213: 3116531482816634395
+    second: Idela Timmy_25
+  - first:
+      213: -4357215841558865363
+    second: Idela Timmy_26
+  - first:
+      213: -2651435125993266807
+    second: Idela Timmy_27
+  - first:
+      213: 6328995927287887193
+    second: Idela Timmy_28
+  - first:
+      213: -1740846197521105898
+    second: Idela Timmy_29
+  - first:
+      213: 1444885475098625565
+    second: Idela Timmy_30
+  - first:
+      213: 2214669328987276192
+    second: Idela Timmy_31
+  - first:
+      213: -5642969052588267408
+    second: Idela Timmy_32
+  - first:
+      213: 1567778465774715955
+    second: Idela Timmy_33
+  - first:
+      213: -6101138292035850185
+    second: Idela Timmy_34
+  - first:
+      213: 3405614551738670663
+    second: Idela Timmy_35
+  - first:
+      213: 3300821345907119860
+    second: Idela Timmy_36
+  - first:
+      213: 5372246028966884032
+    second: Idela Timmy_37
+  - first:
+      213: 533505185928119305
+    second: Idela Timmy_38
+  - first:
+      213: -8859822993955173727
+    second: Idela Timmy_39
+  - first:
+      213: 3694171512813176290
+    second: Idela Timmy_40
+  - first:
+      213: -6042598436633667600
+    second: Idela Timmy_41
+  - first:
+      213: 814613837005552165
+    second: Idela Timmy_42
+  - first:
+      213: -1685654816862892735
+    second: Idela Timmy_43
+  - first:
+      213: 9196553992836642563
+    second: Idela Timmy_44
+  - first:
+      213: -241733380325097484
+    second: Idela Timmy_45
+  - first:
+      213: 5609109147269707577
+    second: Idela Timmy_46
+  - first:
+      213: 4273620118853949146
+    second: Idela Timmy_47
+  - first:
+      213: 3865698229520277010
+    second: Idela Timmy_48
+  - first:
+      213: -8965805733693820165
+    second: Idela Timmy_49
+  - first:
+      213: -1046654223226849172
+    second: Idela Timmy_50
+  - first:
+      213: 6689104477972629520
+    second: Idela Timmy_51
+  - first:
+      213: -7550127195169813015
+    second: Idela Timmy_52
+  - first:
+      213: -1074461135507562672
+    second: Idela Timmy_53
+  - first:
+      213: -3938890743938161241
+    second: Idela Timmy_54
+  - first:
+      213: -7057575783008908523
+    second: Idela Timmy_55
+  - first:
+      213: 996085340017011142
+    second: Idela Timmy_56
+  - first:
+      213: -2055918135398791057
+    second: Idela Timmy_57
+  - first:
+      213: -5614810570628758732
+    second: Idela Timmy_58
+  - first:
+      213: -9015570032597125312
+    second: Idela Timmy_59
+  - first:
+      213: -1875148469171928857
+    second: Idela Timmy_60
+  - first:
+      213: 6991829169301314211
+    second: Idela Timmy_61
+  - first:
+      213: 5528486867681327633
+    second: Idela Timmy_62
+  - first:
+      213: 879900031154133047
+    second: Idela Timmy_63
+  - first:
+      213: -2766674238626663172
+    second: Idela Timmy_64
+  - first:
+      213: -4199008828438940733
+    second: Idela Timmy_65
+  - first:
+      213: 5963092435528443019
+    second: Idela Timmy_66
+  - first:
+      213: -5501979022876855211
+    second: Idela Timmy_67
+  - first:
+      213: 3819169830073950534
+    second: Idela Timmy_68
+  - first:
+      213: 67358301437590574
+    second: Idela Timmy_69
+  - first:
+      213: -6936518652462835570
+    second: Idela Timmy_70
+  - first:
+      213: 5703813907219707461
+    second: Idela Timmy_71
+  - first:
+      213: 6113779742231233430
+    second: Idela Timmy_72
+  - first:
+      213: 2415624461797678820
+    second: Idela Timmy_73
+  - first:
+      213: 2958179121690377146
+    second: Idela Timmy_74
+  - first:
+      213: -5571615922733022578
+    second: Idela Timmy_75
+  - first:
+      213: -5249373801087232775
+    second: Idela Timmy_76
+  - first:
+      213: -7112857112837645373
+    second: Idela Timmy_77
+  - first:
+      213: -161565379654646315
+    second: Idela Timmy_78
+  - first:
+      213: -3094162890501898941
+    second: Idela Timmy_79
+  - first:
+      213: 2843294814091699408
+    second: Idela Timmy_80
+  - first:
+      213: 6363205706656709565
+    second: Idela Timmy_81
+  - first:
+      213: -6464730334969426025
+    second: Idela Timmy_82
+  - first:
+      213: -7041946021463956373
+    second: Idela Timmy_83
+  - first:
+      213: 1596839844731772575
+    second: Idela Timmy_84
+  - first:
+      213: 6333577381844107490
+    second: Idela Timmy_85
+  - first:
+      213: -8348584643827926363
+    second: Idela Timmy_86
+  - first:
+      213: 410048868108834718
+    second: Idela Timmy_87
+  - first:
+      213: -6694948138908623986
+    second: Idela Timmy_88
+  - first:
+      213: -7041880694502330479
+    second: Idela Timmy_89
+  - first:
+      213: 3945175040225745650
+    second: Idela Timmy_90
+  - first:
+      213: -4230750454319049649
+    second: Idela Timmy_91
+  - first:
+      213: 4946215766557146548
+    second: Idela Timmy_92
+  - first:
+      213: -5303063071352370559
+    second: Idela Timmy_93
+  - first:
+      213: -1775422074362005300
+    second: Idela Timmy_94
+  - first:
+      213: 7546719943219826375
+    second: Idela Timmy_95
+  - first:
+      213: -2506781880632830332
+    second: Idela Timmy_96
+  - first:
+      213: 5828416096683647551
+    second: Idela Timmy_97
+  - first:
+      213: -6621409642832324448
+    second: Idela Timmy_98
+  - first:
+      213: -8902274337304644767
+    second: Idela Timmy_99
+  - first:
+      213: -7800116239377795442
+    second: Idela Timmy_100
+  - first:
+      213: -7558253828728103596
+    second: Idela Timmy_101
+  - first:
+      213: -7190648330712774330
+    second: Idela Timmy_102
+  - first:
+      213: -2333288099990207538
+    second: Idela Timmy_103
+  - first:
+      213: -1418592772855523220
+    second: Idela Timmy_104
+  - first:
+      213: 3093061091740917133
+    second: Idela Timmy_105
+  - first:
+      213: 1424275887787260400
+    second: Idela Timmy_106
+  - first:
+      213: 2054260907127436356
+    second: Idela Timmy_107
+  - first:
+      213: -9059679427627761454
+    second: Idela Timmy_108
+  - first:
+      213: -227326051525222913
+    second: Idela Timmy_109
+  - first:
+      213: -3606930664448034139
+    second: Idela Timmy_110
+  - first:
+      213: -2087231915859711076
+    second: Idela Timmy_111
+  - first:
+      213: 2846282056578637298
+    second: Idela Timmy_112
+  - first:
+      213: -4975198581144315714
+    second: Idela Timmy_113
+  - first:
+      213: 3899413233118259771
+    second: Idela Timmy_114
+  - first:
+      213: -7494515361918175287
+    second: Idela Timmy_115
+  - first:
+      213: 7740648951980563337
+    second: Idela Timmy_116
+  - first:
+      213: -995610554275334834
+    second: Idela Timmy_117
+  - first:
+      213: -2874158551898322141
+    second: Idela Timmy_118
+  - first:
+      213: 2984055499123271898
+    second: Idela Timmy_119
+  - first:
+      213: -8408395296053170415
+    second: Idela Timmy_120
+  - first:
+      213: -15895739197109216
+    second: Idela Timmy_121
+  - first:
+      213: 7921224557528584923
+    second: Idela Timmy_122
+  - first:
+      213: 7334550118264407086
+    second: Idela Timmy_123
+  - first:
+      213: 6704517177505451950
+    second: Idela Timmy_124
+  - first:
+      213: -845017465884427479
+    second: Idela Timmy_125
+  - first:
+      213: -5046065237150801284
+    second: Idela Timmy_126
+  - first:
+      213: -4493585518164930278
+    second: Idela Timmy_127
+  - first:
+      213: -7024049127898280833
+    second: Idela Timmy_128
+  - first:
+      213: -6597087828889654213
+    second: Idela Timmy_129
+  - first:
+      213: 5270294899955190285
+    second: Idela Timmy_130
+  - first:
+      213: 2673895495422226450
+    second: Idela Timmy_131
+  - first:
+      213: 5968950595500502621
+    second: Idela Timmy_132
+  - first:
+      213: -821283871089337446
+    second: Idela Timmy_133
+  - first:
+      213: 9218190340503955551
+    second: Idela Timmy_134
+  - first:
+      213: -1117136254418299680
+    second: Idela Timmy_135
+  - first:
+      213: 5778224161659558627
+    second: Idela Timmy_136
+  - first:
+      213: -4210349371363724343
+    second: Idela Timmy_137
+  - first:
+      213: 6484517908732983203
+    second: Idela Timmy_138
+  - first:
+      213: 3850261878289462363
+    second: Idela Timmy_139
+  - first:
+      213: 1425105243478391753
+    second: Idela Timmy_140
+  - first:
+      213: -8376156211160045048
+    second: Idela Timmy_141
+  - first:
+      213: -7164135021985974193
+    second: Idela Timmy_142
+  - first:
+      213: -7742623124721108198
+    second: Idela Timmy_143
+  - first:
+      213: 1659547085150179360
+    second: Idela Timmy_144
+  - first:
+      213: 3908895255402897782
+    second: Idela Timmy_145
+  - first:
+      213: -4375827328565862244
+    second: Idela Timmy_146
+  - first:
+      213: 378836225796573581
+    second: Idela Timmy_147
+  - first:
+      213: -5024033258397672945
+    second: Idela Timmy_148
+  - first:
+      213: -7107191948896947134
+    second: Idela Timmy_149
+  - first:
+      213: 5072673177904248256
+    second: Idela Timmy_150
+  - first:
+      213: 2218603360436776651
+    second: Idela Timmy_151
+  - first:
+      213: 7246568708870449578
+    second: Idela Timmy_152
+  - first:
+      213: -117453802437672970
+    second: Idela Timmy_153
+  - first:
+      213: -2312940991835586342
+    second: Idela Timmy_154
+  - first:
+      213: -8074339245308982321
+    second: Idela Timmy_155
+  - first:
+      213: 2434819703014130675
+    second: Idela Timmy_156
+  - first:
+      213: 5112982934521672120
+    second: Idela Timmy_157
+  - first:
+      213: 3640757372825670033
+    second: Idela Timmy_158
+  - first:
+      213: -2576145311699720221
+    second: Idela Timmy_159
+  - first:
+      213: -6036122342316405873
+    second: Idela Timmy_160
+  - first:
+      213: -1259137161491234437
+    second: Idela Timmy_161
+  - first:
+      213: -4716398595389091039
+    second: Idela Timmy_162
+  - first:
+      213: -2663976050210596054
+    second: Idela Timmy_163
+  - first:
+      213: 5871501713177149253
+    second: Idela Timmy_164
+  - first:
+      213: -1828690025833303942
+    second: Idela Timmy_165
+  - first:
+      213: 2247605409126493108
+    second: Idela Timmy_166
+  - first:
+      213: -7415434339194341431
+    second: Idela Timmy_167
+  - first:
+      213: 1378085110658823433
+    second: Idela Timmy_168
+  - first:
+      213: -8457178691420514232
+    second: Idela Timmy_169
+  - first:
+      213: 7377542673911341525
+    second: Idela Timmy_170
+  - first:
+      213: -8993180078433363528
+    second: Idela Timmy_171
+  - first:
+      213: 8789685115395492154
+    second: Idela Timmy_172
+  - first:
+      213: 553083043054830355
+    second: Idela Timmy_173
+  - first:
+      213: 2175397705578052933
+    second: Idela Timmy_174
+  - first:
+      213: -1240957679745010773
+    second: Idela Timmy_175
+  - first:
+      213: -4823211182844668138
+    second: Idela Timmy_176
+  - first:
+      213: -4785984347516866490
+    second: Idela Timmy_177
+  - first:
+      213: 3616496586747149060
+    second: Idela Timmy_178
+  - first:
+      213: 5555695104955101362
+    second: Idela Timmy_179
+  - first:
+      213: -7039692792874572935
+    second: Idela Timmy_180
+  - first:
+      213: 2511907027501827207
+    second: Idela Timmy_181
+  - first:
+      213: -4572453285470350200
+    second: Idela Timmy_182
+  - first:
+      213: -5986118409481413877
+    second: Idela Timmy_183
+  - first:
+      213: 2030969641872418921
+    second: Idela Timmy_184
+  - first:
+      213: -6734462537407953105
+    second: Idela Timmy_185
+  - first:
+      213: -6363415187136810410
+    second: Idela Timmy_186
+  - first:
+      213: -5115074871202097146
+    second: Idela Timmy_187
+  - first:
+      213: 1499987461319696319
+    second: Idela Timmy_188
+  - first:
+      213: 7978287923536402836
+    second: Idela Timmy_189
+  - first:
+      213: 3324935459631211871
+    second: Idela Timmy_190
+  - first:
+      213: -8292830726429660765
+    second: Idela Timmy_191
+  - first:
+      213: -2057211220441406108
+    second: Idela Timmy_192
+  - first:
+      213: -4792417496614694495
+    second: Idela Timmy_193
+  - first:
+      213: 8949257893841022680
+    second: Idela Timmy_194
+  - first:
+      213: 6469053332609483474
+    second: Idela Timmy_195
+  - first:
+      213: -6859329411219426666
+    second: Idela Timmy_196
+  - first:
+      213: 8930256462818646991
+    second: Idela Timmy_197
+  - first:
+      213: -8361738998159698130
+    second: Idela Timmy_198
+  - first:
+      213: -3464531657261113510
+    second: Idela Timmy_199
+  - first:
+      213: -5011199714481486284
+    second: Idela Timmy_200
+  - first:
+      213: -5057036050857454985
+    second: Idela Timmy_201
+  - first:
+      213: -8039845171362880315
+    second: Idela Timmy_202
+  - first:
+      213: 2078318863600775631
+    second: Idela Timmy_203
+  - first:
+      213: -4014443231359445358
+    second: Idela Timmy_204
+  - first:
+      213: 1877833592013993583
+    second: Idela Timmy_205
+  - first:
+      213: 7474825090947661858
+    second: Idela Timmy_206
+  - first:
+      213: -5570215418693117003
+    second: Idela Timmy_207
+  - first:
+      213: -3174814109387662404
+    second: Idela Timmy_208
+  - first:
+      213: 4683702978850994710
+    second: Idela Timmy_209
+  - first:
+      213: 6909664356786107027
+    second: Idela Timmy_210
+  - first:
+      213: -6051006113407731921
+    second: Idela Timmy_211
+  - first:
+      213: -805211934270008534
+    second: Idela Timmy_212
+  - first:
+      213: 7507572249820118851
+    second: Idela Timmy_213
+  - first:
+      213: 6413421937473696877
+    second: Idela Timmy_214
+  - first:
+      213: 3562260133682283911
+    second: Idela Timmy_215
+  - first:
+      213: -7747202626062059040
+    second: Idela Timmy_216
+  - first:
+      213: -2280422047597994327
+    second: Idela Timmy_217
+  - first:
+      213: -8428471932956317764
+    second: Idela Timmy_218
+  - first:
+      213: -1798062111881822184
+    second: Idela Timmy_219
+  - first:
+      213: 7231294006238035601
+    second: Idela Timmy_220
+  - first:
+      213: 3668551164198500399
+    second: Idela Timmy_221
+  - first:
+      213: -6756360053988776090
+    second: Idela Timmy_222
+  - first:
+      213: -6726588062604713690
+    second: Idela Timmy_223
+  - first:
+      213: -1440390934530970109
+    second: Idela Timmy_224
+  - first:
+      213: -8248224279676212367
+    second: Idela Timmy_225
+  - first:
+      213: 7422284093532999726
+    second: Idela Timmy_226
+  - first:
+      213: 2357396263794622891
+    second: Idela Timmy_227
+  - first:
+      213: 8345402942043318947
+    second: Idela Timmy_228
+  - first:
+      213: -4402976898217513232
+    second: Idela Timmy_229
+  - first:
+      213: 9071230418745295023
+    second: Idela Timmy_230
+  - first:
+      213: -1372999131287318321
+    second: Idela Timmy_231
+  - first:
+      213: -1333501108933443266
+    second: Idela Timmy_232
+  - first:
+      213: -3777852710757299183
+    second: Idela Timmy_233
+  - first:
+      213: -7348734855190616963
+    second: Idela Timmy_234
+  - first:
+      213: 5064470671180668535
+    second: Idela Timmy_235
+  - first:
+      213: -331938506782815982
+    second: Idela Timmy_236
+  - first:
+      213: -3389476797691300660
+    second: Idela Timmy_237
+  - first:
+      213: -5579374741142329479
+    second: Idela Timmy_238
+  - first:
+      213: 1055869252837356977
+    second: Idela Timmy_239
+  - first:
+      213: -342312275380138470
+    second: Idela Timmy_240
+  - first:
+      213: 2227623417105836812
+    second: Idela Timmy_241
+  - first:
+      213: 827923535602022686
+    second: Idela Timmy_242
+  - first:
+      213: -5953638766304107753
+    second: Idela Timmy_243
+  - first:
+      213: 6286877916109011769
+    second: Idela Timmy_244
+  - first:
+      213: -6291391043692142657
+    second: Idela Timmy_245
+  - first:
+      213: -2280303578594547958
+    second: Idela Timmy_246
+  - first:
+      213: -2719633800509384042
+    second: Idela Timmy_247
+  - first:
+      213: 6981486060614280631
+    second: Idela Timmy_248
+  - first:
+      213: 5360540140575273131
+    second: Idela Timmy_249
+  - first:
+      213: -2823099494068481447
+    second: Idela Timmy_250
+  - first:
+      213: -8398383938368673850
+    second: Idela Timmy_251
+  - first:
+      213: -6948455669247136004
+    second: Idela Timmy_252
+  - first:
+      213: -5983060227048785824
+    second: Idela Timmy_253
+  - first:
+      213: -8472410142234634662
+    second: Idela Timmy_254
+  - first:
+      213: 606602916264570619
+    second: Idela Timmy_255
+  - first:
+      213: -5451143559635911243
+    second: Idela Timmy_256
+  - first:
+      213: 5175476121661880487
+    second: Idela Timmy_257
+  - first:
+      213: 349393708483994228
+    second: Idela Timmy_258
+  - first:
+      213: -7815889422682531097
+    second: Idela Timmy_259
+  - first:
+      213: -3799881646467055701
+    second: Idela Timmy_260
+  - first:
+      213: 2738201230978401915
+    second: Idela Timmy_261
+  - first:
+      213: 4890924175046932136
+    second: Idela Timmy_262
+  - first:
+      213: 4408970425610544500
+    second: Idela Timmy_263
+  - first:
+      213: 4177815521398222833
+    second: Idela Timmy_264
+  - first:
+      213: 2719443463391743872
+    second: Idela Timmy_265
+  - first:
+      213: 664634549572930067
+    second: Idela Timmy_266
+  - first:
+      213: -3229438457127829089
+    second: Idela Timmy_267
+  - first:
+      213: 6248806902630026006
+    second: Idela Timmy_268
+  - first:
+      213: 3492705677382054214
+    second: Idela Timmy_269
+  - first:
+      213: -3534021346807859222
+    second: Idela Timmy_270
+  - first:
+      213: 1955064773528357603
+    second: Idela Timmy_271
+  - first:
+      213: -8787573231231432317
+    second: Idela Timmy_272
+  - first:
+      213: -1773902741622910192
+    second: Idela Timmy_273
+  - first:
+      213: 6702084416130220843
+    second: Idela Timmy_274
+  - first:
+      213: 8273225021663653565
+    second: Idela Timmy_275
+  - first:
+      213: -6838836105386123519
+    second: Idela Timmy_276
+  - first:
+      213: -5100860291878443141
+    second: Idela Timmy_277
+  - first:
+      213: -7364677734221365793
+    second: Idela Timmy_278
+  - first:
+      213: 1609305864865012136
+    second: Idela Timmy_279
+  - first:
+      213: 6697450748140035596
+    second: Idela Timmy_280
+  - first:
+      213: -8501054603456543182
+    second: Idela Timmy_281
+  - first:
+      213: 2670595109806697038
+    second: Idela Timmy_282
+  - first:
+      213: -4200722183134364023
+    second: Idela Timmy_283
+  - first:
+      213: 1862894011391714681
+    second: Idela Timmy_284
+  - first:
+      213: -6541120672232884039
+    second: Idela Timmy_285
+  - first:
+      213: -4411027820135114724
+    second: Idela Timmy_286
+  - first:
+      213: 3263327581004073855
+    second: Idela Timmy_287
+  - first:
+      213: 7998257456956502433
+    second: Idela Timmy_288
+  - first:
+      213: 423548299676727584
+    second: Idela Timmy_289
+  - first:
+      213: 8912251333452870920
+    second: Idela Timmy_290
+  - first:
+      213: 7842509139365901143
+    second: Idela Timmy_291
+  - first:
+      213: 5230394384529560700
+    second: Idela Timmy_292
+  - first:
+      213: 805964725482126787
+    second: Idela Timmy_293
+  - first:
+      213: -6533625380666478942
+    second: Idela Timmy_294
+  - first:
+      213: -6457406709967620234
+    second: Idela Timmy_295
+  - first:
+      213: -5519337843875459802
+    second: Idela Timmy_296
+  - first:
+      213: -1246600342813072980
+    second: Idela Timmy_297
+  - first:
+      213: -4565755546928166519
+    second: Idela Timmy_298
+  - first:
+      213: -3442290823272278387
+    second: Idela Timmy_299
+  - first:
+      213: -5720095983704691550
+    second: Idela Timmy_300
+  - first:
+      213: -1322538737618147192
+    second: Idela Timmy_301
+  - first:
+      213: -9089662973363897343
+    second: Idela Timmy_302
+  - first:
+      213: -8355866107371731069
+    second: Idela Timmy_303
+  - first:
+      213: -2995340603703394870
+    second: Idela Timmy_304
+  - first:
+      213: -8532908504914063258
+    second: Idela Timmy_305
+  - first:
+      213: 1200364683606564969
+    second: Idela Timmy_306
+  - first:
+      213: 4698836125068862755
+    second: Idela Timmy_307
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idela Timmy_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 112
+        height: 311
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa499ea3608e48a0800000000000000
+      internalID: -6318972061534827785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_1
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 0
+        width: 112
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10047cf602cc7e510800000000000000
+      internalID: 1578454634102996993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_2
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 0
+        width: 112
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97dd6cfd6786cb990800000000000000
+      internalID: -7368900030515192455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_3
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 0
+        width: 112
+        height: 311
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b0c11a29e440520800000000000000
+      internalID: 2667343270985337666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_4
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 0
+        width: 112
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c358b299fa52fde0800000000000000
+      internalID: -1300877314401741886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_5
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 0
+        width: 112
+        height: 311
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fe300c1af548ec0800000000000000
+      internalID: -3565619856654733551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_6
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 3
+        width: 112
+        height: 311
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defcc004af0f1eba0800000000000000
+      internalID: -6061298665856905235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idela Timmy_7
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 0
+        width: 112
+        height: 320
+      alignment: 9
+      pivot: {x: 0.4649073, y: 0.01177912}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d772b74eef99a40800000000000000
+      internalID: 5375607887515581728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -60,12 +60,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (isGrounded == true)
-        {
-            extraJumps = extraJumpsValue;
-            GetComponent<PlayerSwing>().attachedTo = null;
-        }
-
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
@@ -77,6 +71,12 @@ public class Movement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             jumpPS.Play();
+        }
+
+        if (isGrounded == true)
+        {
+            extraJumps = extraJumpsValue;
+            GetComponent<PlayerSwing>().attachedTo = null;
         }
 
         //climb script

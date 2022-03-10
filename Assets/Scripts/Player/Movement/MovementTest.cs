@@ -65,6 +65,8 @@ public class MovementTest : MonoBehaviour
             GetComponent<PlayerSwingTest>().attachedTo = null;
         }
 
+
+
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);

@@ -41,11 +41,11 @@ public class PlayerSwing : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s") && attachedTo != null)
+        if (Input.GetKeyDown("s") /*&& attachedTo != null*/)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w") && attachedTo != null)
+        if (Input.GetKeyDown("w") /*&& attachedTo != null*/)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);
@@ -88,7 +88,11 @@ public class PlayerSwing : MonoBehaviour
                 {
                     if(disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                     {
-                        Attach(col.gameObject.GetComponent<Rigidbody2D>());
+                        if(GetComponent<Movement>().isGrounded == false) 
+                        {
+                            Attach(col.gameObject.GetComponent<Rigidbody2D>());
+                        }
+                        
                     }
                 }
             }

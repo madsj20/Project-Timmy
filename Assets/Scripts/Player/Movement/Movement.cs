@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
     {
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
-        jumpPS = GetComponent<ParticleSystem>();
+        jumpPS = GameObject.Find("Jump Effect").GetComponent<ParticleSystem>();
         canMove = false;
         Invoke("CanMove", 0f);
     }

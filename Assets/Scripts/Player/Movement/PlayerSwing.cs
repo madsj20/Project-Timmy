@@ -22,12 +22,13 @@ public class PlayerSwing : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
         tim2d = gameObject.GetComponent<BoxCollider2D>();
-        canMove = GetComponent<Movement>().canMove;
+        
     }
 
 
     void Update()
     {
+        canMove = GetComponent<Movement>().canMove;
         CheckInput();
         if (Time.frameCount % 5 == 0)
         {

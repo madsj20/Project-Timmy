@@ -1907,38 +1907,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: lengthInSec
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: ShapeModule.angle
-      value: 80.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: ShapeModule.m_Position.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: ShapeModule.radiusThickness
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 1840509754, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1986,34 +1954,6 @@ PrefabInstance:
     - target: {fileID: 3042317487916538190, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_Name
       value: Timmy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538225, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_GravityScale
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.4649073
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.01177912
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538226, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: jumpPS
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: jumpForce
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: extraJumpsValue
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: happinessBar

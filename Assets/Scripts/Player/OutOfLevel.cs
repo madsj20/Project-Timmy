@@ -14,7 +14,7 @@ public class OutOfLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pos.x < -15)
+        if (gameObject.transform.position.y < -15)
         {
             GetComponent<Transform>().position = pos;
             Debug.Log("Out of bounds");

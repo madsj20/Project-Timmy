@@ -81,7 +81,7 @@ public class BouncyStick : MonoBehaviour
 
 
 
-        Debug.Log(Mathf.InverseLerp(0, 20, timmyVelocity));
+        //Debug.Log(Mathf.InverseLerp(0, 20, timmyVelocity));
     }
 
 }

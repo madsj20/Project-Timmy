@@ -6,64 +6,82 @@ public class PlayerSwing : MonoBehaviour
 {
     public Rigidbody2D rb;
     private HingeJoint2D hj;
+    private BoxCollider2D tim2d;
 
     public float pushForce = 10f;
 
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
+    private bool canMove;
 
+    Vector2 gamer;
 
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
+        tim2d = gameObject.GetComponent<BoxCollider2D>();
+        
     }
 
 
     void Update()
     {
+        canMove = GetComponent<Movement>().canMove;
         CheckInput();
+        if (Time.frameCount % 5 == 0)
+        {
+            GetVelocity();
+        }
     }
     void CheckInput()
     {
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && canMove == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && canMove == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s") /*&& attachedTo != null*/)
+        if (Input.GetKeyDown("s") && canMove == false)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w") /*&& attachedTo != null*/)
+        if (Input.GetKeyDown("w") && canMove == false)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);
         }
         
     }
+    void GetVelocity()
+    {
+        gamer = rb.velocity;
+    }
     public void Attach(Rigidbody2D ropeBone)
     {
+        
         GetComponent<Movement>().canMove = false;
         ropeBone.gameObject.GetComponent<RopeSegment>().isPlayerAttached = true;
         hj.connectedBody = ropeBone;
         hj.enabled = true;
         attached = true;
         attachedTo = ropeBone.gameObject.transform.parent;
+        rb.velocity = new Vector2((gamer.x*2), 0);
+        
 
     }
     void Detatch()
     {
+        tim2d.isTrigger = false;
         GetComponent<Movement>().canMove = true;
         hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
         attached = false;
@@ -90,7 +108,9 @@ public class PlayerSwing : MonoBehaviour
                     {
                         if(GetComponent<Movement>().isGrounded == false) 
                         {
+                            
                             Attach(col.gameObject.GetComponent<Rigidbody2D>());
+                            tim2d.isTrigger = true;
                         }
                         
                     }

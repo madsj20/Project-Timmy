@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840509751}
   serializedVersion: 7
-  lengthInSec: 0.1
+  lengthInSec: 0.05
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.3
+      scalar: 0.2
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -284,7 +284,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 0.2
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -660,12 +660,12 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 40.22
+    angle: 80.2
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.23
     donutRadius: 0.2
-    m_Position: {x: 0.1, y: 0, z: 0}
+    m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: 2, y: 1, z: 1}
     placementMode: 0
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 500
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4933,6 +4933,7 @@ GameObject:
   - component: {fileID: 515507517}
   - component: {fileID: 935108949}
   - component: {fileID: 5295393851187030860}
+  - component: {fileID: 297587363169581423}
   - component: {fileID: 225917953}
   m_Layer: 0
   m_Name: Timmy
@@ -5101,7 +5102,7 @@ MonoBehaviour:
     m_Bits: 64
   extraJumpsValue: 0
   canMove: 1
-  jumpPS: {fileID: 1840509754}
+  jumpPS: {fileID: 0}
 --- !u!114 &515507517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5145,6 +5146,18 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   happinessBar: {fileID: 0}
+--- !u!114 &297587363169581423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704d242451275ca478934686b3fe3018, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &225917953
 Animator:
   serializedVersion: 3

@@ -27,7 +27,11 @@ public class PlatformFall : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Platform"&& GetComponent<PlayerSwing>().attached == false)
+        {
+            m_ObjectCollider.isTrigger = false;
+
+        }
         
-        m_ObjectCollider.isTrigger = false;
     }
 }

@@ -34,6 +34,11 @@ public class PlayerSwing : MonoBehaviour
         {
             GetVelocity();
         }
+
+        if(canMove && !attached && GetComponent<Movement>().isGrounded == true)
+        {
+            GetComponent<PlayerSwing>().attachedTo = null;
+        }
     }
     void CheckInput()
     {

@@ -13,6 +13,7 @@ public class PlayerSwing : MonoBehaviour
     public bool attached = false;
     public Transform attachedTo;
     private GameObject disregard;
+    private bool canMove;
 
     Vector2 gamer;
 
@@ -21,6 +22,7 @@ public class PlayerSwing : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
         tim2d = gameObject.GetComponent<BoxCollider2D>();
+        canMove = GetComponent<Movement>().canMove;
     }
 
 
@@ -34,25 +36,25 @@ public class PlayerSwing : MonoBehaviour
     }
     void CheckInput()
     {
-        if (Input.GetKey("a"))
+        if (Input.GetKey("a") && canMove == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKey("d"))
+        if (Input.GetKey("d") && canMove == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s") /*&& attachedTo != null*/)
+        if (Input.GetKeyDown("s") && canMove == false)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w") /*&& attachedTo != null*/)
+        if (Input.GetKeyDown("w") && canMove == false)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);

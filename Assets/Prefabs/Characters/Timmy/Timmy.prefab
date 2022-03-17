@@ -84,7 +84,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665716757}
   m_LocalRotation: {x: 0, y: 0, z: -0.8032056, w: 0.595702}
-  m_LocalPosition: {x: 0.8202795, y: -0.00000016859325, z: 0}
+  m_LocalPosition: {x: 0.8202795, y: -0.0000001685932, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1832967813}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014922577}
   m_LocalRotation: {x: -0, y: -0, z: 0.7065895, w: 0.7076238}
-  m_LocalPosition: {x: 0.63184965, y: 1.118978, z: 0}
+  m_LocalPosition: {x: 0.030657887, y: 1.064, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 665716758}
@@ -5276,6 +5276,7 @@ GameObject:
   - component: {fileID: 297587363169581423}
   - component: {fileID: 225917953}
   - component: {fileID: 3042317486646254167}
+  - component: {fileID: 1852794593}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -5508,7 +5509,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042317487916538190}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5791a59bc7d6bac4eb417640b14d3879, type: 2}
   m_CullingMode: 0
@@ -5545,7 +5546,19 @@ MonoBehaviour:
   - {fileID: 1399976993}
   - {fileID: 336944577}
   m_Bounds:
-    m_Center: {x: 0.59772277, y: 1.7249638, z: 0}
-    m_Extent: {x: 0.7556509, y: 1.6708777, z: 0}
+    m_Center: {x: -0.00346905, y: 1.6699859, z: 0}
+    m_Extent: {x: 0.7556508, y: 1.6708777, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!114 &1852794593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9905c78da3696c842b791e3fae06c50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

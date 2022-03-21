@@ -15,7 +15,7 @@ public class RealAnimationController : MonoBehaviour
     {
         if (Input.GetKeyDown("w"))
         {
-            // jump animaiton
+            anim.SetBool("isJumping", true);
         }
         if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
         {
@@ -25,7 +25,7 @@ public class RealAnimationController : MonoBehaviour
         else
         {
 
-            //animator.SetBool("isRunnings", false);
+            anim.SetBool("isRunnings", false);
         }
     }
 

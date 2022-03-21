@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float jumpForce = 1;
+    GameObject timmy;
 
     private bool facingRight = true;
     public bool isGrounded;
@@ -29,6 +30,8 @@ public class Movement : MonoBehaviour
         jumpPS = GameObject.Find("Jump Effect").GetComponent<ParticleSystem>();
         canMove = false;
         Invoke("CanMove", 0f);
+
+        timmy = GameObject.Find("Timmy");
     }
 
     // Update is called once per frame
@@ -66,6 +69,7 @@ public class Movement : MonoBehaviour
             jumpPS.Play();
             extraJumps--;
             Debug.Log("Jump");
+
         }
         else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
         {

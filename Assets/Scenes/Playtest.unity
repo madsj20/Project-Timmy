@@ -134,27 +134,13 @@ GameObject:
   - component: {fileID: 62484851}
   - component: {fileID: 62484850}
   - component: {fileID: 62484849}
-  - component: {fileID: 62484848}
   m_Layer: 0
   m_Name: Kaffekop
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &62484848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62484847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98258d53fc503a40bdbd95fb19ae2fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collectibleText: {fileID: 274582774}
 --- !u!61 &62484849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3491,6 +3477,20 @@ MonoBehaviour:
   pushForce: 5
   attached: 0
   attachedTo: {fileID: 0}
+--- !u!114 &1692864774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692864772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98258d53fc503a40bdbd95fb19ae2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleText: {fileID: 274582774}
+  txt: {fileID: 274582776}
 --- !u!114 &1692864776
 MonoBehaviour:
   m_ObjectHideFlags: 0

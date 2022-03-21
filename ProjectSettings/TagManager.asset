@@ -8,6 +8,7 @@ TagManager:
   - Vine
   - Rope
   - Squirrel
+  - Collectible
   layers:
   - Default
   - TransparentFX

@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
-            GetComponent<PlayerSwing>().attachedTo = null;
+            //GetComponent<PlayerSwing>().attachedTo = null;
         }
 
         //climb script

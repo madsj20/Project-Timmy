@@ -14,6 +14,7 @@ public class BouncyStick : MonoBehaviour
     private float timmyVelocity;
     private float timmyVelocitized;
     public float bounceForce = 20f;
+    public float bounceFactor = 1;
 
     private bool running;
     
@@ -62,7 +63,7 @@ public class BouncyStick : MonoBehaviour
    IEnumerator JumpPause()
     {
         running = false;
-        timmy.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * (normDistance * bounceForce * (timmyVelocitized+1)), ForceMode2D.Impulse);
+        timmy.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * (normDistance * bounceForce * (timmyVelocitized+1) * bounceFactor), ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.5f);
         running = true;
     }

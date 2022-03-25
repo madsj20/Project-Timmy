@@ -22,8 +22,7 @@ public class Happiness : MonoBehaviour
     {
         if (Input.GetKeyDown("0"))
         {
-            currentHealth += 20;
-            happinessBar.SetHealth(currentHealth);
+            GiveHappiness(20);
         }
 
         if (Input.GetKeyDown("9"))
@@ -32,10 +31,38 @@ public class Happiness : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Bird")
+        {
+            TakeDamage(10);
+        }
+        if (other.gameObject.tag == "Squirrel")
+        {
+            TakeDamage(10);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "BirdShit")
+        {
+            TakeDamage(15);
+            Destroy(other.gameObject);
+        }
+    }
+
+
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
+        happinessBar.SetHealth(currentHealth);
+    }
+
+    void GiveHappiness(int happiness)
+    {
+        currentHealth += happiness;
         happinessBar.SetHealth(currentHealth);
     }
 }

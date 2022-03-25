@@ -3452,6 +3452,10 @@ PrefabInstance:
       propertyPath: extraJumpsValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: happinessBar
+      value: 
+      objectReference: {fileID: 1537268832}
     m_RemovedComponents:
     - {fileID: 3042317487916538227, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
     - {fileID: 935108949, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}

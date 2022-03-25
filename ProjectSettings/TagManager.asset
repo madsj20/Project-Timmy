@@ -9,6 +9,8 @@ TagManager:
   - Rope
   - Squirrel
   - Collectible
+  - Bird
+  - BirdShit
   layers:
   - Default
   - TransparentFX

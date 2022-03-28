@@ -38,15 +38,21 @@ public class WallJump : MonoBehaviour
         if (isLeft)
         {
             leftOrRight = 1;
+            isWall = true;
         }
         else if  (isRight)
         {
             leftOrRight = -1;
+            isWall = true;
+        }
+        else
+        {
+            isWall = false;
         }
 
         if (Input.GetKeyDown("w") && (isLeft || isRight) /*&& !isGrounded*/)
         {
-            isWall = true;
+            
             wallJumping = true;
             Invoke("SetJumpingToFalse", 0.3f);
         }
@@ -73,6 +79,6 @@ public class WallJump : MonoBehaviour
     {
         wallJumping = false;
         GetComponent<Movement>().canMove = true;
-        isWall = false;
+        
     }
 }

@@ -7,6 +7,7 @@ public class RealAnimationController : MonoBehaviour
     private Animator anim;
     bool grounded;
     bool isJumping;
+    bool isWall;
 
     void Awake()
     {
@@ -17,13 +18,14 @@ public class RealAnimationController : MonoBehaviour
 
     public void Update()
     {
+        isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
         if ((Input.GetKey("a") || (Input.GetKey("d"))) && grounded) //aka se om timmy står på jorden
         {
             stop();
             anim.SetBool("isRunnings", true);
-            Debug.Log("isGrounded: " + this.GetComponent<Movement>().isGrounded);
-            Debug.Log("Animation bool: " + anim.GetBool("isRunnings"));
+            //Debug.Log("isGrounded: " + this.GetComponent<Movement>().isGrounded);
+            //Debug.Log("Animation bool: " + anim.GetBool("isRunnings"));
         }
         else
         {
@@ -36,16 +38,20 @@ public class RealAnimationController : MonoBehaviour
             anim.SetBool("isRunnings", false);
         }*/
 
-        if (!grounded)
+        if (!grounded && !isWall)
         {
             stop();
             anim.SetBool("isJumping", true);
         }
-        else if(anim.GetBool("isJumping") == true && grounded)
+        else if(anim.GetBool("isJumping") == true && (grounded||isWall))
         {
             anim.SetBool("isJumping", false);
         }
         
+        /*if (isWall)
+        {
+            anim.SetBool("isJumping", false);
+        }*/
         
         
         /*if(grounded)

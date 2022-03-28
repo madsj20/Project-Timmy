@@ -8,7 +8,7 @@ public class WallJump : MonoBehaviour
     private float jumpSpeed;
     private float walkSpeed;
     private bool isGrounded;
-    private LayerMask groundMask;
+    public LayerMask groundMask;
     private float moveInput;
     private bool isRight;
     private bool isLeft;
@@ -18,14 +18,14 @@ public class WallJump : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        groundMask = GetComponent<Movement>().whatIsGround;
+        //groundMask = GetComponent<Movement>().whatIsGround;
         walkSpeed = 10f;
         //jumpSpeed = GetComponent<Movement>().jumpForce;
         jumpSpeed = 10f;
     }
     void Update()
     {
-        isGrounded = GetComponent<Movement>().isGrounded;
+        //isGrounded = GetComponent<Movement>().isGrounded;
 
         isLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x -0.25f, gameObject.transform.position.y + 0.8f),
         new Vector2(0.1f, 1.2f), 0f, groundMask);
@@ -42,7 +42,7 @@ public class WallJump : MonoBehaviour
             leftOrRight = -1;
         }
 
-        if (Input.GetKeyDown("w") && (isLeft || isRight) && !isGrounded)
+        if (Input.GetKeyDown("w") && (isLeft || isRight) /*&& !isGrounded*/)
         {
             
             wallJumping = true;

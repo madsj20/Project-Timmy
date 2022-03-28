@@ -5527,6 +5527,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  dirX: 0
   extraJumpsValue: 0
   canMove: 1
   jumpPS: {fileID: 0}
@@ -5646,6 +5647,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9905c78da3696c842b791e3fae06c50a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1130440808
 MonoBehaviour:
   m_ObjectHideFlags: 0

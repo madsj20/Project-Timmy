@@ -5,16 +5,20 @@ using UnityEngine;
 public class RealAnimationController : MonoBehaviour
 {
     private Animator anim;
+    bool grounded;
+    bool isJumping;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
+        grounded = GetComponent<Movement>().isGrounded;
+        
     }
 
     public void Update()
     {
-
-        if ((Input.GetKey("a") || (Input.GetKey("d"))) && this.GetComponent<Movement>().isGrounded == true) //aka se om timmy står på jorden
+        grounded = GetComponent<Movement>().isGrounded;
+        if ((Input.GetKey("a") || (Input.GetKey("d"))) && grounded) //aka se om timmy står på jorden
         {
             stop();
             anim.SetBool("isRunnings", true);
@@ -23,26 +27,37 @@ public class RealAnimationController : MonoBehaviour
         }
         else
         {
+            
             anim.SetBool("isRunnings", false);
         }
-        if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
+        
+        /*if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
             anim.SetBool("isRunnings", false);
-        }
+        }*/
 
-        if (Input.GetKey("w") && this.GetComponent<Movement>().isGrounded == true)
+        if (!grounded)
         {
             stop();
             anim.SetBool("isJumping", true);
         }
-        else
+        else if(anim.GetBool("isJumping") == true && grounded)
         {
             anim.SetBool("isJumping", false);
         }
-        if (Input.GetKeyUp("w"))
+        
+        
+        
+        /*if(grounded)
+        {
+            stop();
+            anim.SetBool("isJumping", false);
+        }*/
+
+        /*if (Input.GetKeyUp("w"))
         {
             anim.SetBool("isRunnings", false);
-        }
+        }*/
 
     }
 

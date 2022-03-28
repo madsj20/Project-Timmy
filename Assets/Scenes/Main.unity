@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform - gren 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 359302839451731726, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1276768788535030211, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
       propertyPath: m_UsedByEffector
       value: 0
@@ -653,7 +657,7 @@ MonoBehaviour:
   birdShit: {fileID: 5613442471283559279, guid: ec7e2dae3b7501549a6572cd878b0784, type: 3}
   speed: 2
   changeDirTime: 5
-  shitTime: 1
+  shitTime: 2.5
 --- !u!1001 &453959394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,6 +1491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform - gren 1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 359302839451731726, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1276768788535030211, guid: efa146f0ae061e44299f248897f85cf1, type: 3}
       propertyPath: m_UsedByEffector
       value: 0
@@ -2189,7 +2197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1146865497089808872, guid: 4e7726c38029bc649b98f040a2b83d37, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1146865497089808872, guid: 4e7726c38029bc649b98f040a2b83d37, type: 3}
       propertyPath: m_LocalRotation.w

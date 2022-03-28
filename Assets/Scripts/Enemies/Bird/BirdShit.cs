@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BirdShit : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class BirdShit : MonoBehaviour
     private bool cooldown;
     private int shitTimer = 3;
     Rigidbody2D rb;
+    public Sprite flatBirdShit;
 
     // Start is called before the first frame update
     void Awake()
@@ -40,7 +42,7 @@ public class BirdShit : MonoBehaviour
         if(other.gameObject.CompareTag("Platform"))
         {
             //Debug.Log("i am running");
-
+            GetComponent<SpriteRenderer>().sprite = flatBirdShit;
             gameObject.transform.parent = other.transform;
             rb.gravityScale = 0;
             rb.velocity = Vector2.zero;

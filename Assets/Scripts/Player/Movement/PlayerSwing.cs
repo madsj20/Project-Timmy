@@ -14,6 +14,7 @@ public class PlayerSwing : MonoBehaviour
     public Transform attachedTo;
     private GameObject disregard;
     private bool canMove;
+    private bool isWall;
 
     Vector2 gamer;
 
@@ -28,7 +29,9 @@ public class PlayerSwing : MonoBehaviour
 
     void Update()
     {
+        isWall = GetComponent<WallJump>().isWall;
         canMove = GetComponent<Movement>().canMove;
+        
         CheckInput();
         if (Time.frameCount % 5 == 0)
         {
@@ -42,25 +45,25 @@ public class PlayerSwing : MonoBehaviour
     }
     void CheckInput()
     {
-        if (Input.GetKey("a") && canMove == false)
+        if (Input.GetKey("a") && canMove == false && isWall == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKey("d") && canMove == false)
+        if (Input.GetKey("d") && canMove == false && isWall == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s") && canMove == false)
+        if (Input.GetKeyDown("s") && canMove == false && isWall == false)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w") && canMove == false)
+        if (Input.GetKeyDown("w") && canMove == false && isWall == false)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);

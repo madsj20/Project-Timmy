@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public float dirX;
 
     private int extraJumps;
     public int extraJumpsValue;
@@ -36,11 +37,11 @@ public class Movement : MonoBehaviour
 
     // Update is called once per frame
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        float dirX = Input.GetAxisRaw("Horizontal");
+        dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)
         {
             rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);

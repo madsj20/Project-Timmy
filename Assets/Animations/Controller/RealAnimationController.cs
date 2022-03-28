@@ -14,37 +14,28 @@ public class RealAnimationController : MonoBehaviour
     public void Update()
     {
 
-        if (Input.GetKeyDown("a") || Input.GetKeyDown("d")) // && (this.GetComponent<Movement>().isGrounded = true)) aka se om timmy står på jorden
+        if ((Input.GetKey("a") || (Input.GetKey("d"))) && this.GetComponent<Movement>().isGrounded == true) //aka se om timmy står på jorden
         {
+            stop();
             anim.SetBool("isRunnings", true);
+            Debug.Log("isGrounded: " + this.GetComponent<Movement>().isGrounded);
+            Debug.Log("Animation bool: " + anim.GetBool("isRunnings"));
         }
-        if (Input.GetKey("a") || Input.GetKey("d"))
+        else
         {
-            anim.SetBool("isRunnings", true);
+            stop();
         }
+       //if ((Input.GetKey("a") || (Input.GetKey("d"))) && this.GetComponent<Movement>().isGrounded == true)
+       //{
+       //    anim.SetBool("isRunnings", true);
+       //}
         if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
         {
+            stop();
             anim.SetBool("isRunnings", false);
         }
-
-        /*
-         if (Input.GetKeyDown("w"))
-         {
-             //stop();
-             anim.SetBool("isJumping", true);
-         }
-         if (Input.GetKeyDown("a") || Input.GetKeyDown("d"))
-         {
-             //stop();
-             anim.SetBool("isIdeal", false);
-             anim.SetBool("isRunnings", true);
-         }
-         else
-         {
-             anim.SetBool("isRunnings", false);
-         }
-        */
     }
+
     public void stop()
     {
         anim.SetBool("isRunnings", false);

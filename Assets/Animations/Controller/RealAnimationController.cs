@@ -23,17 +23,27 @@ public class RealAnimationController : MonoBehaviour
         }
         else
         {
-            stop();
-        }
-       //if ((Input.GetKey("a") || (Input.GetKey("d"))) && this.GetComponent<Movement>().isGrounded == true)
-       //{
-       //    anim.SetBool("isRunnings", true);
-       //}
-        if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
-        {
-            stop();
             anim.SetBool("isRunnings", false);
         }
+        if (Input.GetKeyUp("a") || Input.GetKeyUp("d"))
+        {
+            anim.SetBool("isRunnings", false);
+        }
+
+        if (Input.GetKey("w") && this.GetComponent<Movement>().isGrounded == true)
+        {
+            stop();
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+        if (Input.GetKeyUp("w"))
+        {
+            anim.SetBool("isRunnings", false);
+        }
+
     }
 
     public void stop()

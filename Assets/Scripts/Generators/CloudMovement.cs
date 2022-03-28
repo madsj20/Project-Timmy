@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
-    private float maxVelocity = 0.5f;
+    private float maxVelocity = 0.6f;
     private float minVelocity = 0.2f;
     private int lifeTime = 90;
     private Rigidbody2D rb;

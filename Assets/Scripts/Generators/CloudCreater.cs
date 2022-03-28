@@ -5,9 +5,9 @@ using UnityEngine;
 public class CloudCreater : MonoBehaviour
 {
 
-    public float cloudMin = -2;
-    public float cloudMax = 2;
-    private float spawnRate = 6;
+    public float cloudMin = -4;
+    public float cloudMax = 4;
+    private float spawnRate = 8;
     private int randomCloud;
     public GameObject cloud1;
     public GameObject cloud2;
@@ -16,6 +16,11 @@ public class CloudCreater : MonoBehaviour
     public GameObject cloud5;
     public bool spawnCloud = true;
 
+
+    private void Start()
+    {
+        Invoke("instantiateCloud", 1);
+    }
 
     // Update is called once per frame
     void Update()

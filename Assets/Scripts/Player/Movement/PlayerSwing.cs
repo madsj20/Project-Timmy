@@ -114,7 +114,7 @@ public class PlayerSwing : MonoBehaviour
                 {
                     if(disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                     {
-                        if(GetComponent<Movement>().isGrounded == false) 
+                        if(GetComponent<Movement>().isGrounded == false || !isWall) 
                         {
                             
                             Attach(col.gameObject.GetComponent<Rigidbody2D>());

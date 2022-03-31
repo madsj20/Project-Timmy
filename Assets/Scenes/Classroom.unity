@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 44374943}
   - component: {fileID: 44374942}
   m_Layer: 0
-  m_Name: Child 5
+  m_Name: Child 5 - GirlDevil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 532895856}
   - component: {fileID: 532895855}
   m_Layer: 0
-  m_Name: Child 4
+  m_Name: Child 4 - BadBoi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 1181140597}
   - component: {fileID: 1181140596}
   m_Layer: 0
-  m_Name: Child 2
+  m_Name: Child 2 - GirlHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2311,7 +2311,7 @@ GameObject:
   - component: {fileID: 1786277673}
   - component: {fileID: 1786277672}
   m_Layer: 0
-  m_Name: Child 1
+  m_Name: Child 1 - GirlNoHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

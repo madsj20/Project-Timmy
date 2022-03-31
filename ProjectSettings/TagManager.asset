@@ -11,6 +11,7 @@ TagManager:
   - Collectible
   - Bird
   - BirdShit
+  - HitSquare
   layers:
   - Default
   - TransparentFX

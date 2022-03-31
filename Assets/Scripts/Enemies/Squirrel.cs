@@ -15,13 +15,13 @@ public class Squirrel : MonoBehaviour
     private int dirX = 1;
     public float speed = 2f;
     private bool flipPause = false;
+    public float deathForce = 4;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         canMove = false;
         Invoke("CanMove", 0f);
-        
     }
 
     private void FixedUpdate()
@@ -50,6 +50,18 @@ public class Squirrel : MonoBehaviour
         if (isGrounded == false && flipPause == false)
         {
             StartCoroutine(FlipPause());
+        }
+    }
+    //Squirrel death
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "HitSquare")
+        {
+            //Makes squirrel go through floor
+            GetComponent<Collider2D>().enabled = false;
+            rb.AddForce(transform.up * deathForce, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().freezeRotation = false;
+            rb.AddTorque(360, ForceMode2D.Impulse);
         }
     }
 

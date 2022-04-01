@@ -10,10 +10,12 @@ public class BirdShit : MonoBehaviour
     private int shitTimer = 3;
     Rigidbody2D rb;
     public Sprite flatBirdShit;
+    public GameObject flies;
 
     // Start is called before the first frame update
     void Awake()
     {
+        flies = gameObject.transform.GetChild(0).gameObject;
         iShit = true;
         cooldown = true;
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +45,7 @@ public class BirdShit : MonoBehaviour
         {
             //Debug.Log("i am running");
             GetComponent<SpriteRenderer>().sprite = flatBirdShit;
+            flies.SetActive(true);
             gameObject.transform.parent = other.transform;
             rb.gravityScale = 0;
             rb.velocity = Vector2.zero;

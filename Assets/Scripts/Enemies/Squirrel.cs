@@ -47,7 +47,7 @@ public class Squirrel : MonoBehaviour
             }
         }
 
-        if (isGrounded == false && flipPause == false)
+        if (isGrounded == false && flipPause == false && canMove == true)
         {
             StartCoroutine(FlipPause());
         }
@@ -58,6 +58,7 @@ public class Squirrel : MonoBehaviour
         if (other.gameObject.tag == "HitSquare")
         {
             //Makes squirrel go through floor
+            canMove = false;
             GetComponent<Collider2D>().enabled = false;
             rb.AddForce(transform.up * deathForce, ForceMode2D.Impulse);
             GetComponent<Rigidbody2D>().freezeRotation = false;

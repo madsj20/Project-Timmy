@@ -15,6 +15,7 @@ public class PlayerSwing : MonoBehaviour
     private GameObject disregard;
     private bool canMove;
     private bool isWall;
+    private bool isKnocked;
 
     Vector2 gamer;
 
@@ -24,6 +25,8 @@ public class PlayerSwing : MonoBehaviour
         hj = gameObject.GetComponent<HingeJoint2D>();
         tim2d = gameObject.GetComponent<BoxCollider2D>();
         
+
+
     }
 
 
@@ -31,7 +34,9 @@ public class PlayerSwing : MonoBehaviour
     {
         isWall = GetComponent<WallJump>().isWall;
         canMove = GetComponent<Movement>().canMove;
-        
+        isKnocked = GetComponent<Happiness>().isKnocked;
+
+
         CheckInput();
         if (Time.frameCount % 5 == 0)
         {
@@ -114,7 +119,7 @@ public class PlayerSwing : MonoBehaviour
                 {
                     if(disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                     {
-                        if(GetComponent<Movement>().isGrounded == false && !isWall) 
+                        if(GetComponent<Movement>().isGrounded == false && !isWall && !isKnocked) 
                         {
                             
                             Attach(col.gameObject.GetComponent<Rigidbody2D>());

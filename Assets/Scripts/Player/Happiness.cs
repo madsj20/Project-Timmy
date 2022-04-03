@@ -45,36 +45,34 @@ public class Happiness : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         
-        if (other.gameObject.tag == "Bird" && !isKnocked)
+        if (other.gameObject.CompareTag("Bird") && !isKnocked)
         {
             enemyTf = other.transform;
             TakeDamage(10);
             knockback();
+            Debug.Log("Hit by: " + other);
         }
-        if (other.gameObject.tag == "Squirrel" && !isKnocked)
+        if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
             enemyTf = other.transform;
             TakeDamage(10);
             knockback();
+            Debug.Log("Hit by: " + other);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "BirdShit" && !isKnocked)
+        if (other.gameObject.CompareTag("Spikes") && !isKnocked)
+        {
+            enemyTf = other.transform;
+            TakeDamage(15);
+            knockback();
+            Debug.Log("Hit by: " + other);
+        }
+        if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
         {
             enemyTf = other.transform;
             TakeDamage(15);
             Destroy(other.gameObject);
             knockback();
-        }
-
-        if (other.gameObject.tag == "Spikes" && !isKnocked)
-        {
-            enemyTf = other.transform;
-            TakeDamage(15);
-            knockback();
-            //add knockback
+            Debug.Log("Hit by: " + other);
         }
     }
 

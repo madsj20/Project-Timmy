@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1146865497089808870}
   - component: {fileID: 6603330543452137790}
   - component: {fileID: 6014407292972396036}
+  - component: {fileID: 418882566}
   m_Layer: 0
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,12 +120,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 6
 --- !u!61 &6014407292972396036
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -141,7 +142,7 @@ BoxCollider2D:
   m_Offset: {x: 0.025360107, y: -0.334759}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.34419847}
     oldSize: {x: 3.2, y: 3.2}
     newSize: {x: 3.2, y: 3.2}
     adaptiveTilingThreshold: 0.5
@@ -151,3 +152,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.682644, y: 0.7040286}
   m_EdgeRadius: 0
+--- !u!114 &418882566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146865497089808869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32d027164001d942b7a0849bdcd23e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  canMove: 1
+  deathForce: 4
+  birdShit: {fileID: 5613442471283559279, guid: ec7e2dae3b7501549a6572cd878b0784, type: 3}
+  changeDirTime: 5
+  shitTime: 2.5

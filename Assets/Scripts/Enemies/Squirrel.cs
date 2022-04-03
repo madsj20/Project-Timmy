@@ -2,27 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Squirrel : MonoBehaviour
+public class Squirrel : Enemy
 {
-    public bool canMove;
-    private bool facingRight = true;
-    Rigidbody2D rb;
+    //public bool canMove;
+    //private bool facingRight = true;
+    //Rigidbody2D rb;
 
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
-    private int dirX = 1;
-    public float speed = 2f;
+    //private int dirX = 1;
+    //public float speed = 2f;
     private bool flipPause = false;
-    public float deathForce = 4;
+    //public float deathForce = 4;
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         canMove = false;
         Invoke("CanMove", 0f);
-    }
+    }*/
 
     private void FixedUpdate()
     {
@@ -30,12 +30,11 @@ public class Squirrel : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
-
-        rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
-        //flip player in movement direction
-        if (canMove == true)
+        //rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
+        //flip enemy in movement direction
+        /*if (canMove == true)
         {
             if (facingRight == false && dirX < 0)
             {
@@ -45,40 +44,28 @@ public class Squirrel : MonoBehaviour
             {
                 Flip();
             }
-        }
+        }*/
 
         if (isGrounded == false && flipPause == false && canMove == true)
         {
             StartCoroutine(FlipPause());
         }
-    }
-    //Squirrel death
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "HitSquare")
-        {
-            //Makes squirrel go through floor
-            canMove = false;
-            GetComponent<Collider2D>().enabled = false;
-            rb.AddForce(transform.up * deathForce, ForceMode2D.Impulse);
-            GetComponent<Rigidbody2D>().freezeRotation = false;
-            rb.AddTorque(360, ForceMode2D.Impulse);
-        }
+        base.Update();
     }
 
-    void Flip()
+    /*void Flip()
     {
         facingRight = !facingRight;
         Vector3 Scaler = transform.localScale;
 
         Scaler.x *= -1;
         transform.localScale = Scaler;
-    }
+    }*/
 
-    public void CanMove()
+    /*public void CanMove()
     {
         canMove = true;
-    }
+    }*/
 
     IEnumerator FlipPause()
     {

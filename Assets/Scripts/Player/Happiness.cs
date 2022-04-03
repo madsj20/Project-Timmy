@@ -50,10 +50,16 @@ public class Happiness : MonoBehaviour
             TakeDamage(15);
             Destroy(other.gameObject);
         }
+
+        if (other.gameObject.tag == "Spikes")
+        {
+            TakeDamage(15);
+            //add knockback
+        }
     }
 
 
-    void TakeDamage(int damage)
+     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

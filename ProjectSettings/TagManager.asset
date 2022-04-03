@@ -12,6 +12,7 @@ TagManager:
   - Bird
   - BirdShit
   - HitSquare
+  - Spikes
   layers:
   - Default
   - TransparentFX

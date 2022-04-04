@@ -19,7 +19,7 @@ public class PlatformFall : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Platform" && Input.GetKey("s"))
+        if (collision.gameObject.tag == "Platform" && (Input.GetKey("s") || Input.GetKey(KeyCode.DownArrow)))
         {
             m_ObjectCollider.isTrigger = true;
 

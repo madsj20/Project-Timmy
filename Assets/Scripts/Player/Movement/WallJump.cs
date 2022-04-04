@@ -50,7 +50,7 @@ public class WallJump : MonoBehaviour
             isWall = false;
         }
 
-        if (Input.GetKeyDown("w") && (isLeft || isRight) /*&& !isGrounded*/)
+        if ((Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow)) && (isLeft || isRight) /*&& !isGrounded*/)
         {
             
             wallJumping = true;

@@ -20,7 +20,7 @@ public class RealAnimationController : MonoBehaviour
     {
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
-        if ((Input.GetKey("a") || (Input.GetKey("d"))) && grounded) //aka se om timmy står på jorden
+        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy står på jorden
         {
             stop();
             anim.SetBool("isRunnings", true);

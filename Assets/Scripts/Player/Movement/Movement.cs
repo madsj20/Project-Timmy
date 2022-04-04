@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     private bool facingRight = true;
     public bool isGrounded;
     public Transform groundCheck;
-    public float checkRadius;
+    public float checkWidth = 1;
+    public float checkHeight = 1;
     public LayerMask whatIsGround;
     public float dirX;
 
@@ -31,15 +32,18 @@ public class Movement : MonoBehaviour
         jumpPS = GameObject.Find("Jump Effect").GetComponent<ParticleSystem>();
         canMove = false;
         Invoke("CanMove", 0f);
-
         timmy = GameObject.Find("Timmy");
     }
 
     // Update is called once per frame
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = new Color(1, 0, 0);
+        Gizmos.DrawCube(groundCheck.position, new Vector2(checkWidth, checkHeight));
+    }
     public void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, whatIsGround);
 
         dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)

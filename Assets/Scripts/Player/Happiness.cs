@@ -11,6 +11,9 @@ public class Happiness : MonoBehaviour
     public HappinessBar happinessBar;
     public Transform enemyTf;
     public bool isKnocked;
+    public int knockbackForceUp;
+    public int knockbackForceSides;
+
 
     Rigidbody2D rb;
     
@@ -21,7 +24,8 @@ public class Happiness : MonoBehaviour
         happinessBar.SetMaxHealth(maxHealth);
 
         rb = this.gameObject.GetComponent<Rigidbody2D>();
-        
+        knockbackForceUp = 10;
+        knockbackForceSides = 3;
     }
 
     // Update is called once per frame
@@ -94,15 +98,15 @@ public class Happiness : MonoBehaviour
     {
 
         StartCoroutine(CanMoveAgain());
-        rb.AddForce(Vector2.up * 15f, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up * knockbackForceUp, ForceMode2D.Impulse);
         if (transform.position.x < enemyTf.position.x)
         {
-            rb.AddForce(Vector2.left * 10f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.left * knockbackForceSides, ForceMode2D.Impulse);
         }
         else
         {
             
-            rb.AddForce(Vector2.right * 10f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.right * knockbackForceSides, ForceMode2D.Impulse);
         }
         
     }

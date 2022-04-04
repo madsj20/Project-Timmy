@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 880554547011566576}
   - component: {fileID: 5944883900299800569}
   - component: {fileID: 7938751377303344538}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 758329134}
   - component: {fileID: 848801693164349064}
   - component: {fileID: 7044520118161943931}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bird Shit
   m_TagString: BirdShit
   m_Icon: {fileID: 0}

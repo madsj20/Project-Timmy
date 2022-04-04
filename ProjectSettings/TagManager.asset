@@ -22,10 +22,10 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
-  - 
-  - 
-  - 
+  - GroundEnemy
+  - AirEnemy
+  - Shit
+  - Spike
   - 
   - 
   - 

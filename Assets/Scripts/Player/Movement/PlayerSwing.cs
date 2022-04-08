@@ -50,25 +50,25 @@ public class PlayerSwing : MonoBehaviour
     }
     void CheckInput()
     {
-        if (Input.GetKey("a") && canMove == false && isWall == false)
+        if ((Input.GetKeyDown("a") || Input.GetKey(KeyCode.LeftArrow)) && canMove == false && isWall == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(-1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKey("d") && canMove == false && isWall == false)
+        if ((Input.GetKeyDown("d") || Input.GetKey(KeyCode.RightArrow)) && canMove == false && isWall == false)
         {
             if (attached)
             {
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if (Input.GetKeyDown("s") && canMove == false && isWall == false)
+        if ((Input.GetKeyDown("s") || Input.GetKey(KeyCode.DownArrow)) && canMove == false && isWall == false)
         {
             Detatch();
         }
-        if (Input.GetKeyDown("w") && canMove == false && isWall == false)
+        if ((Input.GetKeyDown("w")|| Input.GetKey(KeyCode.UpArrow)) && canMove == false && isWall == false)
         {
             Detatch();
             rb.velocity = new Vector2(rb.velocity.x, 14f);

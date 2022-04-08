@@ -86,9 +86,42 @@ public class Happiness : MonoBehaviour
             Debug.Log("Hit by: " + other);
         }
     }
+    private void OnTriggerEnter2D (Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("Bird") && !isKnocked)
+        {
+            enemyTf = other.transform;
+            TakeDamage(10);
+            
+            Debug.Log("Hit by: " + other);
+        }
+        if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
+        {
+            
+            TakeDamage(10);
+            
+            Debug.Log("Hit by: " + other);
+        }
+        if (other.gameObject.CompareTag("Spikes") && !isKnocked)
+        {
+            
+            TakeDamage(15);
+            
+            Debug.Log("Hit by: " + other);
+        }
+        if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
+        {
+            
+            TakeDamage(15);
+            Destroy(other.gameObject);
+           
+            Debug.Log("Hit by: " + other);
+        }
+    }
 
 
-     public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

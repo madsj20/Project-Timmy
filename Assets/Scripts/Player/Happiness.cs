@@ -11,6 +11,7 @@ public class Happiness : MonoBehaviour
     public HappinessBar happinessBar;
     public Transform enemyTf;
     public bool isKnocked;
+    public bool checker;
     public int knockbackForceUp;
     public int knockbackForceSides;
 
@@ -24,8 +25,8 @@ public class Happiness : MonoBehaviour
         happinessBar.SetMaxHealth(maxHealth);
 
         rb = this.gameObject.GetComponent<Rigidbody2D>();
-        knockbackForceUp = 10;
-        knockbackForceSides = 3;
+        knockbackForceUp = 15;
+        knockbackForceSides = 10;
     }
 
     // Update is called once per frame
@@ -39,6 +40,12 @@ public class Happiness : MonoBehaviour
         if (Input.GetKeyDown("9"))
         {
             TakeDamage(20);
+        }
+
+        if (isKnocked && GetComponent<Movement>().isGrounded == true && checker)
+        {
+            StopCoroutine(CanMoveAgain());
+            GetComponent<Movement>().canMove = true;
         }
     }
     private void FixedUpdate()
@@ -96,7 +103,7 @@ public class Happiness : MonoBehaviour
 
     void knockback()
     {
-
+        
         StartCoroutine(CanMoveAgain());
         rb.AddForce(Vector2.up * knockbackForceUp, ForceMode2D.Impulse);
         if (transform.position.x < enemyTf.position.x)
@@ -110,12 +117,25 @@ public class Happiness : MonoBehaviour
         }
         
     }
+
+    void check()
+    {
+        if (isKnocked && GetComponent<Movement>().isGrounded == true)
+        {
+            StopCoroutine(CanMoveAgain());
+            GetComponent<Movement>().canMove = true;
+        }
+    }
     IEnumerator CanMoveAgain()
     {
         isKnocked = true;
         GetComponent<Movement>().canMove = false;
+        yield return new WaitForSeconds(0.3f);
+        checker = true;
+
         yield return new WaitForSeconds(1f);
         GetComponent<Movement>().canMove = true;
         isKnocked = false;
+        checker = false;
     }
 }

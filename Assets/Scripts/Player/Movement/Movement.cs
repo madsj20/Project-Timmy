@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour
         }
 
         //climb script
-        if (climb == true)
+        if (climb == true && GetComponent<Happiness>().isKnocked == false)
         {
             if (Input.GetButton("Jump"))
             {

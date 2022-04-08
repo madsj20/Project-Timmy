@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Collectibles : MonoBehaviour
 {
-    public GameObject collectibleText;
-    public Text txt;
+    public GameObject collectedItem;
+    public Sprite currentItem;
     //private string collect;
 
     
@@ -16,7 +16,6 @@ public class Collectibles : MonoBehaviour
 
     private void Start()
     {
-        collectibleText.SetActive(false);
         //Collect = GameObject.FindGameObjectsWithTag("Collectibles");
     }
    
@@ -27,11 +26,12 @@ public class Collectibles : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Collectible"))
         {
-            
+            Debug.Log(currentItem);
             //CollectSound.Play();
             Debug.Log("collected");
-            txt.text = "Det min mors " + collision.gameObject.name + " jeg mistede sidste uge!";
-            collectibleText.SetActive(true);
+            currentItem = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
+            collectedItem.GetComponent<Image>().sprite = currentItem;
+            Debug.Log(currentItem);
             StartCoroutine(Collectible());
             Destroy(collision.gameObject);
         }
@@ -40,7 +40,6 @@ public class Collectibles : MonoBehaviour
         IEnumerator Collectible()
         {
             yield return new WaitForSeconds(3f);
-            collectibleText.SetActive(false);
             Debug.Log("collected3");
 
             

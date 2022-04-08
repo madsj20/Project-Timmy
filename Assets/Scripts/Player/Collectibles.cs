@@ -7,18 +7,37 @@ public class Collectibles : MonoBehaviour
 {
     public GameObject collectedItem;
     public Sprite currentItem;
+    public GameObject currentOwner;
+
+    public Sprite jerome;
+    public Sprite child1;
+    public Sprite child2;
+    public Sprite child3;
+    public Sprite Timmy;
     //private string collect;
 
-    
 
-  
+
+
     //public AudioSource CollectSound;
 
     private void Start()
     {
         //Collect = GameObject.FindGameObjectsWithTag("Collectibles");
     }
-   
+
+    private void Update()
+    {
+        switch (currentItem.name)
+        {
+            case "Bicycle":
+                currentOwner.GetComponent<Image>().sprite = jerome;
+                break;
+            case "Red-White Shoe":
+                currentOwner.GetComponent<Image>().sprite = child2;
+                break;
+        }
+    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,12 +45,10 @@ public class Collectibles : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Collectible"))
         {
-            Debug.Log(currentItem);
             //CollectSound.Play();
             Debug.Log("collected");
             currentItem = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
             collectedItem.GetComponent<Image>().sprite = currentItem;
-            Debug.Log(currentItem);
             StartCoroutine(Collectible());
             Destroy(collision.gameObject);
         }

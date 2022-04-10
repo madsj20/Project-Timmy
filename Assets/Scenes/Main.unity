@@ -1904,7 +1904,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305, y: -182.4}
+  m_AnchoredPosition: {x: -305, y: -273.6}
   m_SizeDelta: {x: 64.2928, y: 64.2928}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330370502
@@ -2405,14 +2405,14 @@ RectTransform:
   m_GameObject: {fileID: 1898715020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.23, z: 1}
   m_Children: []
   m_Father: {fileID: 1330370501}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.854, y: 3}
+  m_AnchoredPosition: {x: 17.854, y: 11.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898715022
@@ -2435,7 +2435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d0991f9b5e863244a8580a6b549999b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4015c68a1b82ddc43b5f942cf0e62df8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3042,23 +3042,31 @@ PrefabInstance:
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: Timmy
       value: 
-      objectReference: {fileID: 21300000, guid: 2cce3acaa77cd1343996cc202bc3be2e, type: 3}
+      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
+    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: timmy
+      value: 
+      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: child1
       value: 
-      objectReference: {fileID: 21300000, guid: 33861f5b78c469e4aa12875ca32426e7, type: 3}
+      objectReference: {fileID: 21300000, guid: e1ec6a95ea680f24f8c5fc49585667aa, type: 3}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: child2
       value: 
-      objectReference: {fileID: 21300000, guid: b5bd5b0e469a72a4a9a21a0589577836, type: 3}
+      objectReference: {fileID: 21300000, guid: 731fc2b3f5270ad439b5f9b9ef029a46, type: 3}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: child3
       value: 
-      objectReference: {fileID: 21300000, guid: 8d0991f9b5e863244a8580a6b549999b, type: 3}
+      objectReference: {fileID: 21300000, guid: 4015c68a1b82ddc43b5f942cf0e62df8, type: 3}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: jerome
       value: 
-      objectReference: {fileID: 21300000, guid: 042ffc672f790f843bffbf44ed6b7ab9, type: 3}
+      objectReference: {fileID: 21300000, guid: 467777a2df9ecf442ae182b28cc8897e, type: 3}
+    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: currentItem
+      value: 
+      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: currentOwner
       value: 

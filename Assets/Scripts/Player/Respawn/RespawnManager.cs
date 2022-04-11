@@ -6,8 +6,7 @@ public class RespawnManager : MonoBehaviour
 {
     private static RespawnManager instance;
     public Vector2 lastCheckPointPos;
-
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {

@@ -15,9 +15,7 @@ public class Checkpoint : MonoBehaviour
       if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("New Checkpoint");
-            Debug.Log(rm.lastCheckPointPos);
             rm.lastCheckPointPos = transform.position;
-            Debug.Log(rm.lastCheckPointPos);
         }
     }
 }

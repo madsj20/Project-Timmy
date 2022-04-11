@@ -16,6 +16,8 @@ public class BouncyStick : MonoBehaviour
     public float bounceForce = 20f;
     public float bounceFactor = 1;
 
+    Vector2 timRB;
+
     private bool running;
     
     public void Awake()
@@ -32,6 +34,10 @@ public class BouncyStick : MonoBehaviour
 
     private void Update()
     {
+        //timmyVelocity = timmy.GetComponent<Rigidbody2D>().velocity.magnitude;
+        //timRB = timmy.GetComponent<Rigidbody2D>().velocity;
+        
+
         if (Time.frameCount % 5 == 0)
         {
             GetVelocity();
@@ -55,8 +61,12 @@ public class BouncyStick : MonoBehaviour
                 
                 StartCoroutine(JumpPause());
             }
-            
+
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * (normDistance * bounceForce), ForceMode2D.Impulse);
+            if (timmy.GetComponent<Rigidbody2D>().velocity.magnitude > 20f)
+            {
+                timmy.GetComponent<Rigidbody2D>().velocity = timmy.GetComponent<Rigidbody2D>().velocity.normalized * 20f;
+            }
             Debug.Log(Mathf.InverseLerp(0, branchWidth, distance));
         }
     }
@@ -79,6 +89,7 @@ public class BouncyStick : MonoBehaviour
     {
         timmyVelocity = timmy.GetComponent<Rigidbody2D>().velocity.magnitude;
         timmyVelocitized = Mathf.InverseLerp(0, 50, timmyVelocity);
+
 
 
 

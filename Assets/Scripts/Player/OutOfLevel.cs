@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class OutOfLevel : MonoBehaviour
 {
-    private Vector2 pos;
+   /* private Vector2 pos;
     // Start is called before the first frame update
     void Start()
     {
-        pos = GetComponent<Transform>().position;
+        pos = GetComponent<Transform>().position;        
     }
 
     // Update is called once per frame
@@ -20,4 +20,5 @@ public class OutOfLevel : MonoBehaviour
             Debug.Log("Out of bounds");
         }
     }
+   */
 }

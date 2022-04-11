@@ -12,8 +12,14 @@ public class Happiness : MonoBehaviour
     public Transform enemyTf;
     public bool isKnocked;
     public bool checker;
+    private bool loop;
+
     public int knockbackForceUp;
     public int knockbackForceSides;
+
+    private GameObject timCock;
+    private SpriteRenderer timCockR;
+
 
 
     Rigidbody2D rb;
@@ -23,6 +29,10 @@ public class Happiness : MonoBehaviour
     {
         currentHealth = maxHealth;
         happinessBar.SetMaxHealth(maxHealth);
+        timCock = GameObject.Find("Timmy´s cock");
+        timCockR = timCock.GetComponent<SpriteRenderer>();
+
+        loop = true;
 
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         knockbackForceUp = 15;
@@ -32,6 +42,18 @@ public class Happiness : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (loop && isKnocked)
+        {
+            loop = false;
+            StartCoroutine(Blinking());
+        }
+        
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
         if (Input.GetKeyDown("0"))
         {
             GiveHappiness(20);
@@ -85,6 +107,10 @@ public class Happiness : MonoBehaviour
             knockback();
             Debug.Log("Hit by: " + other);
         }
+        else if (other.gameObject.CompareTag("BirdShit"))
+        {
+            Destroy(other.gameObject);
+        }
     }
     private void OnTriggerEnter2D (Collider2D other)
     {
@@ -118,6 +144,7 @@ public class Happiness : MonoBehaviour
            
             Debug.Log("Hit by: " + other);
         }
+        
     }
 
 
@@ -151,24 +178,33 @@ public class Happiness : MonoBehaviour
         
     }
 
-    void check()
-    {
-        if (isKnocked && GetComponent<Movement>().isGrounded == true)
-        {
-            StopCoroutine(CanMoveAgain());
-            GetComponent<Movement>().canMove = true;
-        }
-    }
+    
     IEnumerator CanMoveAgain()
     {
         isKnocked = true;
         GetComponent<Movement>().canMove = false;
         yield return new WaitForSeconds(0.3f);
         checker = true;
-
+        
         yield return new WaitForSeconds(1f);
+       
         GetComponent<Movement>().canMove = true;
         isKnocked = false;
+        StopCoroutine(Blinking());
+        GetComponent<SpriteRenderer>().enabled = true;
+        timCockR.enabled = true;
         checker = false;
+    }
+
+    IEnumerator Blinking()
+    {
+        Debug.Log("hej");
+        GetComponent<SpriteRenderer>().enabled = false;
+        timCockR.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        GetComponent<SpriteRenderer>().enabled = true;
+        timCockR.enabled = true;
+        yield return new WaitForSeconds(0.1f);
+        loop = true;
     }
 }

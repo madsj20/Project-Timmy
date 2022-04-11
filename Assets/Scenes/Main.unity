@@ -1334,23 +1334,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 254805717067489495, guid: 0195ecb0f47a6b647b046a278c1d320d, type: 3}
   m_PrefabInstance: {fileID: 254805717045994623}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &927154424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3042317487916538190, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-  m_PrefabInstance: {fileID: 3042317486646254163}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &927154425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927154424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e6f303d16458c7419fe907e610b651f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &964314650
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,34 +3155,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: Timmy
-      value: 
-      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: timmy
-      value: 
-      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: child1
-      value: 
-      objectReference: {fileID: 21300000, guid: e1ec6a95ea680f24f8c5fc49585667aa, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: child2
-      value: 
-      objectReference: {fileID: 21300000, guid: 731fc2b3f5270ad439b5f9b9ef029a46, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: child3
-      value: 
-      objectReference: {fileID: 21300000, guid: 4015c68a1b82ddc43b5f942cf0e62df8, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: jerome
-      value: 
-      objectReference: {fileID: 21300000, guid: 467777a2df9ecf442ae182b28cc8897e, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: currentItem
-      value: 
-      objectReference: {fileID: 21300000, guid: a870bdcbba4c3ef4bb76f502158a986c, type: 3}
-    - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: currentOwner
       value: 
       objectReference: {fileID: 1898715020}
@@ -3251,10 +3206,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3042317487916538189, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538190, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_Name
       value: Timmy
@@ -3263,14 +3214,6 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 1107009497}
-    - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: knockbackForceUp
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
-      propertyPath: knockbackForceSides
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
 --- !u!1001 &5556368622686807830

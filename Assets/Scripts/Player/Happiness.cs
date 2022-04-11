@@ -35,8 +35,6 @@ public class Happiness : MonoBehaviour
         loop = true;
 
         rb = this.gameObject.GetComponent<Rigidbody2D>();
-        knockbackForceUp = 15;
-        knockbackForceSides = 10;
     }
 
     // Update is called once per frame

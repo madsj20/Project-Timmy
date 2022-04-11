@@ -3265,11 +3265,11 @@ PrefabInstance:
       objectReference: {fileID: 1107009497}
     - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: knockbackForceUp
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5295393851187030860, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: knockbackForceSides
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}

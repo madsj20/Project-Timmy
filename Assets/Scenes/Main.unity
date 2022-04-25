@@ -3453,14 +3453,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 195462318641279279, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 195462318641279279, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 195462318641279279, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.66
       objectReference: {fileID: 0}
@@ -3500,31 +3492,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1987307726825135002, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
+      propertyPath: bounceForce
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 5104703889805806463, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
       propertyPath: m_Name
       value: HoppeGren
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
---- !u!1 &7457478375128214735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5104703889805806463, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
-  m_PrefabInstance: {fileID: 7457478375128214734}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7457478375128214736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457478375128214735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd7898f0d3e5164981da6c835ec91db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounceForce: 100
-  bounceFactor: 0.8
 --- !u!1001 &8040655645343800277
 PrefabInstance:
   m_ObjectHideFlags: 0

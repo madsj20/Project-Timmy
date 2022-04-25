@@ -10,10 +10,12 @@ public class Movement : MonoBehaviour
 
     private bool facingRight = true;
     public bool isGrounded;
+    public bool isGrounded1;
     public Transform groundCheck;
     public float checkWidth = 1;
     public float checkHeight = 1;
     public LayerMask whatIsGround;
+    public LayerMask spikes;
     public float dirX;
 
     private int extraJumps;
@@ -44,6 +46,7 @@ public class Movement : MonoBehaviour
     public void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, whatIsGround);
+        isGrounded1 = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, spikes);
 
         dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)
@@ -76,13 +79,13 @@ public class Movement : MonoBehaviour
             Debug.Log("Jump");
 
         }
-        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
+        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && (isGrounded == true || isGrounded1 == true) && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             jumpPS.Play();
         }
 
-        if (isGrounded == true)
+        if (isGrounded == true || isGrounded1 == true)
         {
             extraJumps = extraJumpsValue;
             //GetComponent<PlayerSwing>().attachedTo = null;
@@ -100,7 +103,7 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.gravityScale = 0;
             }
-            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) && isGrounded == false)
+            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) && (isGrounded == false || isGrounded1 == false))
             {
                 rb.velocity = new Vector2(rb.velocity.x, -5f);
             }
@@ -127,6 +130,7 @@ public class Movement : MonoBehaviour
             rb.gravityScale = 4;
         }
     }
+
 
     //Flip function
     void Flip()

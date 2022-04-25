@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd7898f0d3e5164981da6c835ec91db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 100
+  bounceForce: 22
   bounceFactor: 0.8
 --- !u!1001 &1987307728160393975
 PrefabInstance:

@@ -20,5 +20,12 @@ public class PlayerPos : MonoBehaviour
             transform.position = rm.lastCheckPointPos;
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (GetComponent<Happiness>().currentHealth <= 0)
+        {
+            Debug.Log("No Happiness left");
+            transform.position = rm.lastCheckPointPos;
+            GetComponent<Movement>().canMove = false;
+        }
     }
 }

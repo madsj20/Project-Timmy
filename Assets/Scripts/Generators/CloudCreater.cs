@@ -7,7 +7,7 @@ public class CloudCreater : MonoBehaviour
 
     public float cloudMin = -4;
     public float cloudMax = 4;
-    private float spawnRate = 8;
+    public float spawnRate = 8;
     private int randomCloud;
     public GameObject cloud1;
     public GameObject cloud2;

@@ -6,7 +6,6 @@ public class RealAnimationController : MonoBehaviour
 {
     private Animator anim;
     bool grounded;
-    bool groundedBush;
     bool isJumping;
     bool isWall;
 
@@ -14,16 +13,14 @@ public class RealAnimationController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         grounded = GetComponent<Movement>().isGrounded;
-        groundedBush = GetComponent<Movement>().isGrounded;
-
+        
     }
 
     public void Update()
     {
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
-        groundedBush = GetComponent<Movement>().isGrounded;
-        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && (grounded || groundedBush)) //aka se om timmy står på jorden
+        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy står på jorden
         {
             stop();
             anim.SetBool("isRunnings", true);
@@ -41,12 +38,12 @@ public class RealAnimationController : MonoBehaviour
             anim.SetBool("isRunnings", false);
         }*/
 
-        if ((!groundedBush || !grounded) && !isWall)
+        if (!grounded && !isWall)
         {
             stop();
             anim.SetBool("isJumping", true);
         }
-        else if(anim.GetBool("isJumping") == true && ((groundedBush || grounded)||isWall))
+        else if(anim.GetBool("isJumping") == true && (grounded||isWall))
         {
             anim.SetBool("isJumping", false);
         }

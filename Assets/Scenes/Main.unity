@@ -3500,10 +3500,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1987307726825135002, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
-      propertyPath: bounceForce
-      value: 22
-      objectReference: {fileID: 0}
     - target: {fileID: 5104703889805806463, guid: 098579b51b2e3db43abbd5ee8b38acdd, type: 3}
       propertyPath: m_Name
       value: HoppeGren

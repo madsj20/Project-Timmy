@@ -18,7 +18,7 @@ public class PlayerPos : MonoBehaviour
         {
             Debug.Log("Out of bounds");
             transform.position = rm.lastCheckPointPos;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

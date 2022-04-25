@@ -18,6 +18,7 @@ public class Collectibles : MonoBehaviour
 
     private bool bubbleToPos = false;
     public float speed = 8;
+    private int childNumber = 0;
 
     //private string collect;
 
@@ -34,13 +35,19 @@ public class Collectibles : MonoBehaviour
 
     private void Update()
     {
-        switch (currentItem.name)
+        switch (childNumber)
         {
-            case "Bicycle":
+            case 0:
                 currentOwner.GetComponent<Image>().sprite = jerome;
                 break;
-            case "Red-White Shoe":
+            case 1:
                 currentOwner.GetComponent<Image>().sprite = child2;
+                break;
+            case 2:
+                currentOwner.GetComponent<Image>().sprite = child1;
+                break;
+            case 3:
+                currentOwner.GetComponent<Image>().sprite = child3;
                 break;
         }
 
@@ -61,6 +68,7 @@ public class Collectibles : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             //CollectSound.Play();
+            childNumber = Random.Range(0, 4);
             StartCoroutine(Collectible());
             Debug.Log("collected");
             currentItem = collision.gameObject.GetComponent<SpriteRenderer>().sprite;

@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     private bool facingRight = true;
     public bool isGrounded;
-    public bool isGrounded1;
+    public bool isGroundedBush;
     public Transform groundCheck;
     public float checkWidth = 1;
     public float checkHeight = 1;
@@ -45,8 +45,9 @@ public class Movement : MonoBehaviour
     }
     public void FixedUpdate()
     {
+        //checks for different kinds of walkable objects
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, whatIsGround);
-        isGrounded1 = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, spikes);
+        isGroundedBush = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, spikes);
 
         dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)
@@ -71,6 +72,16 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        //checks if player is grounded in any way
+        if (isGrounded == true || isGroundedBush == true)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+
         if (Input.GetButtonDown("Jump") && extraJumps > 0 && canMove == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
@@ -79,13 +90,13 @@ public class Movement : MonoBehaviour
             Debug.Log("Jump");
 
         }
-        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && (isGrounded == true || isGrounded1 == true) && climb == false)
+        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             jumpPS.Play();
         }
 
-        if (isGrounded == true || isGrounded1 == true)
+        if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
             //GetComponent<PlayerSwing>().attachedTo = null;
@@ -103,7 +114,7 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.gravityScale = 0;
             }
-            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) && (isGrounded == false || isGrounded1 == false))
+            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) && isGrounded == false)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -5f);
             }

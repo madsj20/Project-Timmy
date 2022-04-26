@@ -14,14 +14,14 @@ public class RealAnimationController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         grounded = GetComponent<Movement>().isGrounded;
-        groundedBush = GetComponent<Movement>().isGrounded1;
+        groundedBush = GetComponent<Movement>().isGroundedBush;
     }
 
     public void Update()
     {
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
-        groundedBush = GetComponent<Movement>().isGrounded1;
+        groundedBush = GetComponent<Movement>().isGroundedBush;
 
         if (grounded == true || groundedBush == true)
         {

@@ -20,6 +20,8 @@ public class Happiness : MonoBehaviour
     private GameObject timCock;
     private SpriteRenderer timCockR;
 
+    public CameraShake cameraShake;
+
 
 
     Rigidbody2D rb;
@@ -80,6 +82,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(10);
+            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
             knockback();
             Debug.Log("Hit by: " + other);
         }
@@ -87,6 +90,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(10);
+            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
             knockback();
             Debug.Log("Hit by: " + other);
         }
@@ -94,6 +98,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(15);
+            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
             knockback();
             Debug.Log("Hit by: " + other);
         }
@@ -101,6 +106,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(15);
+            StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
             Destroy(other.gameObject);
             knockback();
             Debug.Log("Hit by: " + other);
@@ -108,6 +114,7 @@ public class Happiness : MonoBehaviour
         else if (other.gameObject.CompareTag("BirdShit"))
         {
             Destroy(other.gameObject);
+            StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
         }
     }
     private void OnTriggerEnter2D (Collider2D other)

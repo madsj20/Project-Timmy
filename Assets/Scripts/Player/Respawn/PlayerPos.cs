@@ -18,7 +18,7 @@ public class PlayerPos : MonoBehaviour
         if (gameObject.transform.position.y < rm.lastCheckPointPos.y - 25)
         {
             Debug.Log("Out of bounds");
-            transform.position = rm.lastCheckPointPos;
+            RespawnPlayer();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
@@ -26,11 +26,15 @@ public class PlayerPos : MonoBehaviour
         if (GetComponent<Happiness>().currentHealth <= 0)
         {
             Debug.Log("No Happiness left");
-            GetComponent<Happiness>().currentHealth = GetComponent<Happiness>().maxHealth;
-            happinessBar.SetHealth(GetComponent<Happiness>().currentHealth);
-            Debug.Log("No Happiness left 2");
-            transform.position = rm.lastCheckPointPos;
+            RespawnPlayer();
             GetComponent<Movement>().canMove = true;
         }
+    }
+
+    void RespawnPlayer()
+    {
+        GetComponent<Happiness>().currentHealth = GetComponent<Happiness>().maxHealth;
+        happinessBar.SetHealth(GetComponent<Happiness>().currentHealth);
+        transform.position = rm.lastCheckPointPos;
     }
 }

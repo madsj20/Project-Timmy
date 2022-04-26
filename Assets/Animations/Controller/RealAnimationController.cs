@@ -6,6 +6,7 @@ public class RealAnimationController : MonoBehaviour
 {
     private Animator anim;
     bool grounded;
+    bool groundedBush;
     bool isJumping;
     bool isWall;
 
@@ -13,13 +14,24 @@ public class RealAnimationController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         grounded = GetComponent<Movement>().isGrounded;
-        
+        groundedBush = GetComponent<Movement>().isGrounded1;
     }
 
     public void Update()
     {
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
+        groundedBush = GetComponent<Movement>().isGrounded1;
+
+        if (grounded == true || groundedBush == true)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+
         if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy står på jorden
         {
             stop();

@@ -75,7 +75,7 @@ public class Happiness : MonoBehaviour
         //rb.AddForce(Vector2.left * 20f);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         
         if (other.gameObject.CompareTag("Bird") && !isKnocked)

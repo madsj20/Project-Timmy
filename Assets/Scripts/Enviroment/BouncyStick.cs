@@ -13,8 +13,8 @@ public class BouncyStick : MonoBehaviour
     private float normDistance;
     private float timmyVelocity;
     private float timmyVelocitized;
-    public float bounceForce = 20f;
-    public float bounceFactor = 1;
+    public float bounceForce ;
+    public float bounceFactor;
 
     Vector2 timRB;
 
@@ -88,7 +88,7 @@ public class BouncyStick : MonoBehaviour
     public void GetVelocity()
     {
         timmyVelocity = timmy.GetComponent<Rigidbody2D>().velocity.magnitude;
-        timmyVelocitized = Mathf.InverseLerp(0, 50, timmyVelocity);
+        timmyVelocitized = Mathf.InverseLerp(5, 30, timmyVelocity);
 
 
 

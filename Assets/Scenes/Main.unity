@@ -3842,7 +3842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.128
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 3042317487916538188, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3896,10 +3896,6 @@ PrefabInstance:
     - target: {fileID: 5556368623037157920, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
       propertyPath: m_Name
       value: Rope
-      objectReference: {fileID: 0}
-    - target: {fileID: 5556368623037157921, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
-      propertyPath: numLinks
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5556368623037157934, guid: 00f277cfecd5232429ac167701e614bd, type: 3}
       propertyPath: m_RootOrder

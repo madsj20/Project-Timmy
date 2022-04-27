@@ -13,6 +13,7 @@ public class FallDamage : MonoBehaviour
     float damageForSeconds = 30f;
     public float airTime = 0;
     bool climb = false;
+    bool hitBouncy = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,19 +27,40 @@ public class FallDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!timmyMove.isGrounded && !timmyMove.climb)
+        if (hitBouncy == false)
         {
-            airTime += Time.deltaTime;
-        }
-        if(timmyMove.isGrounded)
-        {
-            if(airTime > minSurviveFall)
+            if (!timmyMove.isGrounded && !timmyMove.climb)
             {
-                timmyHappi.TakeDamage(((int)(damageForSeconds * airTime)));
-                Debug.Log((int)(damageForSeconds * airTime));
-                StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
+                airTime += Time.deltaTime;
             }
+            if (timmyMove.isGrounded)
+            {
+                if (airTime > minSurviveFall)
+                {
+                    timmyHappi.TakeDamage(((int)(damageForSeconds * airTime)));
+                    Debug.Log((int)(damageForSeconds * airTime));
+                    StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
+                }
+                airTime = 0;
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "BouncyPlatform")
+        {
+            Debug.Log("Hit Bouncy Platform");
+            hitBouncy = true;
             airTime = 0;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "BouncyPlatform")
+        {
+            Debug.Log("Left Bouncy Platform");
+            hitBouncy = false;
         }
     }
 }

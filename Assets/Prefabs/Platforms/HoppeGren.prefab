@@ -77,6 +77,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HoppeGren
       objectReference: {fileID: 0}
+    - target: {fileID: 6720453650894651784, guid: f4255459c8a5f1f4eb05f1f3463af0de, type: 3}
+      propertyPath: m_TagString
+      value: BouncyPlatform
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1353617773, guid: f4255459c8a5f1f4eb05f1f3463af0de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f4255459c8a5f1f4eb05f1f3463af0de, type: 3}

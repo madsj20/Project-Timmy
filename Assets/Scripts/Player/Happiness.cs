@@ -82,7 +82,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(10);
-            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
+            StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback();
             Debug.Log("Hit by: " + other);
         }
@@ -90,7 +90,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(10);
-            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
+            StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback();
             Debug.Log("Hit by: " + other);
         }
@@ -98,7 +98,7 @@ public class Happiness : MonoBehaviour
         {
             enemyTf = other.transform;
             TakeDamage(15);
-            StartCoroutine(cameraShake.Shake(0.1f, 0.25f));
+            StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback();
             Debug.Log("Hit by: " + other);
         }

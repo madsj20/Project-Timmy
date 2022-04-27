@@ -5530,6 +5530,7 @@ GameObject:
   - component: {fileID: 1130440808}
   - component: {fileID: 2468602252266393157}
   - component: {fileID: 927154425}
+  - component: {fileID: 1596878700}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -5706,6 +5707,7 @@ MonoBehaviour:
   dirX: 0
   extraJumpsValue: 0
   canMove: 1
+  climb: 0
   jumpPS: {fileID: 0}
 --- !u!114 &515507517
 MonoBehaviour:
@@ -5893,3 +5895,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   happinessBar: {fileID: 0}
+--- !u!114 &1596878700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57f2765a66ead9a4088b6ccbeaea0424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airTime: 0

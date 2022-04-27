@@ -9,7 +9,7 @@ public class FallDamage : MonoBehaviour
     Happiness timmyHappi;
     CameraShake cameraShake;
 
-    float minSurviveFall = 0.7f;
+    float minSurviveFall = 1f;
     float damageForSeconds = 30f;
     public float airTime = 0;
     bool climb = false;

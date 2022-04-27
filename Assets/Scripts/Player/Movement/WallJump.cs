@@ -17,8 +17,12 @@ public class WallJump : MonoBehaviour
     
     public bool isWall;
 
+    FallDamage fallDamage;
+
     private void Start()
     {
+        fallDamage = GetComponent<FallDamage>();
+
         rb = gameObject.GetComponent<Rigidbody2D>();
         //groundMask = GetComponent<Movement>().whatIsGround;
         walkSpeed = 10f;
@@ -54,6 +58,7 @@ public class WallJump : MonoBehaviour
         {
             
             wallJumping = true;
+            fallDamage.airTime = -2;
             Invoke("SetJumpingToFalse", 0.3f);
         }
 

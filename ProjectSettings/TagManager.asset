@@ -15,6 +15,7 @@ TagManager:
   - Spikes
   - GameMaster
   - RM
+  - BouncyPlatform
   layers:
   - Default
   - TransparentFX

@@ -19,13 +19,15 @@ public class PlayerSwing : MonoBehaviour
 
     Vector2 gamer;
 
+    FallDamage fallDamage;
+
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
         tim2d = gameObject.GetComponent<BoxCollider2D>();
-        
 
+        fallDamage = GetComponent<FallDamage>();
 
     }
 
@@ -36,6 +38,10 @@ public class PlayerSwing : MonoBehaviour
         canMove = GetComponent<Movement>().canMove;
         isKnocked = GetComponent<Happiness>().isKnocked;
 
+        if (attached == true)
+        {
+            fallDamage.airTime = -0;
+        }
 
         CheckInput();
         if (Time.frameCount % 5 == 0)
@@ -71,6 +77,7 @@ public class PlayerSwing : MonoBehaviour
         if ((Input.GetKeyDown("w")|| Input.GetKeyDown(KeyCode.UpArrow)) && canMove == false && isWall == false)
         {
             Detatch();
+            fallDamage.airTime = -0;
             rb.velocity = new Vector2(rb.velocity.x, 14f);
         }
         

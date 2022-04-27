@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     public int extraJumpsValue;
 
     public bool canMove;
-    private bool climb = false;
+    public bool climb = false;
 
     public ParticleSystem jumpPS;
 

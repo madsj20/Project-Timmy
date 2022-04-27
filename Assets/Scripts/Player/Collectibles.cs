@@ -68,6 +68,7 @@ public class Collectibles : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             //CollectSound.Play();
+            GetComponent<Happiness>().GiveHappiness(50);
             childNumber = Random.Range(0, 4);
             StartCoroutine(Collectible());
             Debug.Log("collected");

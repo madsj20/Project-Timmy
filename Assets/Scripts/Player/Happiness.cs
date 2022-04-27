@@ -160,7 +160,7 @@ public class Happiness : MonoBehaviour
         happinessBar.SetHealth(currentHealth);
     }
 
-    void GiveHappiness(int happiness)
+    public void GiveHappiness(int happiness)
     {
         currentHealth += happiness;
         happinessBar.SetHealth(currentHealth);
@@ -168,7 +168,6 @@ public class Happiness : MonoBehaviour
 
     void knockback()
     {
-        
         StartCoroutine(CanMoveAgain());
         rb.AddForce(Vector2.up * knockbackForceUp, ForceMode2D.Impulse);
         if (transform.position.x < enemyTf.position.x)
@@ -177,7 +176,6 @@ public class Happiness : MonoBehaviour
         }
         else
         {
-            
             rb.AddForce(Vector2.right * knockbackForceSides, ForceMode2D.Impulse);
         }
         

@@ -7,9 +7,11 @@ public class PlayerPos : MonoBehaviour
 {
     private RespawnManager rm;
     public HappinessBar happinessBar;
+    private FallDamage fallDamage;
 
     void Start()
     {
+        fallDamage = GetComponent<FallDamage>();
         rm = GameObject.FindGameObjectWithTag("RM").GetComponent<RespawnManager>();
         transform.position = rm.lastCheckPointPos;
     }
@@ -36,5 +38,6 @@ public class PlayerPos : MonoBehaviour
         GetComponent<Happiness>().currentHealth = GetComponent<Happiness>().maxHealth;
         happinessBar.SetHealth(GetComponent<Happiness>().currentHealth);
         transform.position = rm.lastCheckPointPos;
+        fallDamage.airTime = 0;
     }
 }

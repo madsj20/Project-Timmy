@@ -8,6 +8,9 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Screen.SetResolution(1920, 1080, true);
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+
     }
 
     // Update is called once per frame

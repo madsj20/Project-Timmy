@@ -172,6 +172,7 @@ public class Happiness : MonoBehaviour
 
     void knockback()
     {
+
         StartCoroutine(CanMoveAgain());
         rb.AddForce(Vector2.up * knockbackForceUp, ForceMode2D.Impulse);
         if (transform.position.x < enemyTf.position.x)

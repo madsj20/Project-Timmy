@@ -49,7 +49,7 @@ public class PlayerSwing : MonoBehaviour
             GetVelocity();
         }
 
-        if(canMove && !attached && GetComponent<Movement>().isGrounded == true)
+        if (canMove && !attached && (GetComponent<Movement>().isGrounded == true || GetComponent<Movement>().isGroundedBush == true))
         {
             GetComponent<PlayerSwing>().attachedTo = null;
         }
@@ -78,7 +78,7 @@ public class PlayerSwing : MonoBehaviour
         {
             Detatch();
             fallDamage.airTime = -0;
-            rb.AddForce(transform.up * 10f, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * 12f, ForceMode2D.Impulse);
         }
         
     }

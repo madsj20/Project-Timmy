@@ -78,7 +78,7 @@ public class PlayerSwing : MonoBehaviour
         {
             Detatch();
             fallDamage.airTime = -0;
-            rb.AddForce(transform.up * 10f, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * 12f, ForceMode2D.Impulse);
         }
         
     }

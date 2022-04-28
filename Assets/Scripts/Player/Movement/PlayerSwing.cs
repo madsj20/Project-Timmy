@@ -49,7 +49,7 @@ public class PlayerSwing : MonoBehaviour
             GetVelocity();
         }
 
-        if(canMove && !attached && GetComponent<Movement>().isGrounded == true)
+        if (canMove && !attached && (GetComponent<Movement>().isGrounded == true || GetComponent<Movement>().isGroundedBush == true))
         {
             GetComponent<PlayerSwing>().attachedTo = null;
         }

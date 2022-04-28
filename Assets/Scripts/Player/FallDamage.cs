@@ -22,6 +22,7 @@ public class FallDamage : MonoBehaviour
         timmy = GameObject.Find("Timmy");
         timmyMove = timmy.GetComponent<Movement>();
         timmyHappi = timmy.GetComponent<Happiness>();
+        airTime = -4;
     }
 
     // Update is called once per frame

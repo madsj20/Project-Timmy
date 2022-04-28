@@ -25,7 +25,7 @@ public class Happiness : MonoBehaviour
     FallDamage fallDamage;
 
     Rigidbody2D rb;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +49,7 @@ public class Happiness : MonoBehaviour
             loop = false;
             StartCoroutine(Blinking());
         }
-        
+
 
         if (currentHealth > maxHealth)
         {
@@ -79,13 +79,13 @@ public class Happiness : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        
+
         if (other.gameObject.CompareTag("Bird") && !isKnocked)
         {
             enemyTf = other.transform;
             TakeDamage(10);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback();
+            knockback(5, 10);
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
@@ -93,7 +93,7 @@ public class Happiness : MonoBehaviour
             enemyTf = other.transform;
             TakeDamage(10);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback();
+            knockback(5, 10);
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Spikes") && !isKnocked)
@@ -101,7 +101,7 @@ public class Happiness : MonoBehaviour
             enemyTf = other.transform;
             TakeDamage(15);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback();
+            knockback(5, 10);
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
@@ -110,48 +110,49 @@ public class Happiness : MonoBehaviour
             TakeDamage(15);
             StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
             Destroy(other.gameObject);
-            knockback();
+            knockback(5, 10);
             Debug.Log("Hit by: " + other);
         }
         else if (other.gameObject.CompareTag("BirdShit"))
         {
             Destroy(other.gameObject);
             StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
+            knockback(5, 10);
         }
     }
-    private void OnTriggerEnter2D (Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
 
         if (other.gameObject.CompareTag("Bird") && !isKnocked)
         {
             enemyTf = other.transform;
             TakeDamage(10);
-            
+
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
-            
+
             TakeDamage(10);
-            
+
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Spikes") && !isKnocked)
         {
-            
+
             TakeDamage(15);
-            
+
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
         {
-            
+
             TakeDamage(15);
             Destroy(other.gameObject);
-           
+
             Debug.Log("Hit by: " + other);
         }
-        
+
     }
 
 
@@ -170,7 +171,7 @@ public class Happiness : MonoBehaviour
         happinessBar.SetHealth(currentHealth);
     }
 
-    void knockback()
+    void knockback(int knockbackForceSides, int knockbackForceUp)
     {
 
         StartCoroutine(CanMoveAgain());
@@ -183,19 +184,19 @@ public class Happiness : MonoBehaviour
         {
             rb.AddForce(Vector2.right * knockbackForceSides, ForceMode2D.Impulse);
         }
-        
+
     }
 
-    
+
     IEnumerator CanMoveAgain()
     {
         isKnocked = true;
         GetComponent<Movement>().canMove = false;
         yield return new WaitForSeconds(0.3f);
         checker = true;
-        
+
         yield return new WaitForSeconds(1f);
-       
+
         GetComponent<Movement>().canMove = true;
         isKnocked = false;
         StopCoroutine(Blinking());

@@ -54,12 +54,12 @@ public class Collectibles : MonoBehaviour
         //Lerp has to be in a loop to work, therefore i use at bool to activate it
         if(bubbleToPos == true)
         {
-            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, 120), Time.deltaTime * speed);
+            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, 0), Time.deltaTime * speed);
         }
 
         if(bubbleToPos == false)
         {
-            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, -120), Time.deltaTime * speed);
+            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, -200), Time.deltaTime * speed);
         }
     }
 

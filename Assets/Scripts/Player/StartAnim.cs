@@ -17,6 +17,11 @@ public class StartAnim : MonoBehaviour
          
         
     }
+    private void Start()
+    {
+        Timmy.gravityScale = 0;
+        Timmy.mass = 0;
+    }
     private void Update()
     {
         if (Starting)
@@ -29,13 +34,11 @@ public class StartAnim : MonoBehaviour
 
     IEnumerator AnimStarter()
     {
-        Timmy.gravityScale = 0;
-        Timmy.mass = 0;
         GetComponent<Movement>().canMove = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         Timmy.gravityScale = 4;
         Timmy.mass = 1;
-        Timmy.AddForce(transform.up * 40f, ForceMode2D.Impulse);
+        Timmy.AddForce(transform.up * 35f, ForceMode2D.Impulse);
         GetComponent<Movement>().canMove = true;
     }
 }

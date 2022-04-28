@@ -574,6 +574,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 254805717067489497, guid: 0195ecb0f47a6b647b046a278c1d320d, type: 3}
+      propertyPath: m_Size.y
+      value: 3.4413698
+      objectReference: {fileID: 0}
+    - target: {fileID: 254805717067489497, guid: 0195ecb0f47a6b647b046a278c1d320d, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.19234455
+      objectReference: {fileID: 0}
     - target: {fileID: 254805717067489498, guid: 0195ecb0f47a6b647b046a278c1d320d, type: 3}
       propertyPath: m_Name
       value: Vines (16)

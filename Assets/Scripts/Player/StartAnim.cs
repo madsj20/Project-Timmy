@@ -35,10 +35,11 @@ public class StartAnim : MonoBehaviour
     IEnumerator AnimStarter()
     {
         GetComponent<Movement>().canMove = false;
-        yield return new WaitForSeconds(1f);
+       
         Timmy.gravityScale = 4;
         Timmy.mass = 1;
         Timmy.AddForce(transform.up * 35f, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(1f);
         GetComponent<Movement>().canMove = true;
     }
 }

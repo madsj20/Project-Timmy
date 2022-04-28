@@ -844,7 +844,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545069845}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3070,7 +3070,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504985737}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3611,6 +3611,7 @@ GameObject:
   - component: {fileID: 1710859135}
   - component: {fileID: 1710859134}
   - component: {fileID: 1710859137}
+  - component: {fileID: 1710859138}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3702,6 +3703,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1710859138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710859133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43148b3f321306a4090628a383b48f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerToNextScene1: 0
 --- !u!1 &1758781068
 GameObject:
   m_ObjectHideFlags: 0

@@ -3166,6 +3166,10 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 1644785357}
+    - target: {fileID: 935108949, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: pushForce
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2468602252266393157, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: currentOwner
       value: 

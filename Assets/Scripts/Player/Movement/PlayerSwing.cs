@@ -8,7 +8,7 @@ public class PlayerSwing : MonoBehaviour
     private HingeJoint2D hj;
     private BoxCollider2D tim2d;
 
-    public float pushForce = 10f;
+    public float pushForce = 20f;
 
     public bool attached = false;
     public Transform attachedTo;

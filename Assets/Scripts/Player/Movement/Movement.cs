@@ -114,7 +114,7 @@ public class Movement : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.gravityScale = 0;
             }
-            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) && isGrounded == false)
+            if ((Input.GetKey("s")|| Input.GetKey(KeyCode.DownArrow)) /*&& isGrounded == false*/)
             {
                 rb.velocity = new Vector2(rb.velocity.x, -5f);
             }

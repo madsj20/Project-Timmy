@@ -22,7 +22,7 @@ public class Happiness : MonoBehaviour
 
     public CameraShake cameraShake;
 
-
+    FallDamage fallDamage;
 
     Rigidbody2D rb;
     
@@ -37,6 +37,8 @@ public class Happiness : MonoBehaviour
         loop = true;
 
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+
+        fallDamage = GetComponent<FallDamage>();
     }
 
     // Update is called once per frame
@@ -158,6 +160,8 @@ public class Happiness : MonoBehaviour
         currentHealth -= damage;
 
         happinessBar.SetHealth(currentHealth);
+        fallDamage.airTime = 0;
+        Debug.Log("Damage taken: " + damage);
     }
 
     public void GiveHappiness(int happiness)

@@ -21,6 +21,7 @@ public class CameraShake : MonoBehaviour
 
             elapsed += Time.deltaTime;
 
+            Debug.Log("Shake");
             //Venter til at næste frame er fremkaldt så den ikke kørerer mens det ikke bliver vist
             yield return null;
         }

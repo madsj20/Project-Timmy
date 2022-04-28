@@ -78,7 +78,7 @@ public class PlayerSwing : MonoBehaviour
         {
             Detatch();
             fallDamage.airTime = -0;
-            rb.AddForce(transform.up * 10f, ForceMode2D.Impulse);
+            rb.AddForce(transform.up * 15f, ForceMode2D.Impulse);
         }
         
     }
@@ -95,7 +95,7 @@ public class PlayerSwing : MonoBehaviour
         hj.enabled = true;
         attached = true;
         attachedTo = ropeBone.gameObject.transform.parent;
-        rb.velocity = new Vector2((gamer.x*2), 0);
+        rb.velocity = new Vector2((gamer.x*4), 0);
         
 
     }
@@ -130,7 +130,7 @@ public class PlayerSwing : MonoBehaviour
                         {
                             
                             Attach(col.gameObject.GetComponent<Rigidbody2D>());
-                            tim2d.isTrigger = true;
+                            //tim2d.isTrigger = true;
                         }
                         
                     }

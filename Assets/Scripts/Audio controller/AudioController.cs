@@ -14,7 +14,7 @@ public class AudioController : MonoBehaviour
         Crying = Resources.Load<AudioClip>("Crying-Timmy");
         Jump = Resources.Load<AudioClip>("Crying-Timmy");
         Landing = Resources.Load<AudioClip>("Landing-Timmy");
-        Hit = Resources.Load<AudioClip>("Lossing-HP-Timmy");
+        Hit = Resources.Load<AudioClip>("Assets/Audio/Sounds/Timmy sounds/Lossing-HP-Timmy.wav");
 
         Audiosrc = GetComponent<AudioSource>();
     }
@@ -46,6 +46,10 @@ public class AudioController : MonoBehaviour
 
             case "Hit":
                 Audiosrc.PlayOneShot(Hit);
+                Debug.Log("played hit sound");
+                break;
+            default:
+                Debug.Log("Something failed, propobely Mads, just blame him <3");
                 break;
         }
     }

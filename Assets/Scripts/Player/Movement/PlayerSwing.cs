@@ -16,6 +16,7 @@ public class PlayerSwing : MonoBehaviour
     private bool canMove;
     private bool isWall;
     private bool isKnocked;
+    int index;
 
     Vector2 gamer;
 
@@ -147,14 +148,23 @@ public class PlayerSwing : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-
+        
         if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
         {
             int index = col.transform.GetSiblingIndex();
-            index = index + 1;
+            
+            
+            if (index < 4)
+            {
+                index = index + 1;
+                Rigidbody2D gamer = col.transform.parent.GetChild(index + 1).gameObject.GetComponent<Rigidbody2D>();
+                hj.connectedBody = gamer;
+            }
+            
+            
 
-            Rigidbody2D gamer = col.transform.parent.GetChild(index+1).gameObject.GetComponent<Rigidbody2D>();
-            hj.connectedBody = gamer;
+
+            
 
         }
     }

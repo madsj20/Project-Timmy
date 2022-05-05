@@ -70,10 +70,14 @@ public class PlayerSwing : MonoBehaviour
                 rb.AddRelativeForce(new Vector3(1, 0, 0) * pushForce);
             }
         }
-        if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
+        /*if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
         {
-            Detatch();
-        }
+            //Detatch();
+            int index = transform.GetSiblingIndex();
+            GameObject nextBrotherNode = transform.parent.GetChild(index + 1).gameObject;
+            attachedTo = nextBrotherNode.transform;
+
+        }*/
         if ((Input.GetKeyDown("w")|| Input.GetKeyDown(KeyCode.UpArrow)) && canMove == false && isWall == false)
         {
             Detatch();
@@ -96,7 +100,10 @@ public class PlayerSwing : MonoBehaviour
         attached = true;
         attachedTo = ropeBone.gameObject.transform.parent;
         rb.velocity = new Vector2((gamer.x*4), 0);
+
         
+        
+            
 
     }
     void Detatch()
@@ -138,6 +145,18 @@ public class PlayerSwing : MonoBehaviour
             }
         }
     }
+    private void OnTriggerStay2D(Collider2D col)
+    {
 
+        if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
+        {
+            int index = col.transform.GetSiblingIndex();
+            index = index + 1;
+
+            Rigidbody2D gamer = col.transform.parent.GetChild(index+1).gameObject.GetComponent<Rigidbody2D>();
+            hj.connectedBody = gamer;
+
+        }
+    }
 
 }

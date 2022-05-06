@@ -42,15 +42,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("HitSquare"))
         {
-            //Makes squirrel go through floor
-            canMove = false;
-            GetComponent<Rigidbody2D>().gravityScale = 1;
-            GetComponent<Collider2D>().enabled = false;
-            rb.AddForce(transform.up * deathForce, ForceMode2D.Impulse);
-            GetComponent<Rigidbody2D>().freezeRotation = false;
-            rb.constraints = (RigidbodyConstraints2D)RigidbodyConstraints.FreezeRotationY;
-            rb.AddTorque(360, ForceMode2D.Impulse);
-            Debug.Log("Hit " + other);
+            StartCoroutine(EnemyDeath());
         }
     }
 
@@ -66,5 +58,17 @@ public class Enemy : MonoBehaviour
 
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+    IEnumerator EnemyDeath()
+    {
+        yield return new WaitForSeconds(0.4f);
+        //Makes squirrel go through floor
+        canMove = false;
+        GetComponent<Rigidbody2D>().gravityScale = 1;
+        GetComponent<Collider2D>().enabled = false;
+        rb.AddForce(transform.up * deathForce, ForceMode2D.Impulse);
+        GetComponent<Rigidbody2D>().freezeRotation = false;
+        rb.constraints = (RigidbodyConstraints2D)RigidbodyConstraints.FreezeRotationY;
+        rb.AddTorque(360, ForceMode2D.Impulse);
     }
 }

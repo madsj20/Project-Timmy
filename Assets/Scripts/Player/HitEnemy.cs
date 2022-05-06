@@ -8,7 +8,11 @@ public class HitEnemy : MonoBehaviour
     public bool hasHit;
     public Transform enemy;
     public float angle;
+
     public Transform rockThrowerTrans;
+    public Rigidbody2D rock;
+    private float launchForce = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,9 @@ public class HitEnemy : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && hasHit == false)
         {
             hasHit = true;
+            Debug.Log("Rock Throw");
+            Rigidbody2D rockInstance = Instantiate(rock, rockThrowerTrans.position, rockThrowerTrans.rotation) as Rigidbody2D;
+            rockInstance.velocity = launchForce * rockThrowerTrans.up;
             StartCoroutine(HitCooldown());
         }
     }

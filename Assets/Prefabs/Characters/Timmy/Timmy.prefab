@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30}
+  m_LocalPosition: {x: 0, y: 5, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 690542976}
@@ -121,7 +121,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5575,6 +5575,7 @@ GameObject:
   - component: {fileID: 2468602252266393157}
   - component: {fileID: 927154425}
   - component: {fileID: 1596878700}
+  - component: {fileID: 2010073033}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Player
@@ -5779,7 +5780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  pushForce: 10
+  pushForce: 20
   attached: 0
   attachedTo: {fileID: 0}
 --- !u!114 &811431546695566667
@@ -5878,8 +5879,8 @@ MonoBehaviour:
   - {fileID: 1399976993}
   - {fileID: 336944577}
   m_Bounds:
-    m_Center: {x: -0.0061196685, y: 1.7139821, z: 0}
-    m_Extent: {x: 0.7549056, y: 1.6710796, z: 0}
+    m_Center: {x: -0.0061195493, y: 1.7139823, z: 0}
+    m_Extent: {x: 0.7549057, y: 1.6710796, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &1852794593
@@ -5938,7 +5939,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3042317487916538190}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e6f303d16458c7419fe907e610b651f, type: 3}
   m_Name: 
@@ -5957,3 +5958,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airTime: 0
+--- !u!114 &2010073033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3042317487916538190}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2b352156b0e8c4aad2b9104fd7dba2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Starting: 1

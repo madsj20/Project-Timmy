@@ -159,7 +159,7 @@ public class Happiness : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        AudioController.playSound("Hit");
+        //AudioController.playSound("Hit");
         happinessBar.SetHealth(currentHealth);
         fallDamage.airTime = 0;
         Debug.Log("Damage taken: " + damage);

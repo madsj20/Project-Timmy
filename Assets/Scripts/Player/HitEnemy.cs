@@ -44,10 +44,10 @@ public class HitEnemy : MonoBehaviour
 
     IEnumerator HitCooldown()
     {
-        //hitSquare.GetComponent<SpriteRenderer>().enabled = true;
+        hitSquare.GetComponent<SpriteRenderer>().enabled = true;
         hitSquare.GetComponent<Collider2D>().enabled = true;
         yield return new WaitForSeconds(0.1f);
-        //hitSquare.GetComponent<SpriteRenderer>().enabled = false;
+        hitSquare.GetComponent<SpriteRenderer>().enabled = false;
         hitSquare.GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(1);
         hasHit = false;

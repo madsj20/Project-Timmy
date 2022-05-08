@@ -9,6 +9,7 @@ public class Collectibles : MonoBehaviour
     public Sprite currentItem;
     public GameObject currentOwner;
     private GameObject speachBubble;
+    private Vector2 SpeachBubbleFinalTrans;
 
     public Sprite jerome;
     public Sprite child1;
@@ -19,6 +20,7 @@ public class Collectibles : MonoBehaviour
     private bool bubbleToPos = false;
     public float speed = 8;
     private int childNumber = 0;
+    private Vector2 speachBubbleTrans;
 
     //private string collect;
 
@@ -31,6 +33,8 @@ public class Collectibles : MonoBehaviour
     {
         //Collect = GameObject.FindGameObjectsWithTag("Collectibles");
         speachBubble = GameObject.Find("Collectibles Speach Bubble");
+        speachBubbleTrans = speachBubble.GetComponent<RectTransform>().position;
+        SpeachBubbleFinalTrans = GameObject.Find("Speach Bubble Transform").GetComponent<RectTransform>().position;
     }
 
     private void Update()
@@ -54,12 +58,12 @@ public class Collectibles : MonoBehaviour
         //Lerp has to be in a loop to work, therefore i use at bool to activate it
         if(bubbleToPos == true)
         {
-            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, 0), Time.deltaTime * speed);
+            speachBubble.GetComponent<RectTransform>().position = Vector2.Lerp(speachBubble.GetComponent<RectTransform>().position, new Vector2(speachBubbleTrans.x, SpeachBubbleFinalTrans.y), Time.deltaTime * speed);
         }
 
         if(bubbleToPos == false)
         {
-            speachBubble.GetComponent<Transform>().position = Vector2.Lerp(speachBubble.GetComponent<Transform>().position, new Vector2(0, -200), Time.deltaTime * speed);
+            speachBubble.GetComponent<RectTransform>().position = Vector2.Lerp(speachBubble.GetComponent<RectTransform>().position, speachBubbleTrans, Time.deltaTime * speed);
         }
     }
 

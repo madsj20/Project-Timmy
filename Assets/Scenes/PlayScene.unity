@@ -6737,6 +6737,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 927154425, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 927154425, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 1644785357}
@@ -11972,7 +11976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0f75170e947c8743aff5ae7b09a7045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: -25, y: 135}
+  lastCheckPointPos: {x: -3.09, y: 0.89}
 --- !u!4 &1201365604
 Transform:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ public class BouncyStick : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log(root);
+        //Debug.Log(root);
         running = true;
     }
 

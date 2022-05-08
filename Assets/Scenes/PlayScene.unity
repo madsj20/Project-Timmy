@@ -6800,7 +6800,8 @@ PrefabInstance:
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 1644785357}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1294570410, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
 --- !u!1001 &652249711
 PrefabInstance:

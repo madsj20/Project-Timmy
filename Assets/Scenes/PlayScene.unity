@@ -4869,7 +4869,7 @@ GameObject:
   - component: {fileID: 475273944}
   m_Layer: 0
   m_Name: Checkpoint 4
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10232,7 +10232,7 @@ GameObject:
   - component: {fileID: 993492272}
   m_Layer: 0
   m_Name: Checkpoint 1
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11955,7 +11955,7 @@ GameObject:
   - component: {fileID: 1201365603}
   m_Layer: 0
   m_Name: RespawnManager
-  m_TagString: Untagged
+  m_TagString: RM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15150,7 +15150,7 @@ GameObject:
   - component: {fileID: 1518917458}
   m_Layer: 0
   m_Name: Checkpoint 3
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19101,7 +19101,7 @@ GameObject:
   - component: {fileID: 1894850143}
   m_Layer: 0
   m_Name: Checkpoint 2
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -65,7 +65,7 @@ public class Happiness : MonoBehaviour
 
         if (Input.GetKeyDown("9"))
         {
-            TakeDamage(20);
+            TakeDamage(20, 0);
         }
 
         if (isKnocked && GetComponent<Movement>().isGrounded == true && checker)
@@ -85,7 +85,7 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("Bird") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(10);
+            TakeDamage(10, 0);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback(5, 10);
             Debug.Log("Hit by: " + other);
@@ -93,7 +93,7 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(10);
+            TakeDamage(10, -4);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback(5, 10);
             Debug.Log("Hit by: " + other);
@@ -101,7 +101,7 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("Spikes") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(15);
+            TakeDamage(15, 0);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback(5, 10);
             Debug.Log("Hit by: " + other);
@@ -109,7 +109,7 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(15);
+            TakeDamage(15, 0);
             StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
             Destroy(other.gameObject);
             knockback(5, 10);
@@ -128,28 +128,27 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("Bird") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(10);
+            TakeDamage(10, 0);
 
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
-
-            TakeDamage(10);
+            TakeDamage(10, -3);
 
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Spikes") && !isKnocked)
         {
 
-            TakeDamage(15);
+            TakeDamage(15, 0);
 
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
         {
 
-            TakeDamage(15);
+            TakeDamage(15, 0);
             Destroy(other.gameObject);
 
             Debug.Log("Hit by: " + other);
@@ -158,14 +157,14 @@ public class Happiness : MonoBehaviour
     }
 
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, int airTimeModifier)
     {
         currentHealth -= damage;
         //AudioController.playSound("Hit");
         happinessBar.SetHealth(currentHealth);
-        fallDamage.airTime = 0;
+        fallDamage.airTime = airTimeModifier;
         Debug.Log("Damage taken: " + damage);
-        crying.Play();
+        //crying.Play();
     }
 
     public void GiveHappiness(int happiness)

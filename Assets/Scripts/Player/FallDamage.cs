@@ -37,7 +37,7 @@ public class FallDamage : MonoBehaviour
             {
                 if (airTime > minSurviveFall)
                 {
-                    timmyHappi.TakeDamage(((int)(damageForSeconds * airTime)));
+                    timmyHappi.TakeDamage(((int)(damageForSeconds * airTime)),0);
                     Debug.Log((int)(damageForSeconds * airTime));
                     StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
                 }

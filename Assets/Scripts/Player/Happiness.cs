@@ -26,6 +26,8 @@ public class Happiness : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public Animation crying;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -163,6 +165,7 @@ public class Happiness : MonoBehaviour
         happinessBar.SetHealth(currentHealth);
         fallDamage.airTime = 0;
         Debug.Log("Damage taken: " + damage);
+        crying.Play();
     }
 
     public void GiveHappiness(int happiness)

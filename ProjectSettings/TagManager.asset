@@ -16,6 +16,7 @@ TagManager:
   - GameMaster
   - RM
   - BouncyPlatform
+  - Rock
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,6 @@ public class FallDamage : MonoBehaviour
     float minSurviveFall = 1.1f;
     float damageForSeconds = 30f;
     public float airTime = 0;
-    bool climb = false;
     bool hitBouncy = false;
 
     // Start is called before the first frame update

@@ -4,25 +4,16 @@ using UnityEngine;
 
 public class Rock : MonoBehaviour
 {
-    private float speed = 50.0f;
-    private GameObject Timmy;
-    private bool moveTorwards = true;
-
-    void Start()
-    {
-        Timmy = GameObject.Find("Timmy");
-    }
+    private float destroyTimer = 10;
 
     void Update()
     {
-        /*if (moveTorwards == true)
-        {
-            float step = speed * Time.deltaTime;
+        GetComponent<Rigidbody2D>().AddTorque(5f);
+    }
 
-            // move sprite towards the target location
-            //transform.position = Vector2.MoveTowards(transform.position, Timmy.GetComponent<Transform>().position, step);
-
-            //moveTorwards = false;
-        }*/
+    IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(destroyTimer);
+        Destroy(gameObject);
     }
 }

@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public bool canMove = true;
     public float deathForce = 4;
     protected float speed = 2f;
+    private float deathTimer;
 
     protected int dirX = 1;
     protected bool facingRight = true;
@@ -42,6 +43,12 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("HitSquare"))
         {
+            deathTimer = 0.4f;
+            StartCoroutine(EnemyDeath());
+        }
+        if (other.gameObject.CompareTag("Rock"))
+        {
+            deathTimer = 0;
             StartCoroutine(EnemyDeath());
         }
     }
@@ -61,7 +68,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator EnemyDeath()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(deathTimer);
         //Makes squirrel go through floor
         canMove = false;
         GetComponent<Rigidbody2D>().gravityScale = 1;

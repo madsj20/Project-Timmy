@@ -24,6 +24,14 @@ public class HitEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<Transform>().localScale.x < 0)
+        {
+            hitSquare.GetComponent<Transform>().localScale = new Vector3(-2.5f, 1.5f, 0);
+        }
+        else
+        {
+            hitSquare.GetComponent<Transform>().localScale = new Vector3(2.5f, 1.5f, 0);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && hasHit == false)
         {
             hasHit = true;
@@ -36,10 +44,10 @@ public class HitEnemy : MonoBehaviour
 
     IEnumerator HitCooldown()
     {
-        hitSquare.GetComponent<SpriteRenderer>().enabled = true;
+        //hitSquare.GetComponent<SpriteRenderer>().enabled = true;
         hitSquare.GetComponent<Collider2D>().enabled = true;
         yield return new WaitForSeconds(0.1f);
-        hitSquare.GetComponent<SpriteRenderer>().enabled = false;
+        //hitSquare.GetComponent<SpriteRenderer>().enabled = false;
         hitSquare.GetComponent<Collider2D>().enabled = false;
         yield return new WaitForSeconds(1);
         hasHit = false;

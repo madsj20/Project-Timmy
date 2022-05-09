@@ -60,7 +60,7 @@ public class WallJump : MonoBehaviour
         {
             
             wallJumping = true;
-            fallDamage.airTime = -0.5f;
+            fallDamage.airTime = -0.3f;
             Invoke("SetJumpingToFalse", 0.3f);
         }
 

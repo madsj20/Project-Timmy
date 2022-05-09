@@ -11,11 +11,13 @@ public class Movement : MonoBehaviour
     private bool facingRight = true;
     public bool isGrounded;
     public bool isGroundedBush;
+    public bool isGroundedWallJump;
     public Transform groundCheck;
     public float checkWidth = 1;
     public float checkHeight = 1;
     public LayerMask whatIsGround;
     public LayerMask spikes;
+    public LayerMask wallJump;
     public float dirX;
 
     private int extraJumps;
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
         //checks for different kinds of walkable objects
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, whatIsGround);
         isGroundedBush = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, spikes);
+        isGroundedWallJump = Physics2D.OverlapBox(groundCheck.position, new Vector2(checkWidth, checkHeight), 0, wallJump);
 
         dirX = Input.GetAxisRaw("Horizontal");
         if (canMove == true)
@@ -72,8 +75,9 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(isGrounded);
         //checks if player is grounded in any way
-        if (isGrounded == true || isGroundedBush == true)
+        if (isGrounded == true || isGroundedBush == true || isGroundedWallJump == true)
         {
             isGrounded = true;
         }

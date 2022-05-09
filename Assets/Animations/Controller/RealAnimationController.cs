@@ -7,6 +7,7 @@ public class RealAnimationController : MonoBehaviour
     private Animator anim;
     bool grounded;
     bool groundedBush;
+    bool isGroundedWallJump;
     bool isJumping;
     bool isWall;
 
@@ -15,6 +16,7 @@ public class RealAnimationController : MonoBehaviour
         anim = GetComponent<Animator>();
         grounded = GetComponent<Movement>().isGrounded;
         groundedBush = GetComponent<Movement>().isGroundedBush;
+        isGroundedWallJump = GetComponent<Movement>().isGroundedWallJump;
     }
 
     public void Update()
@@ -23,7 +25,7 @@ public class RealAnimationController : MonoBehaviour
         grounded = GetComponent<Movement>().isGrounded;
         groundedBush = GetComponent<Movement>().isGroundedBush;
 
-        if (grounded == true || groundedBush == true)
+        if (grounded == true || groundedBush == true || isGroundedWallJump == true)
         {
             grounded = true;
         }

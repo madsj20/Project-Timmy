@@ -323,8 +323,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5216983082625256327, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
       propertyPath: m_Name
-      value: AudioController
+      value: AudioControllerObjekt
       objectReference: {fileID: 0}
+    - target: {fileID: 6074287239502822085, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
+      propertyPath: Hit
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d4cf123e41e95240bb0ceb96c4810d4, type: 3}
+    - target: {fileID: 6074287239502822085, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
+      propertyPath: Jump
+      value: 
+      objectReference: {fileID: 8300000, guid: 54a11c59187475a4896377007f007003, type: 3}
+    - target: {fileID: 6074287239502822085, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
+      propertyPath: Crying
+      value: 
+      objectReference: {fileID: 8300000, guid: 52e78bbfd2e8d3e4b84b5af38e9856d6, type: 3}
+    - target: {fileID: 6074287239502822085, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
+      propertyPath: Landing
+      value: 
+      objectReference: {fileID: 8300000, guid: 4616cb4af1a59dc4fbb951afbfea20b6, type: 3}
+    - target: {fileID: 6074287239502822085, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
+      propertyPath: UIClick
+      value: 
+      objectReference: {fileID: 8300000, guid: 48e936c712bf6cf4198eff8251f8ea46, type: 3}
     - target: {fileID: 9160788303592081755, guid: 88f49c5a149fac94486fe7a80f9aa53e, type: 3}
       propertyPath: m_RootOrder
       value: 0

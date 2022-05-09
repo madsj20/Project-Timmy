@@ -19,9 +19,12 @@ public class BouncyStick : MonoBehaviour
     Vector2 timRB;
 
     private bool running;
+
+    GameObject audios;
     
     public void Awake()
     {
+        audios = GameObject.Find("AudioManager");
         timmy = GameObject.FindWithTag("Player");
         branchWidth = GetComponent<Collider2D>().bounds.size.x;
 
@@ -48,7 +51,7 @@ public class BouncyStick : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            
+            audios.GetComponent<AudioController>().playJump();
             timmyRoot = timmy.transform.position.x;
             root = this.gameObject.transform.GetChild(0).position.x;
             distance = Mathf.Abs(timmyRoot - root);

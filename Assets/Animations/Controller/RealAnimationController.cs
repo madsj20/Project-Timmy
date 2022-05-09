@@ -10,12 +10,14 @@ public class RealAnimationController : MonoBehaviour
     bool isGroundedWallJump;
     bool isJumping;
     bool isWall;
+    GameObject audios;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         grounded = GetComponent<Movement>().isGrounded;
         groundedBush = GetComponent<Movement>().isGroundedBush;
+        audios = GameObject.Find("AudioManager");
         isGroundedWallJump = GetComponent<Movement>().isGroundedWallJump;
     }
 
@@ -34,7 +36,7 @@ public class RealAnimationController : MonoBehaviour
             grounded = false;
         }
 
-        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy står på jorden
+        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy stï¿½r pï¿½ jorden
         {
             stop();
             anim.SetBool("isRunnings", true);
@@ -61,6 +63,10 @@ public class RealAnimationController : MonoBehaviour
         {
             anim.SetBool("isJumping", false);
         }
+
+       
+
+
         
         /*if (isWall)
         {

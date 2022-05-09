@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioClip UIClick, Crying, Jump, Landing, Hit;
-    static AudioSource Audiosrc;
-    private AudioController Instance;
+    //public AudioClip UIClick, Crying, Jump, Landing, Hit;
+    //static AudioSource Audiosrc;
+    //private AudioController Instance;
+    public AudioSource audioSource;
+    public AudioClip Jump;
+    public AudioClip clip1;
 
 
-    private void Awake()
+    public void Awake()
     {
-        Audiosrc = this.GetComponent<AudioSource>();
-        Instance = this;
+        audioSource = GetComponent<AudioSource>();
+        clip1 = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Crying-Timmy");
+        Jump = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Jumping-Timmy");
+        //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
+        //AudioClip clip3 = Resources.Load("Sounds/cube_onslot", typeof(AudioClip)) as AudioClip;
 
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //audioSource.PlayOneShot(clip1);
     }
 
-    public static void playSound() 
+    public void playJump() 
     {
-        AudioClip[] audioClips;
-        
+
+        audioSource.PlayOneShot(Jump);
+
     }
 }

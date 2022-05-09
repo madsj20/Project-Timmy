@@ -28,7 +28,14 @@ public class Movement : MonoBehaviour
 
     public ParticleSystem jumpPS;
 
+    private GameObject audios;
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
     void Start()
     {
         extraJumps = extraJumpsValue;
@@ -37,6 +44,7 @@ public class Movement : MonoBehaviour
         canMove = false;
         Invoke("CanMove", 0f);
         timmy = GameObject.Find("Timmy");
+        
     }
 
     // Update is called once per frame
@@ -92,12 +100,14 @@ public class Movement : MonoBehaviour
             jumpPS.Play();
             extraJumps--;
             Debug.Log("Jump");
+            
 
         }
         else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             jumpPS.Play();
+            audios.GetComponent<AudioController>().playJump();
         }
 
         if (isGrounded == true)
@@ -111,6 +121,7 @@ public class Movement : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
+                
                 rb.velocity = new Vector2(rb.velocity.x, 5f);
             }
             else

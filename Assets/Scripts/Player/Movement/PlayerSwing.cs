@@ -22,8 +22,11 @@ public class PlayerSwing : MonoBehaviour
 
     FallDamage fallDamage;
 
+    GameObject audios;
+
     void Awake()
     {
+        audios = GameObject.Find("AudioManager");
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
         tim2d = gameObject.GetComponent<BoxCollider2D>();
@@ -81,6 +84,7 @@ public class PlayerSwing : MonoBehaviour
         }*/
         if ((Input.GetKeyDown("w")|| Input.GetKeyDown(KeyCode.UpArrow)) && canMove == false && isWall == false)
         {
+            audios.GetComponent<AudioController>().playJump();
             Detatch();
             fallDamage.airTime = -0;
             rb.AddForce(transform.up * 12f, ForceMode2D.Impulse);

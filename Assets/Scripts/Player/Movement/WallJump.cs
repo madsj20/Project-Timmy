@@ -19,6 +19,13 @@ public class WallJump : MonoBehaviour
 
     FallDamage fallDamage;
 
+
+    GameObject audios;
+
+    public void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
     private void Start()
     {
         fallDamage = GetComponent<FallDamage>();
@@ -62,6 +69,7 @@ public class WallJump : MonoBehaviour
             wallJumping = true;
             fallDamage.airTime = -0.3f;
             Invoke("SetJumpingToFalse", 0.3f);
+            audios.GetComponent<AudioController>().playJump();
         }
 
         if (wallJumping)

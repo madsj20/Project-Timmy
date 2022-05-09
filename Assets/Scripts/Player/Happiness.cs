@@ -27,10 +27,12 @@ public class Happiness : MonoBehaviour
     Rigidbody2D rb;
 
     public AudioController audioo;
+    GameObject audios;
 
     // Start is called before the first frame update
     void Start()
     {
+        audios = GameObject.Find("AudioManager");
         currentHealth = maxHealth;
         happinessBar.SetMaxHealth(maxHealth);
         timCock = GameObject.Find("Timmy´s cock");

@@ -41,11 +41,13 @@ public class WallJump : MonoBehaviour
 
         if (isLeft)
         {
+            fallDamage.airTime = -3f;
             leftOrRight = 1;
             isWall = true;
         }
         else if  (isRight)
         {
+            fallDamage.airTime = -3f;
             leftOrRight = -1;
             isWall = true;
         }
@@ -58,7 +60,7 @@ public class WallJump : MonoBehaviour
         {
             
             wallJumping = true;
-            fallDamage.airTime = -2;
+            fallDamage.airTime = -0.5f;
             Invoke("SetJumpingToFalse", 0.3f);
         }
 

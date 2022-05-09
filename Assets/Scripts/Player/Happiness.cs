@@ -162,7 +162,7 @@ public class Happiness : MonoBehaviour
     public void TakeDamage(int damage, int airTimeModifier)
     {
         currentHealth -= damage;
-        audioo.Hit;
+        //audioo.Hit;
         happinessBar.SetHealth(currentHealth);
         fallDamage.airTime = airTimeModifier;
         Debug.Log("Damage taken: " + damage);

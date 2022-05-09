@@ -128,9 +128,13 @@ public class PlayerSwing : MonoBehaviour
     {
         if (!attached)
         {
-            if(col.gameObject.tag == "Rope")
+
+            int index = col.transform.GetSiblingIndex();
+
+            if (col.gameObject.tag == "Rope" )
             {
-                if(attachedTo != col.gameObject.transform.parent)
+
+                if (attachedTo != col.gameObject.transform.parent && index != 1)
                 {
                     if(disregard == null || col.gameObject.transform.parent.gameObject != disregard)
                     {
@@ -148,25 +152,32 @@ public class PlayerSwing : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        
-        if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
+        if(col.gameObject.tag == "Rope")
         {
             int index = col.transform.GetSiblingIndex();
-            
-            
-            if (index < 4)
+            if ((Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow)) && canMove == false && isWall == false)
             {
-                index = index + 1;
-                Rigidbody2D gamer = col.transform.parent.GetChild(index + 1).gameObject.GetComponent<Rigidbody2D>();
-                hj.connectedBody = gamer;
+
+                
+
+
+                if (index < 4)
+                {
+
+                    index = index + 1;
+
+                    Rigidbody2D gamer = col.transform.parent.GetChild(index + 1).gameObject.GetComponent<Rigidbody2D>();
+                    hj.connectedBody = gamer;
+                }
             }
-            
-            
 
 
-            
+
 
         }
+
+        
+
     }
 
 }

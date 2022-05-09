@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3768149202795079773}
   - component: {fileID: 3768149202795079772}
   - component: {fileID: 3768149202795079770}
+  - component: {fileID: 3270946743560893106}
   m_Layer: 7
   m_Name: Walljump branch
   m_TagString: Untagged
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 66567c6377f1f4c4eb38042db954a5b4, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.5701361, y: -0.014434814}
   m_SpriteTilingProperty:
@@ -109,3 +110,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.58748055, y: 5.96698}
   m_EdgeRadius: 0
+--- !u!251 &3270946743560893106
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768149202795079775}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 180
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 340
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1

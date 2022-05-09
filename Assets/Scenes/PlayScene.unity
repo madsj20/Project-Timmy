@@ -6191,6 +6191,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0195ecb0f47a6b647b046a278c1d320d, type: 3}
+--- !u!1 &530135948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3768149202795079775, guid: 63f328df75b25294ea3c322f9833a485, type: 3}
+  m_PrefabInstance: {fileID: 1325900806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &530135952
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530135948}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 180
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 340
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1001 &530914576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15018,6 +15042,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 66567c6377f1f4c4eb38042db954a5b4, type: 2}
+    - target: {fileID: 3768149202795079770, guid: 63f328df75b25294ea3c322f9833a485, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3768149202795079773, guid: 63f328df75b25294ea3c322f9833a485, type: 3}
       propertyPath: m_RootOrder
       value: 19

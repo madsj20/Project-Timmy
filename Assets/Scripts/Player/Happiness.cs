@@ -26,7 +26,7 @@ public class Happiness : MonoBehaviour
 
     Rigidbody2D rb;
 
-    public Animation crying;
+    public AudioController audioo;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,8 @@ public class Happiness : MonoBehaviour
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
         fallDamage = GetComponent<FallDamage>();
+
+        audioo = GameObject.Find("AudioControllerObjekt").GetComponent <AudioController>();
     }
 
     // Update is called once per frame
@@ -93,7 +95,7 @@ public class Happiness : MonoBehaviour
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
             enemyTf = other.transform;
-            TakeDamage(10, -4);
+            TakeDamage(10, -1);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
             knockback(5, 10);
             Debug.Log("Hit by: " + other);
@@ -134,7 +136,7 @@ public class Happiness : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
         {
-            TakeDamage(10, -3);
+            TakeDamage(10, -1);
 
             Debug.Log("Hit by: " + other);
         }
@@ -160,7 +162,7 @@ public class Happiness : MonoBehaviour
     public void TakeDamage(int damage, int airTimeModifier)
     {
         currentHealth -= damage;
-        //AudioController.playSound("Hit");
+        //
         happinessBar.SetHealth(currentHealth);
         fallDamage.airTime = airTimeModifier;
         Debug.Log("Damage taken: " + damage);

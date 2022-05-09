@@ -4877,6 +4877,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 1365338838}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4973,6 +4974,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6579526f534c1b042b1d4d712d620fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1365338838
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &665716757
 GameObject:
   m_ObjectHideFlags: 0
@@ -9895,7 +9915,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014922577}
-  m_LocalRotation: {x: -0, y: -0, z: 0.6985234, w: 0.7155874}
+  m_LocalRotation: {x: -0, y: -0, z: 0.69852334, w: 0.7155873}
   m_LocalPosition: {x: 0.03065777, y: 1.1071992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -19691,7 +19711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832967812}
-  m_LocalRotation: {x: -0, y: -0, z: -0.8042032, w: -0.59435457}
+  m_LocalRotation: {x: -0, y: -0, z: -0.80420315, w: -0.59435457}
   m_LocalPosition: {x: 0.01751804, y: 0.082459524, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -24948,6 +24968,7 @@ MonoBehaviour:
   knockbackForceUp: 10
   knockbackForceSides: 5
   cameraShake: {fileID: 519420033}
+  crying: {fileID: 0}
 --- !u!95 &225917953
 Animator:
   serializedVersion: 3
@@ -24993,8 +25014,8 @@ MonoBehaviour:
   - {fileID: 1399976993}
   - {fileID: 336944577}
   m_Bounds:
-    m_Center: {x: -0.0061195493, y: 1.7139822, z: 0}
-    m_Extent: {x: 0.7549062, y: 1.6710796, z: 0}
+    m_Center: {x: -0.0061175227, y: 1.7139739, z: 0}
+    m_Extent: {x: 0.7549046, y: 1.6710775, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!114 &1852794593

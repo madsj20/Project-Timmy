@@ -24,6 +24,7 @@ public class HitEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hitSquare.GetComponent<Transform>().position = new Vector2(GetComponent<Transform>().position.x, GetComponent<Transform>().position.y + 0.75f);
         if (GetComponent<Transform>().localScale.x < 0)
         {
             hitSquare.GetComponent<Transform>().localScale = new Vector3(-2.5f, 1.5f, 0);

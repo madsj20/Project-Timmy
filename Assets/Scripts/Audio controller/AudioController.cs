@@ -17,43 +17,43 @@ public class AudioController : MonoBehaviour
 
 
     public void Awake()
-    {
-        childsource = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
-
-        audioSource = GetComponent<AudioSource>();
-        clip1 = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Crying-Timmy");
-        Jump = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Jumping-Timmy");
-        TouchGrass = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Landing-Timmy");
-        backgrounds = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Music");
-        //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
+    {
+        childsource = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
+
+        audioSource = GetComponent<AudioSource>();
+        clip1 = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Crying-Timmy");
+        Jump = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Jumping-Timmy");
+        TouchGrass = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Landing-Timmy");
+        backgrounds = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Music");
+        //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
         //AudioClip clip3 = Resources.Load("Sounds/cube_onslot", typeof(AudioClip)) as AudioClip;
 
         //audioSource.PlayOneShot(clip1);
-    }
-    public void Start()
-    {
-        background();
+    }
+    public void Start()
+    {
+        background();
     }
 
     public void playJump() 
-    {
-        audioSource.volume = 0.5f;
-        audioSource.PlayOneShot(Jump);
-
+    {
+
+        audioSource.PlayOneShot(Jump);
+
     }
 
-    public void FallGround()
-    {
-        audioSource.volume = 1f;
-        audioSource.PlayOneShot(TouchGrass);
+    public void FallGround()
+    {
+        audioSource.volume = 1f;
+        audioSource.PlayOneShot(TouchGrass);
     }
 
-    public void background()
-    {
-        
-        childsource.loop = true;
-        childsource.clip = backgrounds;
-        childsource.volume = 0.1f;
-        childsource.Play();
+    public void background()
+    {
+        
+        childsource.loop = true;
+        childsource.clip = backgrounds;
+        childsource.volume = 0.1f;
+        childsource.Play();
     }
 }

@@ -69,6 +69,7 @@ public class Collectibles : MonoBehaviour
         {
             speachBubble.GetComponent<RectTransform>().position = Vector2.Lerp(speachBubble.GetComponent<RectTransform>().position, speachBubbleTrans, Time.deltaTime * speed);
         }
+
         //Prints Collected Items
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {

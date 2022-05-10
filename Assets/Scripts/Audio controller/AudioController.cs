@@ -41,7 +41,7 @@ public class AudioController : MonoBehaviour
 
     public void playJump() 
     {
-        audioSource.volume = 0.5f;
+        audioSource.volume = 0.2f;
         audioSource.PlayOneShot(Jump);
 
     }

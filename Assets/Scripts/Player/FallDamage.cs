@@ -9,14 +9,24 @@ public class FallDamage : MonoBehaviour
     Happiness timmyHappi;
     CameraShake cameraShake;
 
+    public bool falling;
+
     float minSurviveFall = 1.1f;
     float damageForSeconds = 30f;
     public float airTime = 0;
     bool hitBouncy = false;
 
+    GameObject audios;
+
     // Start is called before the first frame update
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
+
     void Start()
     {
+        falling = true;
         cameraShake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         timmy = GameObject.Find("Timmy");
         timmyMove = timmy.GetComponent<Movement>();
@@ -27,6 +37,16 @@ public class FallDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(airTime > 1f && falling == true)
+        {
+            audios.GetComponent<AudioController>().falldamageON();
+        }
+
+        if(falling == false && airTime <1)
+        {
+            audios.GetComponent<AudioController>().falldamageOFF();
+        }
+
         if (hitBouncy == false)
         {
             if (!timmyMove.isGrounded && !timmyMove.climb)

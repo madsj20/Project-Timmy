@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(isGrounded);
+        //Debug.Log(isGrounded);
         //checks if player is grounded in any way
         if (isGrounded == true || isGroundedBush == true || isGroundedWallJump == true)
         {

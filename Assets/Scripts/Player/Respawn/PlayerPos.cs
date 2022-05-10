@@ -31,6 +31,27 @@ public class PlayerPos : MonoBehaviour
             RespawnPlayer();
             GetComponent<Movement>().canMove = true;
         }
+
+        if (Input.GetKeyDown("1"))
+        {
+            transform.position = GameObject.Find("Checkpoint 1").GetComponent<Transform>().position;
+        }
+        if (Input.GetKeyDown("2"))
+        {
+            transform.position = GameObject.Find("Checkpoint 2").GetComponent<Transform>().position;
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            transform.position = GameObject.Find("Checkpoint 3").GetComponent<Transform>().position;
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            transform.position = GameObject.Find("Checkpoint 4").GetComponent<Transform>().position;
+        }
+        if (Input.GetKeyDown("5"))
+        {
+            transform.position = GameObject.Find("Checkpoint 5").GetComponent<Transform>().position;
+        }
     }
 
     void RespawnPlayer()

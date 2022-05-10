@@ -69,7 +69,7 @@ public class WallJump : MonoBehaviour
             wallJumping = true;
             fallDamage.airTime = -0.3f;
             Invoke("SetJumpingToFalse", 0.3f);
-            audios.GetComponent<AudioController>().playJump();
+            //audios.GetComponent<AudioController>().playJump();
         }
 
         if (wallJumping)

@@ -17,7 +17,7 @@ public class PlayerPos : MonoBehaviour
     }
     void Update()
     {
-        if (gameObject.transform.position.y < rm.lastCheckPointPos.y - 25)
+        if (gameObject.transform.position.y < -25)
         {
             Debug.Log("Out of bounds");
             RespawnPlayer();

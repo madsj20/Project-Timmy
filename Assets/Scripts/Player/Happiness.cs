@@ -37,7 +37,7 @@ public class Happiness : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audios = GameObject.Find("AudioManager");
+        //audios = GameObject.Find("AudioManager");
         currentHealth = maxHealth;
         happinessBar.SetMaxHealth(maxHealth);
         timCock = GameObject.Find("Timmy´s cock");

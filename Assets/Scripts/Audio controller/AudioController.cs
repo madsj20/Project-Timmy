@@ -17,6 +17,8 @@ public class AudioController : MonoBehaviour
     public AudioClip BoingEffect;
     public AudioClip TimOof;
 
+    public AudioClip SquirrelOof;
+
     public AudioClip backgrounds;
 
     public void Awake()
@@ -34,6 +36,8 @@ public class AudioController : MonoBehaviour
         TimCollect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Yay");
         BoingEffect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-Boing");
         TimOof = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-oof");
+        SquirrelOof = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/SquirrelPain");
+
 
         //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
         //AudioClip clip3 = Resources.Load("Sounds/cube_onslot", typeof(AudioClip)) as AudioClip;
@@ -97,5 +101,10 @@ public class AudioController : MonoBehaviour
     public void Oof()
     {
         audioSource.PlayOneShot(TimOof, 1f);
+    }
+
+    public void Sqdeath()
+    {
+        audioSource.PlayOneShot(SquirrelOof, 0.5f);
     }
 }

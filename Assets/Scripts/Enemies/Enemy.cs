@@ -13,6 +13,13 @@ public class Enemy : MonoBehaviour
     protected int dirX = 1;
     protected bool facingRight = true;
 
+    GameObject audios;
+
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
+
     protected virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -68,6 +75,7 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator EnemyDeath()
     {
+        audios.GetComponent<AudioController>().Sqdeath();
         yield return new WaitForSeconds(deathTimer);
         //Makes squirrel go through floor
         canMove = false;

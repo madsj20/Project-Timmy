@@ -10,15 +10,12 @@ public class Collectibles : MonoBehaviour
     public GameObject currentOwner;
     private GameObject speachBubble;
     private Vector2 SpeachBubbleFinalTrans;
-    public static List<GameObject> collectedItems = new List<GameObject>();
 
     public Sprite jerome;
     public Sprite child1;
     public Sprite child2;
     public Sprite child3;
     public Sprite timmy;
-
-    private Transform collectedItemsTrans;
 
     private bool bubbleToPos = false;
     public float speed = 8;
@@ -45,7 +42,6 @@ public class Collectibles : MonoBehaviour
         speachBubble = GameObject.Find("Collectibles Speach Bubble");
         speachBubbleTrans = speachBubble.GetComponent<RectTransform>().position;
         SpeachBubbleFinalTrans = GameObject.Find("Speach Bubble Transform").GetComponent<RectTransform>().position;
-        collectedItemsTrans = GameObject.Find("Collected Items Transform").GetComponent<Transform>();
     }
 
     private void Update()
@@ -76,16 +72,6 @@ public class Collectibles : MonoBehaviour
         {
             speachBubble.GetComponent<RectTransform>().position = Vector2.Lerp(speachBubble.GetComponent<RectTransform>().position, speachBubbleTrans, Time.deltaTime * speed);
         }
-
-        //Prints Collected Items
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
-        {
-            for (int i = 0; i < collectedItems.Count; i++)
-            {
-                Debug.Log(collectedItems[i]);
-                Instantiate(collectedItems[i], collectedItemsTrans);
-            }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -98,8 +84,6 @@ public class Collectibles : MonoBehaviour
             StartCoroutine(Collectible());
             Debug.Log("collected");
             currentItem = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
-            //Adds collected item to list
-            collectedItems.Add(collision.gameObject);
             collectedItem.GetComponent<Image>().sprite = currentItem;
             //Moves gameobject out of view
             collision.gameObject.GetComponent<Transform>().position = new Vector2(-50, 0);

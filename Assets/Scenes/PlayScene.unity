@@ -28693,36 +28693,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3741925484388993771, guid: ac4959069d9054a4187e2019762ade2f, type: 3}
   m_PrefabInstance: {fileID: 1604045020}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1609725986
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_RootOrder: 17
-  m_Father: {fileID: 0}
-  m_Children: []
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalPosition: {x: 41.2, y: -7.396123, z: -372.01746}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_GameObject: {fileID: 1609725986}
-  m_PrefabAsset: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_ObjectHideFlags: 0
-Transform:
---- !u!4 &1609725987
-  m_IsActive: 1
-  m_StaticEditorFlags: 0
-  m_NavMeshLayer: 0
-  m_Icon: {fileID: 0}
-  m_TagString: Untagged
-  m_Name: Collected Items Transform
-  m_Layer: 0
-  - component: {fileID: 1609725987}
-  m_Component:
-  serializedVersion: 6
-  m_PrefabAsset: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_ObjectHideFlags: 0
-GameObject:
 --- !u!1001 &1612568731
 PrefabInstance:
   m_ObjectHideFlags: 0

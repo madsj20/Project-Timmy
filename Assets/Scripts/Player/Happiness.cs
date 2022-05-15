@@ -26,8 +26,13 @@ public class Happiness : MonoBehaviour
 
     Rigidbody2D rb;
 
-    public AudioController audioo;
+    
     GameObject audios;
+
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -44,7 +49,7 @@ public class Happiness : MonoBehaviour
 
         fallDamage = GetComponent<FallDamage>();
 
-        audioo = GameObject.Find("AudioControllerObjekt").GetComponent <AudioController>();
+      
     }
 
     // Update is called once per frame
@@ -163,6 +168,7 @@ public class Happiness : MonoBehaviour
 
     public void TakeDamage(int damage, int airTimeModifier)
     {
+        audios.GetComponent<AudioController>().Oof();
         currentHealth -= damage;
         //audioo.Hit;
         happinessBar.SetHealth(currentHealth);

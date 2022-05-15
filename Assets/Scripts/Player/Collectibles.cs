@@ -25,12 +25,19 @@ public class Collectibles : MonoBehaviour
     private int childNumber = 0;
     private Vector2 speachBubbleTrans;
 
+    GameObject audios;
+
     //private string collect;
 
 
 
 
     //public AudioSource CollectSound;
+
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
 
     private void Start()
     {
@@ -85,7 +92,7 @@ public class Collectibles : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Collectible"))
         {
-            //CollectSound.Play();
+            audios.GetComponent<AudioController>().Collect();
             GetComponent<Happiness>().GiveHappiness(50);
             childNumber = Random.Range(0, 4);
             StartCoroutine(Collectible());

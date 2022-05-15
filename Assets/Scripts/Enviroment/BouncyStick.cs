@@ -51,7 +51,7 @@ public class BouncyStick : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            audios.GetComponent<AudioController>().playJump();
+            
             timmyRoot = timmy.transform.position.x;
             root = this.gameObject.transform.GetChild(0).position.x;
             distance = Mathf.Abs(timmyRoot - root);
@@ -68,9 +68,12 @@ public class BouncyStick : MonoBehaviour
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * (normDistance * bounceForce), ForceMode2D.Impulse);
             if (timmy.GetComponent<Rigidbody2D>().velocity.magnitude > 20f)
             {
+
                 timmy.GetComponent<Rigidbody2D>().velocity = timmy.GetComponent<Rigidbody2D>().velocity.normalized * 20f;
             }
             Debug.Log(Mathf.InverseLerp(0, branchWidth, distance));
+            float timjump = Mathf.InverseLerp(0, branchWidth, distance);
+            audios.GetComponent<AudioController>().Boing(timjump);
         }
     }
    IEnumerator JumpPause()

@@ -13,6 +13,8 @@ public class AudioController : MonoBehaviour
     public AudioClip clip1;
     public AudioClip TouchGrass;
     public AudioClip fallingTim;
+    public AudioClip TimCollect;
+    public AudioClip BoingEffect;
 
     public AudioClip backgrounds;
 
@@ -28,6 +30,9 @@ public class AudioController : MonoBehaviour
         TouchGrass = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Landing-Timmy");
         backgrounds = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Music");
         fallingTim = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Falling-Damage");
+        TimCollect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Yay");
+        BoingEffect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-Boing");
+
         //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
         //AudioClip clip3 = Resources.Load("Sounds/cube_onslot", typeof(AudioClip)) as AudioClip;
 
@@ -41,15 +46,14 @@ public class AudioController : MonoBehaviour
 
     public void playJump() 
     {
-        audioSource.volume = 0.2f;
-        audioSource.PlayOneShot(Jump);
+        audioSource.PlayOneShot(Jump, 0.2f);
 
     }
 
     public void FallGround()
     {
-        audioSource.volume = 1f;
-        audioSource.PlayOneShot(TouchGrass);
+      
+        audioSource.PlayOneShot(TouchGrass,1f);
     }
 
     public void background()
@@ -63,22 +67,28 @@ public class AudioController : MonoBehaviour
 
     public void falldamageON()
     {
-        audioSource.PlayOneShot(fallingTim);
+        audioSource.PlayOneShot(fallingTim, 1f);
         Debug.Log("jeg falder");
         GameObject.FindWithTag("Player").GetComponent<FallDamage>().falling = false;
-        audioSource.volume = 1f;
-        
 
-        /*audioSource.clip = fallingTim;
-        audioSource.volume = 1f;
-        audioSource.Play();*/
 
     }
     public void falldamageOFF()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<FallDamage>().falling = true;
         audioSource.Stop();
-        audioSource.PlayOneShot(TouchGrass);
+        audioSource.PlayOneShot(TouchGrass, 1f);
     }
 
+    public void Collect()
+    {
+        audioSource.PlayOneShot(TimCollect, 0.5f);
+
+    }
+
+    public void Boing(float jumpvolume)
+    {
+        Debug.Log(jumpvolume);
+        audioSource.PlayOneShot(BoingEffect, jumpvolume);
+    }
 }

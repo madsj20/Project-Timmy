@@ -15,6 +15,7 @@ public class AudioController : MonoBehaviour
     public AudioClip fallingTim;
     public AudioClip TimCollect;
     public AudioClip BoingEffect;
+    public AudioClip TimOof;
 
     public AudioClip backgrounds;
 
@@ -32,6 +33,7 @@ public class AudioController : MonoBehaviour
         fallingTim = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Falling-Damage");
         TimCollect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Timmy-Yay");
         BoingEffect = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-Boing");
+        TimOof = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-oof");
 
         //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
         //AudioClip clip3 = Resources.Load("Sounds/cube_onslot", typeof(AudioClip)) as AudioClip;
@@ -88,7 +90,12 @@ public class AudioController : MonoBehaviour
 
     public void Boing(float jumpvolume)
     {
-        Debug.Log(jumpvolume);
+        //Debug.Log(jumpvolume);
         audioSource.PlayOneShot(BoingEffect, jumpvolume);
+    }
+
+    public void Oof()
+    {
+        audioSource.PlayOneShot(TimOof, 1f);
     }
 }

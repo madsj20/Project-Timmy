@@ -13,6 +13,7 @@ public class Happiness : MonoBehaviour
     public bool isKnocked;
     public bool checker;
     private bool loop;
+    private bool attachted;
 
     public int knockbackForceUp;
     public int knockbackForceSides;
@@ -32,6 +33,7 @@ public class Happiness : MonoBehaviour
     private void Awake()
     {
         audios = GameObject.Find("AudioManager");
+        
     }
 
     // Start is called before the first frame update
@@ -55,6 +57,7 @@ public class Happiness : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        attachted = GetComponent<PlayerSwing>().attached;
         if (loop && isKnocked)
         {
             loop = false;
@@ -96,7 +99,11 @@ public class Happiness : MonoBehaviour
             enemyTf = other.transform;
             TakeDamage(10, 0);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback(5, 10);
+            if (!attachted)
+            {
+               knockback(5, 10);
+            }
+            
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Squirrel") && !isKnocked)
@@ -104,7 +111,10 @@ public class Happiness : MonoBehaviour
             enemyTf = other.transform;
             TakeDamage(10, -1);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback(5, 10);
+            if (!attachted)
+            {
+                knockback(5, 10);
+            }
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("Spikes") && !isKnocked)
@@ -112,7 +122,10 @@ public class Happiness : MonoBehaviour
             enemyTf = other.transform;
             TakeDamage(15, 0);
             StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
-            knockback(5, 10);
+            if (!attachted)
+            {
+                knockback(5, 10);
+            }
             Debug.Log("Hit by: " + other);
         }
         if (other.gameObject.CompareTag("BirdShit") && !isKnocked)
@@ -121,14 +134,20 @@ public class Happiness : MonoBehaviour
             TakeDamage(15, 0);
             StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
             Destroy(other.gameObject);
-            knockback(5, 10);
+            if (!attachted)
+            {
+                knockback(5, 10);
+            }
             Debug.Log("Hit by: " + other);
         }
         else if (other.gameObject.CompareTag("BirdShit"))
         {
             Destroy(other.gameObject);
             StartCoroutine(cameraShake.Shake(0.05f, 0.2f));
-            knockback(5, 10);
+            if (!attachted)
+            {
+                knockback(5, 10);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

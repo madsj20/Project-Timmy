@@ -27,6 +27,7 @@ public class PlayerPos : MonoBehaviour
         //resets player position on death
         if (GetComponent<Happiness>().currentHealth <= 0)
         {
+            GetComponent<PlayerSwing>().Detatch();
             Debug.Log("No Happiness left");
             RespawnPlayer();
             GetComponent<Movement>().canMove = true;

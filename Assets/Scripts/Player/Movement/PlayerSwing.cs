@@ -111,7 +111,7 @@ public class PlayerSwing : MonoBehaviour
             
 
     }
-    void Detatch()
+    public void Detatch()
     {
         tim2d.isTrigger = false;
         GetComponent<Movement>().canMove = true;

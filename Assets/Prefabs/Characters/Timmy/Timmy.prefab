@@ -24510,13 +24510,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 000304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -24887,6 +24887,7 @@ MonoBehaviour:
   jumpForce: 1.6
   isGrounded: 0
   isGroundedBush: 0
+  isGroundedWallJump: 0
   groundCheck: {fileID: 3042317487578500756}
   checkWidth: 0.6
   checkHeight: 0.1
@@ -24896,6 +24897,9 @@ MonoBehaviour:
   spikes:
     serializedVersion: 2
     m_Bits: 2048
+  wallJump:
+    serializedVersion: 2
+    m_Bits: 0
   dirX: 0
   extraJumpsValue: 0
   canMove: 1
@@ -24968,7 +24972,6 @@ MonoBehaviour:
   knockbackForceUp: 10
   knockbackForceSides: 5
   cameraShake: {fileID: 519420033}
-  crying: {fileID: 0}
 --- !u!95 &225917953
 Animator:
   serializedVersion: 3
@@ -25092,6 +25095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f2765a66ead9a4088b6ccbeaea0424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  falling: 0
   airTime: 0
 --- !u!114 &2010073033
 MonoBehaviour:

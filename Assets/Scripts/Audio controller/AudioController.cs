@@ -17,6 +17,7 @@ public class AudioController : MonoBehaviour
     public AudioClip BoingEffect;
     public AudioClip TimOof;
     public AudioClip TimThrow;
+    public AudioClip TimFallDamage;
 
     public AudioClip SquirrelOof;
 
@@ -39,6 +40,7 @@ public class AudioController : MonoBehaviour
         TimOof = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/Tim-oof");
         SquirrelOof = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/SquirrelPain");
         TimThrow = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/TimThrowing");
+        TimFallDamage = (AudioClip)Resources.Load("Audio/Sounds/TimmySounds/TimFallDamage");
 
 
         //AudioClip clip2 = Resources.Load<AudioClip>("Sounds/cube_up");
@@ -85,7 +87,7 @@ public class AudioController : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<FallDamage>().falling = true;
         audioSource.Stop();
-        audioSource.PlayOneShot(TouchGrass, 1f);
+        audioSource.PlayOneShot(TimFallDamage, 0.6f);
     }
 
     public void Collect()

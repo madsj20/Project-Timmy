@@ -15,6 +15,7 @@ public class FallDamage : MonoBehaviour
     float damageForSeconds = 30f;
     public float airTime = 0;
     bool hitBouncy = false;
+    bool damageFall = false;
 
     GameObject audios;
 
@@ -26,44 +27,55 @@ public class FallDamage : MonoBehaviour
 
     void Start()
     {
+        damageFall = false;
         falling = true;
         cameraShake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
         timmy = GameObject.Find("Timmy");
         timmyMove = timmy.GetComponent<Movement>();
         timmyHappi = timmy.GetComponent<Happiness>();
         airTime = -4;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(airTime > 1f && falling == true)
+        
+
+        if(airTime > minSurviveFall && falling == true)
         {
             audios.GetComponent<AudioController>().falldamageON();
         }
 
-        if(falling == false && airTime <1)
+        if(falling == false && airTime < minSurviveFall)
         {
             audios.GetComponent<AudioController>().falldamageOFF();
         }
+      
 
         if (hitBouncy == false)
         {
             if (!timmyMove.isGrounded && !timmyMove.climb)
             {
                 airTime += Time.deltaTime;
+
             }
             if (timmyMove.isGrounded)
             {
                 if (airTime > minSurviveFall)
                 {
+                    damageFall = true;
                     timmyHappi.TakeDamage(((int)(damageForSeconds * airTime)),0);
                     Debug.Log((int)(damageForSeconds * airTime));
                     StartCoroutine(cameraShake.Shake(0.1f, 0.4f));
+                    
+
                 }
                 airTime = 0;
             }
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)

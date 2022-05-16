@@ -9,7 +9,7 @@ public class BreakingPlatform : MonoBehaviour
     private Vector3 originPosition;
     private Quaternion originRotation;
     public float shake_decay = 0.003f;
-    public float shake_intensity = .2f;
+    public float shake_intensity = .15f;
     public bool isShaking = false;
     private float temp_shake_intensity = 0;
     GameObject spriteg;

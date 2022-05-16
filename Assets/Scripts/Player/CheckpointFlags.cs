@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CheckpointFlags : MonoBehaviour
 {
     private int flagNumber;
-    public GameObject currentFlag;
+    private GameObject currentFlag;
 
     public Sprite flag1;
     public Sprite flag2;

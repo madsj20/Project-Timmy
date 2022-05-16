@@ -21241,6 +21241,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform Leves
       objectReference: {fileID: 0}
+    - target: {fileID: 4905737224354094151, guid: 23b99c1aeb338b445942c7708ac56eee, type: 3}
+      propertyPath: m_Size.x
+      value: 7.3887196
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905737224354094151, guid: 23b99c1aeb338b445942c7708ac56eee, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.1945734
+      objectReference: {fileID: 0}
     - target: {fileID: 4905737224354094521, guid: 23b99c1aeb338b445942c7708ac56eee, type: 3}
       propertyPath: m_RootOrder
       value: 65
@@ -43871,7 +43879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4582468942881575394, guid: 03dfe1c9ad72753449004bebffc1d090, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.84
+      value: 18.05
       objectReference: {fileID: 0}
     - target: {fileID: 4582468942881575394, guid: 03dfe1c9ad72753449004bebffc1d090, type: 3}
       propertyPath: m_LocalPosition.y

@@ -6,8 +6,18 @@ public class RopeSegment : MonoBehaviour
 {
     public GameObject connectedAbove, connectedBelow;
     public bool isPlayerAttached;
+
+    public bool straight = true;
+
+
+    private void Awake()
+    {
+        ;
+    }
+
     void Start()
     {
+        straight = true;
         connectedAbove = GetComponent<HingeJoint2D>().connectedBody.gameObject;
         RopeSegment aboveSegment = connectedAbove.GetComponent<RopeSegment>();
         if (aboveSegment != null)
@@ -20,9 +30,35 @@ public class RopeSegment : MonoBehaviour
         {
             GetComponent<HingeJoint2D>().connectedAnchor = new Vector2(0, 0);
         }
+
+        
     }
-    
+    private void Update()
+    {
+        if(!straight && GameObject.FindWithTag("Player").GetComponent<PlayerSwing>().attached == false)
+        {
+            straight = true;
+            CancelInvoke();
+            Invoke("reset", 5f);
+            Debug.Log("kører");
+        }
+
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerSwing>().attached == true)
+        {
+            CancelInvoke();
+        }
+
+    }
+    void reset()
+    {
+        Debug.Log("reset");
+        
+        
+        GetComponentInParent<Rope>().reset();
+        CancelInvoke();
 
 
-    
+    }
+
+
 }

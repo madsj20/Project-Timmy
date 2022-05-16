@@ -7,6 +7,8 @@ public class Rope : MonoBehaviour
     public GameObject[] prefabRopeSegs;
     public int numLinks = 5;
 
+     
+
     void Start()
     {
         GenerateRope();
@@ -25,5 +27,22 @@ public class Rope : MonoBehaviour
 
             prevBod = newSeg.GetComponent<Rigidbody2D>();
         }
+
+
+
+    }
+    public void reset()
+    {
+        int count = transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            child.GetComponent<Rigidbody2D>().angularVelocity = 0f;
+            child.localPosition = Vector3.zero;
+            child.localEulerAngles = Vector3.zero;
+            
+        }
+
     }
 }

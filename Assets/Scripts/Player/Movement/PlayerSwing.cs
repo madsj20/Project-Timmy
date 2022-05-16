@@ -17,6 +17,7 @@ public class PlayerSwing : MonoBehaviour
     private bool isWall;
     private bool isKnocked;
     int index;
+    bool cantouch;
 
     Vector2 gamer;
 
@@ -26,6 +27,7 @@ public class PlayerSwing : MonoBehaviour
 
     void Awake()
     {
+        cantouch = true;
         audios = GameObject.Find("AudioManager");
         rb = gameObject.GetComponent<Rigidbody2D>();
         hj = gameObject.GetComponent<HingeJoint2D>();
@@ -41,6 +43,10 @@ public class PlayerSwing : MonoBehaviour
         isWall = GetComponent<WallJump>().isWall;
         canMove = GetComponent<Movement>().canMove;
         isKnocked = GetComponent<Happiness>().isKnocked;
+        if(GetComponent<Movement>().isGrounded == true)
+        {
+            cantouch = true;
+        }
 
         if (attached == true)
         {
@@ -113,12 +119,14 @@ public class PlayerSwing : MonoBehaviour
     }
     public void Detatch()
     {
+        
         tim2d.isTrigger = false;
         GetComponent<Movement>().canMove = true;
         hj.connectedBody.gameObject.GetComponent<RopeSegment>().isPlayerAttached = false;
         attached = false;
         hj.enabled = false;
         hj.connectedBody = null;
+        
         //StartCoroutine(AttachedNull());
     }
 
@@ -152,6 +160,15 @@ public class PlayerSwing : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Rope" && cantouch)
+        {
+            col.GetComponent<RopeSegment>().straight = false;
+            cantouch = false;
         }
     }
     private void OnTriggerStay2D(Collider2D col)

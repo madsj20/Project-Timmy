@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
-    private float maxVelocity = 0.6f;
-    private float minVelocity = 0.2f;
-    private int lifeTime = 90;
+    private float maxVelocity = 2f;
+    private float minVelocity = 1f;
+    private int lifeTime = 150;
     private Rigidbody2D rb;
 
     // Start is called before the first frame update

@@ -12,7 +12,7 @@ public class FallDamage : MonoBehaviour
     public bool falling;
 
     float minSurviveFall = 1.1f;
-    float damageForSeconds = 30f;
+    float damageForSeconds = 50f;
     public float airTime = 0;
     bool hitBouncy = false;
     bool damageFall = false;

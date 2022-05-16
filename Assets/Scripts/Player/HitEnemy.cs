@@ -13,6 +13,13 @@ public class HitEnemy : MonoBehaviour
     public Rigidbody2D rock;
     private float launchForce = 30f;
 
+    GameObject audios;
+
+    private void Awake()
+    {
+        audios = GameObject.Find("AudioManager");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +43,7 @@ public class HitEnemy : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && hasHit == false)
         {
+            audios.GetComponent<AudioController>().Throw();
             hasHit = true;
             Debug.Log("Rock Throw");
             Rigidbody2D rockInstance = Instantiate(rock, rockThrowerTrans.position, rockThrowerTrans.rotation) as Rigidbody2D;

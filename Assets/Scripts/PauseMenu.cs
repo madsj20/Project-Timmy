@@ -8,6 +8,16 @@ public class PauseMenu : MonoBehaviour
     private GameObject menu;
     private bool menuToggle;
 
+    public AudioSource audioSource;
+    public AudioClip clickUI;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        clickUI = (AudioClip)Resources.Load("Audio/Sounds/UI/click5");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,12 +49,14 @@ public class PauseMenu : MonoBehaviour
 
     public void ToMenu()
     {
+        audioSource.PlayOneShot(clickUI, 1f);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1;
     }
 
     public void Continue()
     {
+        audioSource.PlayOneShot(clickUI, 1f);
         menuToggle = false;
         menu.SetActive(false);
         Time.timeScale = 1;
@@ -52,6 +64,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Exit()
     {
+        audioSource.PlayOneShot(clickUI, 1f);
         Application.Quit();
     }
 }

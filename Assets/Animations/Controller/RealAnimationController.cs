@@ -12,6 +12,7 @@ public class RealAnimationController : MonoBehaviour
     bool isWall;
     bool soundfall;
     GameObject audios;
+    bool isDying;
 
     void Awake()
     {
@@ -22,6 +23,7 @@ public class RealAnimationController : MonoBehaviour
         isGroundedWallJump = GetComponent<Movement>().isGroundedWallJump;
 
         soundfall = false;
+
     }
 
     public void Update()
@@ -29,6 +31,19 @@ public class RealAnimationController : MonoBehaviour
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
         groundedBush = GetComponent<Movement>().isGroundedBush;
+        isDying = this.GetComponent<PlayerPos>().dying;
+
+        if (isDying == true)
+        {
+            stop();
+            anim.enabled = false;
+            anim.enabled = true;
+            anim.SetBool("isCrying", true);
+        }
+        else if (isDying == false)
+        {
+            anim.SetBool("isCrying", false);
+        }
 
         if (grounded == true || groundedBush == true || isGroundedWallJump == true)
         {
@@ -39,7 +54,7 @@ public class RealAnimationController : MonoBehaviour
             grounded = false;
         }
 
-        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded) //aka se om timmy st�r p� jorden
+        if ((Input.GetKey("a") || (Input.GetKey("d")) || Input.GetKey(KeyCode.LeftArrow) || (Input.GetKey(KeyCode.RightArrow))) && grounded)  //&& isDying == false )  //aka se om timmy st�r p� jorden
         {
             stop();
             anim.SetBool("isRunnings", true);
@@ -57,7 +72,7 @@ public class RealAnimationController : MonoBehaviour
             anim.SetBool("isRunnings", false);
         }*/
 
-        if (!grounded && !isWall)
+        if (!grounded && !isWall) //isDying == false)
         {
             stop();
             anim.SetBool("isJumping", true);

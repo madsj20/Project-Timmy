@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour
             
 
         }
-        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false)
+        else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true && climb == false && canMove == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, 10f * jumpForce);
             jumpPS.Play();
@@ -117,7 +117,7 @@ public class Movement : MonoBehaviour
         }
 
         //climb script
-        if (climb == true && GetComponent<Happiness>().isKnocked == false)
+        if (climb == true && GetComponent<Happiness>().isKnocked == false && canMove == true)
         {
             if (Input.GetButton("Jump"))
             {

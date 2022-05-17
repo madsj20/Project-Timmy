@@ -21854,6 +21854,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 927154425, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
+      propertyPath: deathTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 927154425, guid: f7a7aadd976d3f14d99f8b53ece7a5dd, type: 3}
       propertyPath: happinessBar
       value: 
       objectReference: {fileID: 1644785357}

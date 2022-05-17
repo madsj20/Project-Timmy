@@ -22,6 +22,8 @@ public class Collectibles : MonoBehaviour
     private int childNumber = 0;
     private Vector2 speachBubbleTrans;
 
+    public static List<string> Collected = new List<string>();
+
     GameObject audios;
 
     //private string collect;
@@ -85,10 +87,13 @@ public class Collectibles : MonoBehaviour
             Debug.Log("collected");
             currentItem = collision.gameObject.GetComponent<SpriteRenderer>().sprite;
             collectedItem.GetComponent<Image>().sprite = currentItem;
+            //Adds collectible to list
+            Collected.Add(collision.gameObject.GetComponent<SpriteRenderer>().sprite.name);
             //Moves gameobject out of view
             collision.gameObject.GetComponent<Transform>().position = new Vector2(-50, 0);
             //Destroy(collision.gameObject);
             bubbleToPos = true;
+            Debug.Log(Collected.Count);
         }
         
         IEnumerator Collectible()

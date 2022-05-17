@@ -28,9 +28,9 @@ public class SceneController4 : MonoBehaviour
         {
             SceneManager.LoadScene("GettingTheFrisbee");
         }
-        /*if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("GettingTheFrisbee");
-        }*/
+        }
     }
 }

@@ -12,7 +12,7 @@ public class RealAnimationController : MonoBehaviour
     bool isWall;
     bool soundfall;
     GameObject audios;
-    bool isDying;
+    //bool isDying;
 
     void Awake()
     {
@@ -31,19 +31,19 @@ public class RealAnimationController : MonoBehaviour
         isWall = GetComponent<WallJump>().isWall;
         grounded = GetComponent<Movement>().isGrounded;
         groundedBush = GetComponent<Movement>().isGroundedBush;
-        isDying = this.GetComponent<PlayerPos>().dying;
-
-        if (isDying == true)
-        {
-            stop();
-            anim.enabled = false;
-            anim.enabled = true;
-            anim.SetBool("isCrying", true);
-        }
-        else if (isDying == false)
-        {
-            anim.SetBool("isCrying", false);
-        }
+        //isDying = this.GetComponent<PlayerPos>().dying;
+        //
+        //if (isDying == true)
+        //{
+        //    stop();
+        //    anim.enabled = false;
+        //    anim.enabled = true;
+        //    anim.SetBool("isCrying", true);
+        //}
+        //else if (isDying == false)
+        //{
+        //    anim.SetBool("isCrying", false);
+        //}
 
         if (grounded == true || groundedBush == true || isGroundedWallJump == true)
         {

@@ -3716,7 +3716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43148b3f321306a4090628a383b48f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerToNextScene1: 51
+  timerToNextScene1: 46.5
 --- !u!114 &1710859139
 MonoBehaviour:
   m_ObjectHideFlags: 0

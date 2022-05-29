@@ -43,7 +43,7 @@ public class FallDamage : MonoBehaviour
     {
         
 
-        if(airTime > minSurviveFall && falling == true)
+        if(airTime > minSurviveFall && falling == true && GetComponent<PlayerPos>().dying == false)
         {
             audios.GetComponent<AudioController>().falldamageON();
         }

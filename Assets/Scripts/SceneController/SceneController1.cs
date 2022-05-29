@@ -9,7 +9,6 @@ public class SceneController1 : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        timerToNextScene1 = 51;
         Invoke("Play", timerToNextScene1);
     }
 

@@ -8,14 +8,17 @@ public class PlayerPos : MonoBehaviour
     private RespawnManager rm;
     public HappinessBar happinessBar;
     private FallDamage fallDamage;
-    public float deathTimer;
+    public float deathTimer = 3f;
     public bool dying;
+    GameObject timmyCrying;
 
     void Start()
     {
         fallDamage = GetComponent<FallDamage>();
         rm = GameObject.FindGameObjectWithTag("RM").GetComponent<RespawnManager>();
         transform.position = rm.lastCheckPointPos;
+        timmyCrying = GameObject.Find("timmyCrying");
+        timmyCrying.SetActive(false);
     }
     void Update()
     {
@@ -63,29 +66,31 @@ public class PlayerPos : MonoBehaviour
 
     void RespawnPlayer()
     {
-
-        if (GetComponent<Movement>().isGrounded == true)
-        {
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
-        }
+        GetComponent<SpriteRenderer>().color = new Color32 (0,0,0,0);
+        GameObject timmysCock = GameObject.Find("TimmysCock");
+        timmysCock.GetComponent<SpriteRenderer>().color = new Color32(0, 0, 0, 0);
+        GetComponent<PlatformFall>().enabled = false;
+        GetComponent<Movement>().enabled = false;
         dying = true;
-        GetComponent<Movement>().canMove = false;
-        StartCoroutine(death());
+        StartCoroutine("death");
+        timmyCrying.SetActive(true);
     }
     IEnumerator death()
     {
-        GetComponent<RealAnimationController>().stop();
-        GetComponent<RealAnimationController>().enabled = false;
-        GetComponent<RealAnimationController>().enabled = true;
         yield return new WaitForSeconds(deathTimer);
         dying = false;
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        timmyCrying.SetActive(false);
         GetComponent<Happiness>().currentHealth = GetComponent<Happiness>().maxHealth;
         happinessBar.SetHealth(GetComponent<Happiness>().currentHealth);
         transform.position = rm.lastCheckPointPos;
         fallDamage.airTime = 0;
 
-        GetComponent<Movement>().canMove = true;
+        GetComponent<PlatformFall>().enabled = true;
+        GetComponent<Movement>().enabled = true;
+
+        GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+        GameObject timmysCock = GameObject.Find("TimmysCock");
+        timmysCock.GetComponent<SpriteRenderer>().color = new Color32(255,255,255, 255);
+        Debug.Log("Timmys death loop");
     }
 }

@@ -42,7 +42,7 @@ public class Happiness : MonoBehaviour
         //audios = GameObject.Find("AudioManager");
         currentHealth = maxHealth;
         happinessBar.SetMaxHealth(maxHealth);
-        timCock = GameObject.Find("Timmy´s cock");
+        timCock = GameObject.Find("TimmysCock");
         timCockR = timCock.GetComponent<SpriteRenderer>();
 
         loop = true;
@@ -215,7 +215,6 @@ public class Happiness : MonoBehaviour
         {
             rb.AddForce(Vector2.right * knockbackForceSides, ForceMode2D.Impulse);
         }
-
     }
 
 

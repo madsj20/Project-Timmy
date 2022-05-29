@@ -33,6 +33,8 @@ public class BouncyStick : MonoBehaviour
     {
         //Debug.Log(root);
         running = true;
+        bounceForce = 22f;
+        bounceFactor =0.8f;
     }
 
     private void Update()
@@ -70,7 +72,7 @@ public class BouncyStick : MonoBehaviour
             {
 
                 timmy.GetComponent<Rigidbody2D>().velocity = timmy.GetComponent<Rigidbody2D>().velocity.normalized * 20f;
-            }
+                            }
             Debug.Log(Mathf.InverseLerp(0, branchWidth, distance));
             float timjump = Mathf.InverseLerp(0, branchWidth, distance);
             audios.GetComponent<AudioController>().Boing(timjump);
@@ -80,6 +82,7 @@ public class BouncyStick : MonoBehaviour
     {
         running = false;
         timmy.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * (normDistance * bounceForce * (timmyVelocitized+1) * bounceFactor), ForceMode2D.Impulse);
+        Debug.Log("jeg hop pauser");
         yield return new WaitForSeconds(0.5f);
         running = true;
     }
@@ -95,7 +98,7 @@ public class BouncyStick : MonoBehaviour
     {
         timmyVelocity = timmy.GetComponent<Rigidbody2D>().velocity.magnitude;
         timmyVelocitized = Mathf.InverseLerp(5, 30, timmyVelocity);
-
+        Debug.Log("jeg fik velocity");
 
 
 

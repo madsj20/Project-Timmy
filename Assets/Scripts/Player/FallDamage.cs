@@ -15,7 +15,7 @@ public class FallDamage : MonoBehaviour
     float damageForSeconds = 50f;
     public float airTime = 0;
     bool hitBouncy = false;
-    bool damageFall = false;
+    public bool damageFall = false;
 
     GameObject audios;
 

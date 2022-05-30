@@ -16,7 +16,8 @@ public class crying : MonoBehaviour
         Timmy = GameObject.Find("Timmy");
         rb = gameObject.GetComponent<Rigidbody2D>();
         timrb = Timmy.GetComponent<Rigidbody2D>();
-        
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        timrb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
 
